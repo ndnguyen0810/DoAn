@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLDA", "QLDA\QLDA.csproj", "{8645E96E-88E6-49AC-B680-3E92876F095E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8645E96E-88E6-49AC-B680-3E92876F095E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8645E96E-88E6-49AC-B680-3E92876F095E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8645E96E-88E6-49AC-B680-3E92876F095E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8645E96E-88E6-49AC-B680-3E92876F095E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84A751AF-8A28-4B52-82B3-53F5D6F1303B}
+	EndGlobalSection
+EndGlobal
