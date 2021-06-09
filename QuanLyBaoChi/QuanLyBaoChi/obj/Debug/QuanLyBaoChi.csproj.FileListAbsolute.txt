@@ -1,0 +1,102 @@
+C:\Users\Admin\OneDrive\Máy tính\Đồ Án Cơ Sở 1 New 01\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\QuanLyBaoChi.exe.config
+C:\Users\Admin\OneDrive\Máy tính\Đồ Án Cơ Sở 1 New 01\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\QuanLyBaoChi.exe
+C:\Users\Admin\OneDrive\Máy tính\Đồ Án Cơ Sở 1 New 01\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\QuanLyBaoChi.pdb
+C:\Users\Admin\OneDrive\Máy tính\Đồ Án Cơ Sở 1 New 01\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.csprojAssemblyReference.cache
+C:\Users\Admin\OneDrive\Máy tính\Đồ Án Cơ Sở 1 New 01\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.Properties.Resources.resources
+C:\Users\Admin\OneDrive\Máy tính\Đồ Án Cơ Sở 1 New 01\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.csproj.GenerateResource.cache
+C:\Users\Admin\OneDrive\Máy tính\Đồ Án Cơ Sở 1 New 01\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive\Máy tính\Đồ Án Cơ Sở 1 New 01\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.exe
+C:\Users\Admin\OneDrive\Máy tính\Đồ Án Cơ Sở 1 New 01\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.pdb
+C:\Users\Admin\OneDrive\Máy tính\Đồ Án Cơ Sở 1 New 01\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.frmMain.resources
+C:\Users\Admin\OneDrive\Máy tính\Đồ Án Cơ Sở 1 New 01\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.FORM.frmQuanTriAdmin.resources
+C:\Users\Admin\OneDrive\Máy tính\Đồ Án Cơ Sở 1 New 01\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.FORM.frmDangNhap.resources
+C:\Users\Admin\OneDrive\Máy tính\Đồ Án Cơ Sở 1 New 01\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.FORM.frmBaiViet.resources
+F:\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\QuanLyBaoChi.exe.config
+F:\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\QuanLyBaoChi.exe
+F:\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\QuanLyBaoChi.pdb
+F:\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.csprojAssemblyReference.cache
+F:\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.FORM.frmBaiViet.resources
+F:\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.FORM.frmDangNhap.resources
+F:\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.frmMain.resources
+F:\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.FORM.frmQuanTriAdmin.resources
+F:\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.Properties.Resources.resources
+F:\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.csproj.GenerateResource.cache
+F:\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.csproj.CoreCompileInputs.cache
+F:\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.exe
+F:\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.pdb
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\QuanLyBaoChi.exe.config
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\QuanLyBaoChi.exe
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\QuanLyBaoChi.pdb
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.FORM.frmDangNhap.resources
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.frmMain.resources
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.FORM.frmQuanTriAdmin.resources
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.Properties.Resources.resources
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.csproj.GenerateResource.cache
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.csproj.CoreCompileInputs.cache
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.exe
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.pdb
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.FORM.frmQuanLyBao.resources
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.FORM.frmLienHe.resources
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.FORM.frmReport.resources
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\RdlCompile.cache
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\RdlCompile.compiled
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\Microsoft.ReportViewer.Common.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\Microsoft.ReportViewer.Design.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\Microsoft.SqlServer.Types.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\EnvDTE.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\stdole.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\Microsoft.MSXML.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.csproj.CopyComplete
+F:\GitHub\DoAnCoSo1_New\QuanLyBaoChi\QuanLyBaoChi\obj\Debug\QuanLyBaoChi.csprojAssemblyReference.cache
