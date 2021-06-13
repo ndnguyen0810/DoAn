@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8645E96E-88E6-49AC-B680-3E92876F095E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QLDA</RootNamespace>
+    <AssemblyName>QLDA</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCTTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCTTC.Designer.cs">
+      <DependentUpon>FrmCTTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCungCap.Designer.cs">
+      <DependentUpon>FrmCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCungUng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCungUng.Designer.cs">
+      <DependentUpon>FrmCungUng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDauTu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDauTu.Designer.cs">
+      <DependentUpon>FrmDauTu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDuAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDuAn.Designer.cs">
+      <DependentUpon>FrmDuAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHangHoa.Designer.cs">
+      <DependentUpon>FrmHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNhaCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNhaCC.Designer.cs">
+      <DependentUpon>FrmNhaCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNhaDT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNhaDT.Designer.cs">
+      <DependentUpon>FrmNhaDT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNhanVien.Designer.cs">
+      <DependentUpon>FrmNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QLDADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDADataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCTTC.resx">
+      <DependentUpon>FrmCTTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCungCap.resx">
+      <DependentUpon>FrmCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCungUng.resx">
+      <DependentUpon>FrmCungUng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDauTu.resx">
+      <DependentUpon>FrmDauTu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDuAn.resx">
+      <DependentUpon>FrmDuAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHangHoa.resx">
+      <DependentUpon>FrmHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNhaCC.resx">
+      <DependentUpon>FrmNhaCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNhaDT.resx">
+      <DependentUpon>FrmNhaDT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNhanVien.resx">
+      <DependentUpon>FrmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="QLDADataSet.xsc">
+      <DependentUpon>QLDADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLDADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDADataSet.xss">
+      <DependentUpon>QLDADataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NCC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICTTC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IDA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NDT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ex.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
