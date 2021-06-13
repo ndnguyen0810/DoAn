@@ -1,0 +1,38 @@
+C:\Users\Admin\OneDrive\Máy tính\DOAN 1 _ 2021 _ NHK\QLDA\QLDA\bin\Debug\QLDA.exe.config
+C:\Users\Admin\OneDrive\Máy tính\DOAN 1 _ 2021 _ NHK\QLDA\QLDA\bin\Debug\QLDA.exe
+C:\Users\Admin\OneDrive\Máy tính\DOAN 1 _ 2021 _ NHK\QLDA\QLDA\bin\Debug\QLDA.pdb
+C:\Users\Admin\OneDrive\Máy tính\DOAN 1 _ 2021 _ NHK\QLDA\QLDA\obj\Debug\QLDA.csprojAssemblyReference.cache
+C:\Users\Admin\OneDrive\Máy tính\DOAN 1 _ 2021 _ NHK\QLDA\QLDA\obj\Debug\QLDA.Form1.resources
+C:\Users\Admin\OneDrive\Máy tính\DOAN 1 _ 2021 _ NHK\QLDA\QLDA\obj\Debug\QLDA.Properties.Resources.resources
+C:\Users\Admin\OneDrive\Máy tính\DOAN 1 _ 2021 _ NHK\QLDA\QLDA\obj\Debug\QLDA.csproj.GenerateResource.cache
+C:\Users\Admin\OneDrive\Máy tính\DOAN 1 _ 2021 _ NHK\QLDA\QLDA\obj\Debug\QLDA.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive\Máy tính\DOAN 1 _ 2021 _ NHK\QLDA\QLDA\obj\Debug\QLDA.exe
+C:\Users\Admin\OneDrive\Máy tính\DOAN 1 _ 2021 _ NHK\QLDA\QLDA\obj\Debug\QLDA.pdb
+C:\Users\Admin\OneDrive\Máy tính\DOAN 1 _ 2021 _ NHK\QLDA\QLDA\obj\Debug\QLDA.FrmDuAn.resources
+C:\Users\Admin\OneDrive\Máy tính\DOAN 1 _ 2021 _ NHK\QLDA\QLDA\obj\Debug\QLDA.FrmNhaCC.resources
+C:\Users\Admin\OneDrive\Máy tính\DOAN 1 _ 2021 _ NHK\QLDA\QLDA\obj\Debug\QLDA.FrmNhaDT.resources
+C:\Users\Admin\OneDrive\Máy tính\DOAN 1 _ 2021 _ NHK\QLDA\QLDA\obj\Debug\QLDA.FrmCTTC.resources
+C:\Users\Admin\OneDrive\Máy tính\DOAN 1 _ 2021 _ NHK\QLDA\QLDA\obj\Debug\QLDA.FrmHangHoa.resources
+C:\Users\Admin\OneDrive\Máy tính\DOAN 1 _ 2021 _ NHK\QLDA\QLDA\obj\Debug\QLDA.FrmCungCap.resources
+C:\Users\Admin\OneDrive\Máy tính\DOAN 1 _ 2021 _ NHK\QLDA\QLDA\obj\Debug\QLDA.FrmCungUng.resources
+C:\Users\Admin\OneDrive\Máy tính\DOAN 1 _ 2021 _ NHK\QLDA\QLDA\obj\Debug\QLDA.FrmDauTu.resources
+C:\Users\Admin\OneDrive\Máy tính\DOAN 1 _ 2021 _ NHK\QLDA\QLDA\obj\Debug\QLDA.FrmNhanVien.resources
+C:\Users\Admin\OneDrive\Máy tính\QLDA_NHK\QLDA\QLDA\QLDA\bin\Debug\QLDA.exe.config
+C:\Users\Admin\OneDrive\Máy tính\QLDA_NHK\QLDA\QLDA\QLDA\bin\Debug\QLDA.exe
+C:\Users\Admin\OneDrive\Máy tính\QLDA_NHK\QLDA\QLDA\QLDA\bin\Debug\QLDA.pdb
+C:\Users\Admin\OneDrive\Máy tính\QLDA_NHK\QLDA\QLDA\QLDA\obj\Debug\QLDA.FrmCTTC.resources
+C:\Users\Admin\OneDrive\Máy tính\QLDA_NHK\QLDA\QLDA\QLDA\obj\Debug\QLDA.FrmCungCap.resources
+C:\Users\Admin\OneDrive\Máy tính\QLDA_NHK\QLDA\QLDA\QLDA\obj\Debug\QLDA.FrmCungUng.resources
+C:\Users\Admin\OneDrive\Máy tính\QLDA_NHK\QLDA\QLDA\QLDA\obj\Debug\QLDA.FrmDauTu.resources
+C:\Users\Admin\OneDrive\Máy tính\QLDA_NHK\QLDA\QLDA\QLDA\obj\Debug\QLDA.FrmDuAn.resources
+C:\Users\Admin\OneDrive\Máy tính\QLDA_NHK\QLDA\QLDA\QLDA\obj\Debug\QLDA.FrmHangHoa.resources
+C:\Users\Admin\OneDrive\Máy tính\QLDA_NHK\QLDA\QLDA\QLDA\obj\Debug\QLDA.FrmNhaCC.resources
+C:\Users\Admin\OneDrive\Máy tính\QLDA_NHK\QLDA\QLDA\QLDA\obj\Debug\QLDA.FrmNhaDT.resources
+C:\Users\Admin\OneDrive\Máy tính\QLDA_NHK\QLDA\QLDA\QLDA\obj\Debug\QLDA.FrmNhanVien.resources
+C:\Users\Admin\OneDrive\Máy tính\QLDA_NHK\QLDA\QLDA\QLDA\obj\Debug\QLDA.Properties.Resources.resources
+C:\Users\Admin\OneDrive\Máy tính\QLDA_NHK\QLDA\QLDA\QLDA\obj\Debug\QLDA.csproj.GenerateResource.cache
+C:\Users\Admin\OneDrive\Máy tính\QLDA_NHK\QLDA\QLDA\QLDA\obj\Debug\QLDA.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive\Máy tính\QLDA_NHK\QLDA\QLDA\QLDA\obj\Debug\QLDA.exe
+C:\Users\Admin\OneDrive\Máy tính\QLDA_NHK\QLDA\QLDA\QLDA\obj\Debug\QLDA.pdb
+C:\Users\Admin\OneDrive\Máy tính\QLDA_NHK\QLDA\QLDA\QLDA\obj\Debug\QLDA.csprojAssemblyReference.cache
+C:\Users\Admin\OneDrive\Máy tính\QLDA_NHK\QLDA\QLDA\QLDA\obj\Debug\QLDA.Home.resources
