@@ -83,6 +83,12 @@
     <Compile Include="From\frmMau.Designer.cs">
       <DependentUpon>frmMau.cs</DependentUpon>
     </Compile>
+    <Compile Include="From\frmPhieuMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From\frmPhieuMuon.Designer.cs">
+      <DependentUpon>frmPhieuMuon.cs</DependentUpon>
+    </Compile>
     <Compile Include="From\frmSach_NXB.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="From\frmMau.resx">
       <DependentUpon>frmMau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="From\frmPhieuMuon.resx">
+      <DependentUpon>frmPhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From\frmSach_NXB.resx">
       <DependentUpon>frmSach_NXB.cs</DependentUpon>
