@@ -1,0 +1,77 @@
+F:\GitHub\QR\CreateQR\CreateQR\bin\Debug\CreateQR.exe.config
+F:\GitHub\QR\CreateQR\CreateQR\bin\Debug\CreateQR.exe
+F:\GitHub\QR\CreateQR\CreateQR\bin\Debug\CreateQR.pdb
+F:\GitHub\QR\CreateQR\CreateQR\obj\Debug\CreateQR.csprojAssemblyReference.cache
+F:\GitHub\QR\CreateQR\CreateQR\obj\Debug\CreateQR.Form1.resources
+F:\GitHub\QR\CreateQR\CreateQR\obj\Debug\CreateQR.Properties.Resources.resources
+F:\GitHub\QR\CreateQR\CreateQR\obj\Debug\CreateQR.csproj.GenerateResource.cache
+F:\GitHub\QR\CreateQR\CreateQR\obj\Debug\CreateQR.csproj.CoreCompileInputs.cache
+F:\GitHub\QR\CreateQR\CreateQR\obj\Debug\CreateQR.exe
+F:\GitHub\QR\CreateQR\CreateQR\obj\Debug\CreateQR.pdb
+F:\GitHub\QR\CreateQR\CreateQR\bin\Debug\QRCoder.dll
+F:\GitHub\QR\CreateQR\CreateQR\bin\Debug\zxing.dll
+F:\GitHub\QR\CreateQR\CreateQR\obj\Debug\CreateQR.csproj.CopyComplete
+F:\GitHub\QR\CreateQR\CreateQR\bin\Debug\AForge.dll
+F:\GitHub\QR\CreateQR\CreateQR\bin\Debug\AForge.Video.DirectShow.dll
+F:\GitHub\QR\CreateQR\CreateQR\bin\Debug\AForge.Video.dll
+F:\GitHub\QR\CreateQR\CreateQR\bin\Debug\AForge.xml
+F:\GitHub\QR\CreateQR\CreateQR\bin\Debug\AForge.Video.xml
+F:\GitHub\QR\CreateQR\CreateQR\bin\Debug\AForge.Video.DirectShow.xml
+F:\GitHub\QR\CreateQR\CreateQR\bin\Debug\zxing.presentation.dll
+F:\GitHub\QR\CreateQR\CreateQR\bin\Debug\zxing.xml
+F:\GitHub\QR\CreateQR\CreateQR\bin\Debug\zxing.presentation.xml
+C:\Users\Admin\OneDrive\Máy tính\CreateQR\CreateQR\CreateQR\bin\Debug\CreateQR.exe.config
+C:\Users\Admin\OneDrive\Máy tính\CreateQR\CreateQR\CreateQR\bin\Debug\CreateQR.exe
+C:\Users\Admin\OneDrive\Máy tính\CreateQR\CreateQR\CreateQR\bin\Debug\CreateQR.pdb
+C:\Users\Admin\OneDrive\Máy tính\CreateQR\CreateQR\CreateQR\bin\Debug\AForge.dll
+C:\Users\Admin\OneDrive\Máy tính\CreateQR\CreateQR\CreateQR\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\Admin\OneDrive\Máy tính\CreateQR\CreateQR\CreateQR\bin\Debug\AForge.Video.dll
+C:\Users\Admin\OneDrive\Máy tính\CreateQR\CreateQR\CreateQR\bin\Debug\QRCoder.dll
+C:\Users\Admin\OneDrive\Máy tính\CreateQR\CreateQR\CreateQR\bin\Debug\zxing.dll
+C:\Users\Admin\OneDrive\Máy tính\CreateQR\CreateQR\CreateQR\bin\Debug\zxing.presentation.dll
+C:\Users\Admin\OneDrive\Máy tính\CreateQR\CreateQR\CreateQR\bin\Debug\AForge.xml
+C:\Users\Admin\OneDrive\Máy tính\CreateQR\CreateQR\CreateQR\bin\Debug\AForge.Video.xml
+C:\Users\Admin\OneDrive\Máy tính\CreateQR\CreateQR\CreateQR\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\Admin\OneDrive\Máy tính\CreateQR\CreateQR\CreateQR\bin\Debug\zxing.xml
+C:\Users\Admin\OneDrive\Máy tính\CreateQR\CreateQR\CreateQR\bin\Debug\zxing.presentation.xml
+C:\Users\Admin\OneDrive\Máy tính\CreateQR\CreateQR\CreateQR\obj\Debug\CreateQR.csprojAssemblyReference.cache
+C:\Users\Admin\OneDrive\Máy tính\CreateQR\CreateQR\CreateQR\obj\Debug\CreateQR.Form1.resources
+C:\Users\Admin\OneDrive\Máy tính\CreateQR\CreateQR\CreateQR\obj\Debug\CreateQR.Properties.Resources.resources
+C:\Users\Admin\OneDrive\Máy tính\CreateQR\CreateQR\CreateQR\obj\Debug\CreateQR.csproj.GenerateResource.cache
+C:\Users\Admin\OneDrive\Máy tính\CreateQR\CreateQR\CreateQR\obj\Debug\CreateQR.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive\Máy tính\CreateQR\CreateQR\CreateQR\obj\Debug\CreateQR.csproj.CopyComplete
+C:\Users\Admin\OneDrive\Máy tính\CreateQR\CreateQR\CreateQR\obj\Debug\CreateQR.exe
+C:\Users\Admin\OneDrive\Máy tính\CreateQR\CreateQR\CreateQR\obj\Debug\CreateQR.pdb
+F:\CreateQR\CreateQR\bin\Debug\CreateQR.exe.config
+F:\CreateQR\CreateQR\bin\Debug\CreateQR.exe
+F:\CreateQR\CreateQR\bin\Debug\CreateQR.pdb
+F:\CreateQR\CreateQR\bin\Debug\AForge.dll
+F:\CreateQR\CreateQR\bin\Debug\AForge.Video.DirectShow.dll
+F:\CreateQR\CreateQR\bin\Debug\AForge.Video.dll
+F:\CreateQR\CreateQR\bin\Debug\QRCoder.dll
+F:\CreateQR\CreateQR\bin\Debug\zxing.dll
+F:\CreateQR\CreateQR\bin\Debug\zxing.presentation.dll
+F:\CreateQR\CreateQR\bin\Debug\AForge.xml
+F:\CreateQR\CreateQR\bin\Debug\AForge.Video.xml
+F:\CreateQR\CreateQR\bin\Debug\AForge.Video.DirectShow.xml
+F:\CreateQR\CreateQR\bin\Debug\zxing.xml
+F:\CreateQR\CreateQR\bin\Debug\zxing.presentation.xml
+F:\CreateQR\CreateQR\obj\Debug\CreateQR.Form1.resources
+F:\CreateQR\CreateQR\obj\Debug\CreateQR.Properties.Resources.resources
+F:\CreateQR\CreateQR\obj\Debug\CreateQR.csproj.GenerateResource.cache
+F:\CreateQR\CreateQR\obj\Debug\CreateQR.csproj.CoreCompileInputs.cache
+F:\CreateQR\CreateQR\obj\Debug\CreateQR.csproj.CopyComplete
+F:\CreateQR\CreateQR\obj\Debug\CreateQR.exe
+F:\CreateQR\CreateQR\obj\Debug\CreateQR.pdb
+F:\CreateQR\CreateQR\bin\Debug\x86\sqlite3.dll
+F:\CreateQR\CreateQR\bin\Debug\x64\sqlite3.dll
+F:\CreateQR\CreateQR\bin\Debug\EntityFramework.dll
+F:\CreateQR\CreateQR\bin\Debug\EntityFramework.SqlServer.dll
+F:\CreateQR\CreateQR\bin\Debug\System.Data.SQLite.dll
+F:\CreateQR\CreateQR\bin\Debug\System.Data.SQLite.EF6.dll
+F:\CreateQR\CreateQR\bin\Debug\System.Data.SQLite.Linq.dll
+F:\CreateQR\CreateQR\bin\Debug\EntityFramework.xml
+F:\CreateQR\CreateQR\bin\Debug\EntityFramework.SqlServer.xml
+F:\CreateQR\CreateQR\bin\Debug\System.Data.SQLite.xml
+F:\CreateQR\CreateQR\bin\Debug\QLGPLX.db
+F:\CreateQR\CreateQR\obj\Debug\CreateQR.csprojAssemblyReference.cache
