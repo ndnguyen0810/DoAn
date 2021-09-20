@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoaiSach_ViTri));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
             this.gwVT = new DevExpress.XtraGrid.GridControl();
@@ -93,8 +94,8 @@
             // tablePanel1
             // 
             this.tablePanel1.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 31.16F),
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 28.84F)});
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 30.26F),
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 29.74F)});
             this.tablePanel1.Controls.Add(this.gwVT);
             this.tablePanel1.Controls.Add(this.gwLoaiSach);
             this.tablePanel1.Controls.Add(this.gctLoaisach);
@@ -111,11 +112,11 @@
             // 
             this.tablePanel1.SetColumn(this.gwVT, 1);
             this.gwVT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gwVT.Location = new System.Drawing.Point(644, 240);
+            this.gwVT.Location = new System.Drawing.Point(626, 153);
             this.gwVT.MainView = this.gridView2;
             this.gwVT.Name = "gwVT";
             this.tablePanel1.SetRow(this.gwVT, 1);
-            this.gwVT.Size = new System.Drawing.Size(588, 431);
+            this.gwVT.Size = new System.Drawing.Size(606, 518);
             this.gwVT.TabIndex = 3;
             this.gwVT.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -124,16 +125,21 @@
             // 
             this.gridView2.GridControl = this.gwVT;
             this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsFind.AlwaysVisible = true;
+            this.gridView2.OptionsFind.FindNullPrompt = "Bạn cần tìm gì ở đây...";
+            this.gridView2.OptionsFind.FindPanelLocation = DevExpress.XtraGrid.Views.Grid.GridFindPanelLocation.Panel;
+            this.gridView2.OptionsFind.ShowFindButton = false;
+            this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
             // gwLoaiSach
             // 
             this.tablePanel1.SetColumn(this.gwLoaiSach, 0);
             this.gwLoaiSach.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gwLoaiSach.Location = new System.Drawing.Point(3, 240);
+            this.gwLoaiSach.Location = new System.Drawing.Point(3, 153);
             this.gwLoaiSach.MainView = this.gridView1;
             this.gwLoaiSach.Name = "gwLoaiSach";
             this.tablePanel1.SetRow(this.gwLoaiSach, 1);
-            this.gwLoaiSach.Size = new System.Drawing.Size(635, 431);
+            this.gwLoaiSach.Size = new System.Drawing.Size(617, 518);
             this.gwLoaiSach.TabIndex = 2;
             this.gwLoaiSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -142,6 +148,11 @@
             // 
             this.gridView1.GridControl = this.gwLoaiSach;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsFind.AlwaysVisible = true;
+            this.gridView1.OptionsFind.FindNullPrompt = "Bạn cần tìm gì ở đây...";
+            this.gridView1.OptionsFind.FindPanelLocation = DevExpress.XtraGrid.Views.Grid.GridFindPanelLocation.Panel;
+            this.gridView1.OptionsFind.ShowFindButton = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // gctLoaisach
             // 
@@ -157,7 +168,7 @@
             this.gctLoaisach.Location = new System.Drawing.Point(3, 3);
             this.gctLoaisach.Name = "gctLoaisach";
             this.tablePanel1.SetRow(this.gctLoaisach, 0);
-            this.gctLoaisach.Size = new System.Drawing.Size(635, 231);
+            this.gctLoaisach.Size = new System.Drawing.Size(617, 144);
             this.gctLoaisach.TabIndex = 0;
             this.gctLoaisach.Text = "Loại Sách";
             // 
@@ -165,9 +176,10 @@
             // 
             this.btnLamMoiLS.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.btnLamMoiLS.Appearance.Options.UseFont = true;
-            this.btnLamMoiLS.Location = new System.Drawing.Point(379, 179);
+            this.btnLamMoiLS.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLamMoiLS.ImageOptions.SvgImage")));
+            this.btnLamMoiLS.Location = new System.Drawing.Point(403, 97);
             this.btnLamMoiLS.Name = "btnLamMoiLS";
-            this.btnLamMoiLS.Size = new System.Drawing.Size(83, 30);
+            this.btnLamMoiLS.Size = new System.Drawing.Size(100, 30);
             this.btnLamMoiLS.TabIndex = 2;
             this.btnLamMoiLS.Text = "Làm mới";
             // 
@@ -175,9 +187,10 @@
             // 
             this.btnXoaLS.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.btnXoaLS.Appearance.Options.UseFont = true;
-            this.btnXoaLS.Location = new System.Drawing.Point(379, 138);
+            this.btnXoaLS.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnXoaLS.ImageOptions.SvgImage")));
+            this.btnXoaLS.Location = new System.Drawing.Point(281, 97);
             this.btnXoaLS.Name = "btnXoaLS";
-            this.btnXoaLS.Size = new System.Drawing.Size(83, 30);
+            this.btnXoaLS.Size = new System.Drawing.Size(100, 30);
             this.btnXoaLS.TabIndex = 2;
             this.btnXoaLS.Text = "Xoá";
             // 
@@ -185,9 +198,10 @@
             // 
             this.btnSuaLS.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.btnSuaLS.Appearance.Options.UseFont = true;
-            this.btnSuaLS.Location = new System.Drawing.Point(379, 97);
+            this.btnSuaLS.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSuaLS.ImageOptions.SvgImage")));
+            this.btnSuaLS.Location = new System.Drawing.Point(161, 97);
             this.btnSuaLS.Name = "btnSuaLS";
-            this.btnSuaLS.Size = new System.Drawing.Size(83, 30);
+            this.btnSuaLS.Size = new System.Drawing.Size(100, 30);
             this.btnSuaLS.TabIndex = 2;
             this.btnSuaLS.Text = "Sửa";
             // 
@@ -195,9 +209,10 @@
             // 
             this.btnThemLS.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.btnThemLS.Appearance.Options.UseFont = true;
-            this.btnThemLS.Location = new System.Drawing.Point(379, 56);
+            this.btnThemLS.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnThemLS.ImageOptions.SvgImage")));
+            this.btnThemLS.Location = new System.Drawing.Point(39, 97);
             this.btnThemLS.Name = "btnThemLS";
-            this.btnThemLS.Size = new System.Drawing.Size(83, 30);
+            this.btnThemLS.Size = new System.Drawing.Size(100, 30);
             this.btnThemLS.TabIndex = 2;
             this.btnThemLS.Text = "Thêm";
             // 
@@ -205,7 +220,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(45, 104);
+            this.labelControl2.Location = new System.Drawing.Point(39, 69);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(46, 17);
             this.labelControl2.TabIndex = 1;
@@ -213,7 +228,7 @@
             // 
             // txtTenLoaiSach
             // 
-            this.txtTenLoaiSach.Location = new System.Drawing.Point(112, 101);
+            this.txtTenLoaiSach.Location = new System.Drawing.Point(106, 66);
             this.txtTenLoaiSach.Name = "txtTenLoaiSach";
             this.txtTenLoaiSach.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtTenLoaiSach.Properties.Appearance.Options.UseFont = true;
@@ -224,7 +239,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(45, 59);
+            this.labelControl1.Location = new System.Drawing.Point(39, 38);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(40, 17);
             this.labelControl1.TabIndex = 1;
@@ -232,7 +247,7 @@
             // 
             // txtMaLoaiSach
             // 
-            this.txtMaLoaiSach.Location = new System.Drawing.Point(112, 56);
+            this.txtMaLoaiSach.Location = new System.Drawing.Point(106, 35);
             this.txtMaLoaiSach.Name = "txtMaLoaiSach";
             this.txtMaLoaiSach.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtMaLoaiSach.Properties.Appearance.Options.UseFont = true;
@@ -250,10 +265,10 @@
             this.groupControl3.Controls.Add(this.txtTenVT);
             this.groupControl3.Controls.Add(this.btnThemNXB);
             this.groupControl3.Controls.Add(this.labelControl4);
-            this.groupControl3.Location = new System.Drawing.Point(644, 3);
+            this.groupControl3.Location = new System.Drawing.Point(626, 3);
             this.groupControl3.Name = "groupControl3";
             this.tablePanel1.SetRow(this.groupControl3, 0);
-            this.groupControl3.Size = new System.Drawing.Size(588, 231);
+            this.groupControl3.Size = new System.Drawing.Size(606, 144);
             this.groupControl3.TabIndex = 0;
             this.groupControl3.Text = "Vị Trí";
             // 
@@ -261,9 +276,10 @@
             // 
             this.btnLamMoiNXB.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.btnLamMoiNXB.Appearance.Options.UseFont = true;
-            this.btnLamMoiNXB.Location = new System.Drawing.Point(438, 179);
+            this.btnLamMoiNXB.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLamMoiNXB.ImageOptions.SvgImage")));
+            this.btnLamMoiNXB.Location = new System.Drawing.Point(415, 97);
             this.btnLamMoiNXB.Name = "btnLamMoiNXB";
-            this.btnLamMoiNXB.Size = new System.Drawing.Size(83, 30);
+            this.btnLamMoiNXB.Size = new System.Drawing.Size(100, 30);
             this.btnLamMoiNXB.TabIndex = 2;
             this.btnLamMoiNXB.Text = "Làm mới";
             // 
@@ -271,7 +287,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(66, 48);
+            this.labelControl3.Location = new System.Drawing.Point(66, 38);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(47, 17);
             this.labelControl3.TabIndex = 1;
@@ -281,15 +297,16 @@
             // 
             this.btnXoaNXB.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.btnXoaNXB.Appearance.Options.UseFont = true;
-            this.btnXoaNXB.Location = new System.Drawing.Point(438, 138);
+            this.btnXoaNXB.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnXoaNXB.ImageOptions.SvgImage")));
+            this.btnXoaNXB.Location = new System.Drawing.Point(299, 97);
             this.btnXoaNXB.Name = "btnXoaNXB";
-            this.btnXoaNXB.Size = new System.Drawing.Size(83, 30);
+            this.btnXoaNXB.Size = new System.Drawing.Size(100, 30);
             this.btnXoaNXB.TabIndex = 2;
             this.btnXoaNXB.Text = "Xoá";
             // 
             // txtMaVT
             // 
-            this.txtMaVT.Location = new System.Drawing.Point(140, 45);
+            this.txtMaVT.Location = new System.Drawing.Point(140, 33);
             this.txtMaVT.Name = "txtMaVT";
             this.txtMaVT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtMaVT.Properties.Appearance.Options.UseFont = true;
@@ -300,15 +317,16 @@
             // 
             this.btnSuaNXB.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.btnSuaNXB.Appearance.Options.UseFont = true;
-            this.btnSuaNXB.Location = new System.Drawing.Point(438, 91);
+            this.btnSuaNXB.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSuaNXB.ImageOptions.SvgImage")));
+            this.btnSuaNXB.Location = new System.Drawing.Point(182, 97);
             this.btnSuaNXB.Name = "btnSuaNXB";
-            this.btnSuaNXB.Size = new System.Drawing.Size(83, 30);
+            this.btnSuaNXB.Size = new System.Drawing.Size(100, 30);
             this.btnSuaNXB.TabIndex = 2;
             this.btnSuaNXB.Text = "Sửa";
             // 
             // txtTenVT
             // 
-            this.txtTenVT.Location = new System.Drawing.Point(140, 90);
+            this.txtTenVT.Location = new System.Drawing.Point(140, 64);
             this.txtTenVT.Name = "txtTenVT";
             this.txtTenVT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtTenVT.Properties.Appearance.Options.UseFont = true;
@@ -319,9 +337,10 @@
             // 
             this.btnThemNXB.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.btnThemNXB.Appearance.Options.UseFont = true;
-            this.btnThemNXB.Location = new System.Drawing.Point(438, 48);
+            this.btnThemNXB.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnThemNXB.ImageOptions.SvgImage")));
+            this.btnThemNXB.Location = new System.Drawing.Point(66, 97);
             this.btnThemNXB.Name = "btnThemNXB";
-            this.btnThemNXB.Size = new System.Drawing.Size(83, 30);
+            this.btnThemNXB.Size = new System.Drawing.Size(100, 30);
             this.btnThemNXB.TabIndex = 2;
             this.btnThemNXB.Text = "Thêm";
             // 
@@ -329,7 +348,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(66, 93);
+            this.labelControl4.Location = new System.Drawing.Point(66, 67);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(53, 17);
             this.labelControl4.TabIndex = 1;
@@ -372,7 +391,7 @@
             this.Font = new System.Drawing.Font("Tahoma", 10F);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmLoaiSach_ViTri";
-            this.Text = "Sách và Nhà xuất bản";
+            this.Text = "Loại sách";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();

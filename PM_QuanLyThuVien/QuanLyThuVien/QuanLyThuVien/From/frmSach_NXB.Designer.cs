@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSach_NXB));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
             this.gwNXB = new DevExpress.XtraGrid.GridControl();
@@ -56,21 +57,21 @@
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.txtEmail = new DevExpress.XtraEditors.TextEdit();
+            this.txtDiaChi = new DevExpress.XtraEditors.TextEdit();
             this.txtMaNXB = new DevExpress.XtraEditors.TextEdit();
+            this.txtWeb = new DevExpress.XtraEditors.TextEdit();
+            this.txtSDT = new DevExpress.XtraEditors.TextEdit();
             this.txtTenNXB = new DevExpress.XtraEditors.TextEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSDT = new DevExpress.XtraEditors.TextEdit();
-            this.txtDiaChi = new DevExpress.XtraEditors.TextEdit();
-            this.txtWeb = new DevExpress.XtraEditors.TextEdit();
-            this.txtEmail = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
@@ -89,15 +90,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMaSach.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaNXB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWeb.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenNXB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWeb.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -148,6 +149,10 @@
             // 
             this.gridView2.GridControl = this.gwNXB;
             this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsFind.AlwaysVisible = true;
+            this.gridView2.OptionsFind.FindNullPrompt = "Bạn cần tìm gì ở đây...";
+            this.gridView2.OptionsFind.FindPanelLocation = DevExpress.XtraGrid.Views.Grid.GridFindPanelLocation.Panel;
+            this.gridView2.OptionsFind.ShowFindButton = false;
             // 
             // gwSach
             // 
@@ -166,6 +171,10 @@
             // 
             this.gridView1.GridControl = this.gwSach;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsFind.AlwaysVisible = true;
+            this.gridView1.OptionsFind.FindNullPrompt = "Bạn cần tìm gì ở đây...";
+            this.gridView1.OptionsFind.FindPanelLocation = DevExpress.XtraGrid.Views.Grid.GridFindPanelLocation.Panel;
+            this.gridView1.OptionsFind.ShowFindButton = false;
             // 
             // gctLoaisach
             // 
@@ -197,9 +206,10 @@
             // 
             this.simpleButton4.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.simpleButton4.Appearance.Options.UseFont = true;
+            this.simpleButton4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton4.ImageOptions.SvgImage")));
             this.simpleButton4.Location = new System.Drawing.Point(417, 170);
             this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(83, 30);
+            this.simpleButton4.Size = new System.Drawing.Size(100, 30);
             this.simpleButton4.TabIndex = 2;
             this.simpleButton4.Text = "Làm mới";
             // 
@@ -207,9 +217,10 @@
             // 
             this.simpleButton3.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.simpleButton3.Appearance.Options.UseFont = true;
+            this.simpleButton3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton3.ImageOptions.SvgImage")));
             this.simpleButton3.Location = new System.Drawing.Point(417, 130);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(83, 30);
+            this.simpleButton3.Size = new System.Drawing.Size(100, 30);
             this.simpleButton3.TabIndex = 2;
             this.simpleButton3.Text = "Xoá";
             // 
@@ -217,9 +228,10 @@
             // 
             this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
             this.simpleButton2.Location = new System.Drawing.Point(417, 90);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(83, 30);
+            this.simpleButton2.Size = new System.Drawing.Size(100, 30);
             this.simpleButton2.TabIndex = 2;
             this.simpleButton2.Text = "Sửa";
             // 
@@ -227,9 +239,10 @@
             // 
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
             this.simpleButton1.Location = new System.Drawing.Point(417, 50);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(83, 30);
+            this.simpleButton1.Size = new System.Drawing.Size(100, 30);
             this.simpleButton1.TabIndex = 2;
             this.simpleButton1.Text = "Thêm";
             // 
@@ -377,9 +390,10 @@
             // 
             this.simpleButton8.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.simpleButton8.Appearance.Options.UseFont = true;
+            this.simpleButton8.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton8.ImageOptions.SvgImage")));
             this.simpleButton8.Location = new System.Drawing.Point(383, 170);
             this.simpleButton8.Name = "simpleButton8";
-            this.simpleButton8.Size = new System.Drawing.Size(83, 30);
+            this.simpleButton8.Size = new System.Drawing.Size(100, 30);
             this.simpleButton8.TabIndex = 2;
             this.simpleButton8.Text = "Làm mới";
             // 
@@ -387,9 +401,10 @@
             // 
             this.simpleButton5.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.simpleButton5.Appearance.Options.UseFont = true;
+            this.simpleButton5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton5.ImageOptions.SvgImage")));
             this.simpleButton5.Location = new System.Drawing.Point(383, 51);
             this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(83, 30);
+            this.simpleButton5.Size = new System.Drawing.Size(100, 30);
             this.simpleButton5.TabIndex = 2;
             this.simpleButton5.Text = "Thêm";
             // 
@@ -397,9 +412,10 @@
             // 
             this.simpleButton7.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.simpleButton7.Appearance.Options.UseFont = true;
+            this.simpleButton7.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton7.ImageOptions.SvgImage")));
             this.simpleButton7.Location = new System.Drawing.Point(383, 130);
             this.simpleButton7.Name = "simpleButton7";
-            this.simpleButton7.Size = new System.Drawing.Size(83, 30);
+            this.simpleButton7.Size = new System.Drawing.Size(100, 30);
             this.simpleButton7.TabIndex = 2;
             this.simpleButton7.Text = "Xoá";
             // 
@@ -407,11 +423,52 @@
             // 
             this.simpleButton6.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.simpleButton6.Appearance.Options.UseFont = true;
+            this.simpleButton6.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton6.ImageOptions.SvgImage")));
             this.simpleButton6.Location = new System.Drawing.Point(383, 90);
             this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.Size = new System.Drawing.Size(83, 30);
+            this.simpleButton6.Size = new System.Drawing.Size(100, 30);
             this.simpleButton6.TabIndex = 2;
             this.simpleButton6.Text = "Sửa";
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelControl12.Appearance.Options.UseFont = true;
+            this.labelControl12.Location = new System.Drawing.Point(50, 205);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(48, 16);
+            this.labelControl12.TabIndex = 1;
+            this.labelControl12.Text = "Websize";
+            // 
+            // labelControl11
+            // 
+            this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelControl11.Appearance.Options.UseFont = true;
+            this.labelControl11.Location = new System.Drawing.Point(50, 170);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(31, 16);
+            this.labelControl11.TabIndex = 1;
+            this.labelControl11.Text = "Email";
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelControl10.Appearance.Options.UseFont = true;
+            this.labelControl10.Location = new System.Drawing.Point(50, 135);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(79, 17);
+            this.labelControl10.TabIndex = 1;
+            this.labelControl10.Text = "Số điện thoại";
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelControl9.Appearance.Options.UseFont = true;
+            this.labelControl9.Location = new System.Drawing.Point(50, 100);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(40, 17);
+            this.labelControl9.TabIndex = 1;
+            this.labelControl9.Text = "Địa chỉ";
             // 
             // labelControl8
             // 
@@ -433,6 +490,24 @@
             this.labelControl7.TabIndex = 1;
             this.labelControl7.Text = "Mã NXB";
             // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(143, 167);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txtEmail.Properties.Appearance.Options.UseFont = true;
+            this.txtEmail.Size = new System.Drawing.Size(212, 22);
+            this.txtEmail.TabIndex = 0;
+            // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.Location = new System.Drawing.Point(143, 97);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txtDiaChi.Properties.Appearance.Options.UseFont = true;
+            this.txtDiaChi.Size = new System.Drawing.Size(212, 22);
+            this.txtDiaChi.TabIndex = 0;
+            // 
             // txtMaNXB
             // 
             this.txtMaNXB.Location = new System.Drawing.Point(143, 27);
@@ -441,6 +516,24 @@
             this.txtMaNXB.Properties.Appearance.Options.UseFont = true;
             this.txtMaNXB.Size = new System.Drawing.Size(212, 22);
             this.txtMaNXB.TabIndex = 0;
+            // 
+            // txtWeb
+            // 
+            this.txtWeb.Location = new System.Drawing.Point(143, 202);
+            this.txtWeb.Name = "txtWeb";
+            this.txtWeb.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txtWeb.Properties.Appearance.Options.UseFont = true;
+            this.txtWeb.Size = new System.Drawing.Size(212, 22);
+            this.txtWeb.TabIndex = 0;
+            // 
+            // txtSDT
+            // 
+            this.txtSDT.Location = new System.Drawing.Point(143, 132);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txtSDT.Properties.Appearance.Options.UseFont = true;
+            this.txtSDT.Size = new System.Drawing.Size(212, 22);
+            this.txtSDT.TabIndex = 0;
             // 
             // txtTenNXB
             // 
@@ -478,82 +571,6 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // labelControl9
-            // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(50, 100);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(40, 17);
-            this.labelControl9.TabIndex = 1;
-            this.labelControl9.Text = "Địa chỉ";
-            // 
-            // labelControl10
-            // 
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Location = new System.Drawing.Point(50, 135);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(79, 17);
-            this.labelControl10.TabIndex = 1;
-            this.labelControl10.Text = "Số điện thoại";
-            // 
-            // labelControl11
-            // 
-            this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl11.Appearance.Options.UseFont = true;
-            this.labelControl11.Location = new System.Drawing.Point(50, 170);
-            this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(31, 16);
-            this.labelControl11.TabIndex = 1;
-            this.labelControl11.Text = "Email";
-            // 
-            // labelControl12
-            // 
-            this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl12.Appearance.Options.UseFont = true;
-            this.labelControl12.Location = new System.Drawing.Point(50, 205);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(48, 16);
-            this.labelControl12.TabIndex = 1;
-            this.labelControl12.Text = "Websize";
-            // 
-            // txtSDT
-            // 
-            this.txtSDT.Location = new System.Drawing.Point(143, 132);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtSDT.Properties.Appearance.Options.UseFont = true;
-            this.txtSDT.Size = new System.Drawing.Size(212, 22);
-            this.txtSDT.TabIndex = 0;
-            // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.Location = new System.Drawing.Point(143, 97);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtDiaChi.Properties.Appearance.Options.UseFont = true;
-            this.txtDiaChi.Size = new System.Drawing.Size(212, 22);
-            this.txtDiaChi.TabIndex = 0;
-            // 
-            // txtWeb
-            // 
-            this.txtWeb.Location = new System.Drawing.Point(143, 202);
-            this.txtWeb.Name = "txtWeb";
-            this.txtWeb.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtWeb.Properties.Appearance.Options.UseFont = true;
-            this.txtWeb.Size = new System.Drawing.Size(212, 22);
-            this.txtWeb.TabIndex = 0;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(143, 167);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtEmail.Properties.Appearance.Options.UseFont = true;
-            this.txtEmail.Size = new System.Drawing.Size(212, 22);
-            this.txtEmail.TabIndex = 0;
-            // 
             // frmSach_NXB
             // 
             this.Appearance.Options.UseFont = true;
@@ -562,9 +579,10 @@
             this.ClientSize = new System.Drawing.Size(1192, 698);
             this.Controls.Add(this.layoutControl1);
             this.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("frmSach_NXB.IconOptions.SvgImage")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmSach_NXB";
-            this.Text = "Sách và Vị trí";
+            this.Text = "Sách";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
@@ -585,15 +603,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             this.groupControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaNXB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWeb.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenNXB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWeb.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
