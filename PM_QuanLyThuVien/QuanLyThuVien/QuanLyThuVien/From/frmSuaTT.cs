@@ -17,5 +17,20 @@ namespace QuanLyThuVien.From
         {
             InitializeComponent();
         }
+
+        private void txtOldPass_Properties_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNewPass_Properties_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtReNewPass_Properties_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
