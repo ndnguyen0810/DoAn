@@ -17,5 +17,38 @@ namespace QuanLyThuVien.From
         {
             InitializeComponent();
         }
+
+        connection con = new connection();
+        string querySach;// = "select * from book";
+        string queryNXB; //= "select * from booktype";
+
+
+        private void loadNXBOnSach()
+        {
+            //DataTable dt = con.readData(sqlRBT);
+            //if (dt != null)
+            //{
+            //    lueLoaiSach.Properties.DataSource = dt;
+            //    lueLoaiSach.Properties.DisplayMember = "booktypename";
+            //    lueLoaiSach.Properties.ValueMember = "id_booktype";
+            //}
+        }
+
+        private void loadSach()
+        {
+            //DataTable dt = con.readData(sqlR);
+            //if (dt != null)
+            //{
+            //    gcSach.DataSource = dt;
+            //}
+        }
+        private void loadNXB()
+        {
+            //DataTable dt = con.readData(sqlR);
+            //if (dt != null)
+            //{
+            //    gcSach.DataSource = dt;
+            //}
+        }
     }
 }

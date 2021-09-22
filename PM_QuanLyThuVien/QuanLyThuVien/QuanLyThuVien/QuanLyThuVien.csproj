@@ -125,6 +125,12 @@
     <Compile Include="From\frmHome.Designer.cs">
       <DependentUpon>frmHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="From\frmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From\frmNhanVien.Designer.cs">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="From\frmPhieuMuon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,11 +179,23 @@
     <Compile Include="From\frmSuaTT.Designer.cs">
       <DependentUpon>frmSuaTT.cs</DependentUpon>
     </Compile>
+    <Compile Include="From\frmThanhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From\frmThanhVien.Designer.cs">
+      <DependentUpon>frmThanhVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="From\frmThemTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="From\frmThemTaiKhoan.Designer.cs">
       <DependentUpon>frmThemTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="From\frmThongTinPhanMem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From\frmThongTinPhanMem.Designer.cs">
+      <DependentUpon>frmThongTinPhanMem.cs</DependentUpon>
     </Compile>
     <Compile Include="From\frmTimKiemDocGia.cs">
       <SubType>Form</SubType>
@@ -211,11 +229,17 @@
     <EmbeddedResource Include="From\frmDocGia.resx">
       <DependentUpon>frmDocGia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="From\frmDocGiaDangMuon.resx">
+      <DependentUpon>frmDocGiaDangMuon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="From\frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From\frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="From\frmNhanVien.resx">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From\frmPhieuMuon.resx">
       <DependentUpon>frmPhieuMuon.cs</DependentUpon>
@@ -241,8 +265,23 @@
     <EmbeddedResource Include="From\frmSuaTT.resx">
       <DependentUpon>frmSuaTT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="From\frmThanhVien.resx">
+      <DependentUpon>frmThanhVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="From\frmThemTaiKhoan.resx">
       <DependentUpon>frmThemTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="From\frmThongTinPhanMem.resx">
+      <DependentUpon>frmThongTinPhanMem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="From\frmTimKiemDocGia.resx">
+      <DependentUpon>frmTimKiemDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="From\frmTimKiemNhanVien.resx">
+      <DependentUpon>frmTimKiemNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="From\frmTimKiemSach.resx">
+      <DependentUpon>frmTimKiemSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From\frmTraSach.resx">
       <DependentUpon>frmTraSach.cs</DependentUpon>

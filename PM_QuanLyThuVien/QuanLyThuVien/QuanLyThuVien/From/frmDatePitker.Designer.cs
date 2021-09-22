@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDatePitker));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnHUy = new DevExpress.XtraEditors.SimpleButton();
             this.btnChon = new DevExpress.XtraEditors.SimpleButton();
@@ -38,16 +39,18 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(37, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(135, 16);
+            this.labelControl1.Size = new System.Drawing.Size(151, 17);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Chọn ngày hẹn trả sách";
             // 
             // btnHUy
             // 
+            this.btnHUy.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHUy.Appearance.Options.UseFont = true;
             this.btnHUy.Location = new System.Drawing.Point(37, 55);
             this.btnHUy.Name = "btnHUy";
             this.btnHUy.Size = new System.Drawing.Size(75, 23);
@@ -57,6 +60,8 @@
             // 
             // btnChon
             // 
+            this.btnChon.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChon.Appearance.Options.UseFont = true;
             this.btnChon.Location = new System.Drawing.Point(155, 55);
             this.btnChon.Name = "btnChon";
             this.btnChon.Size = new System.Drawing.Size(75, 23);
@@ -69,14 +74,15 @@
             this.txtHanTra.EditValue = null;
             this.txtHanTra.Location = new System.Drawing.Point(37, 26);
             this.txtHanTra.Name = "txtHanTra";
+            this.txtHanTra.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHanTra.Properties.Appearance.Options.UseFont = true;
             this.txtHanTra.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtHanTra.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtHanTra.Properties.EditFormat.FormatString = "dd/mm/yyyy";
             this.txtHanTra.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.txtHanTra.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.txtHanTra.Size = new System.Drawing.Size(193, 20);
+            this.txtHanTra.Size = new System.Drawing.Size(193, 22);
             this.txtHanTra.TabIndex = 3;
             // 
             // frmDatePitker
@@ -88,6 +94,7 @@
             this.Controls.Add(this.btnHUy);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.txtHanTra);
+            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("frmDatePitker.IconOptions.SvgImage")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmDatePitker";

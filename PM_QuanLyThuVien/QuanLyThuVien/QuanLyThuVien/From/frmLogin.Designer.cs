@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            this.txtTK = new DevExpress.XtraEditors.TextEdit();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.label2 = new System.Windows.Forms.Label();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnDangNhap = new DevExpress.XtraEditors.SimpleButton();
@@ -42,27 +41,20 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.imageEdit1 = new DevExpress.XtraEditors.PictureEdit();
-            this.txtMK = new DevExpress.XtraEditors.ButtonEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTK.Properties)).BeginInit();
+            this.txtUsername = new DevExpress.XtraEditors.TextEdit();
+            this.txtPass = new DevExpress.XtraEditors.ButtonEdit();
+            this.checkGhiNho = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.imageEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMK.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkGhiNho.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtTK
-            // 
-            this.txtTK.Location = new System.Drawing.Point(245, 80);
-            this.txtTK.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.txtTK.Name = "txtTK";
-            this.txtTK.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTK.Properties.Appearance.Options.UseFont = true;
-            this.txtTK.Size = new System.Drawing.Size(215, 26);
-            this.txtTK.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(166, 19);
+            this.label2.Location = new System.Drawing.Point(123, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(268, 31);
             this.label2.TabIndex = 2;
@@ -72,7 +64,7 @@
             // 
             this.btnXoa.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Appearance.Options.UseFont = true;
-            this.btnXoa.Location = new System.Drawing.Point(126, 179);
+            this.btnXoa.Location = new System.Drawing.Point(103, 174);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(94, 34);
             this.btnXoa.TabIndex = 4;
@@ -83,27 +75,29 @@
             // 
             this.btnDangNhap.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.Appearance.Options.UseFont = true;
-            this.btnDangNhap.Location = new System.Drawing.Point(245, 179);
+            this.btnDangNhap.Location = new System.Drawing.Point(222, 174);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(94, 34);
             this.btnDangNhap.TabIndex = 4;
             this.btnDangNhap.Text = "Đăng Nhập";
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // btnThoat
             // 
             this.btnThoat.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Appearance.Options.UseFont = true;
-            this.btnThoat.Location = new System.Drawing.Point(365, 179);
+            this.btnThoat.Location = new System.Drawing.Point(342, 174);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(94, 34);
             this.btnThoat.TabIndex = 4;
             this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(129, 117);
+            this.labelControl1.Location = new System.Drawing.Point(132, 108);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(66, 20);
             this.labelControl1.TabIndex = 5;
@@ -113,7 +107,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(126, 83);
+            this.labelControl2.Location = new System.Drawing.Point(129, 74);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(69, 20);
             this.labelControl2.TabIndex = 5;
@@ -122,7 +116,7 @@
             // imageEdit1
             // 
             this.imageEdit1.EditValue = ((object)(resources.GetObject("imageEdit1.EditValue")));
-            this.imageEdit1.Location = new System.Drawing.Point(9, 57);
+            this.imageEdit1.Location = new System.Drawing.Point(12, 48);
             this.imageEdit1.Name = "imageEdit1";
             this.imageEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.imageEdit1.Properties.Appearance.Options.UseBackColor = true;
@@ -133,52 +127,74 @@
             this.imageEdit1.TabIndex = 6;
             this.imageEdit1.TabStop = true;
             // 
-            // txtMK
+            // txtUsername
             // 
-            this.txtMK.Location = new System.Drawing.Point(244, 114);
-            this.txtMK.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
-            this.txtMK.Name = "txtMK";
-            this.txtMK.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMK.Properties.Appearance.Options.UseFont = true;
-            editorButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions1.SvgImage")));
-            this.txtMK.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.txtMK.Properties.Padding = new System.Windows.Forms.Padding(1);
-            this.txtMK.Size = new System.Drawing.Size(215, 40);
-            this.txtMK.TabIndex = 3;
-            this.txtMK.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtMK_ButtonClick);
+            this.txtUsername.Location = new System.Drawing.Point(222, 71);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Properties.Appearance.Options.UseFont = true;
+            this.txtUsername.Size = new System.Drawing.Size(215, 26);
+            this.txtUsername.TabIndex = 2;
+            // 
+            // txtPass
+            // 
+            this.txtPass.Location = new System.Drawing.Point(222, 107);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Properties.Appearance.Options.UseFont = true;
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            this.txtPass.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.txtPass.Properties.UseSystemPasswordChar = true;
+            this.txtPass.Properties.Click += new System.EventHandler(this.txtReNewPass_Properties_Click);
+            this.txtPass.Size = new System.Drawing.Size(216, 22);
+            this.txtPass.TabIndex = 19;
+            // 
+            // checkGhiNho
+            // 
+            this.checkGhiNho.Location = new System.Drawing.Point(222, 134);
+            this.checkGhiNho.Name = "checkGhiNho";
+            this.checkGhiNho.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkGhiNho.Properties.Appearance.Options.UseFont = true;
+            this.checkGhiNho.Properties.Caption = "Ghi nhớ đăng nhập";
+            this.checkGhiNho.Size = new System.Drawing.Size(158, 21);
+            this.checkGhiNho.TabIndex = 20;
             // 
             // frmLogin
             // 
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 254);
+            this.ClientSize = new System.Drawing.Size(487, 220);
+            this.Controls.Add(this.checkGhiNho);
+            this.Controls.Add(this.txtPass);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtTK);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.imageEdit1);
-            this.Controls.Add(this.txtMK);
             this.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("frmLogin.IconOptions.SvgImage")));
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.MaximizeBox = false;
             this.Name = "frmLogin";
             this.Text = "Đăng Nhập";
-            ((System.ComponentModel.ISupportInitialize)(this.txtTK.Properties)).EndInit();
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.imageEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMK.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.checkGhiNho.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.TextEdit txtTK;
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.SimpleButton btnXoa;
         private DevExpress.XtraEditors.SimpleButton btnDangNhap;
@@ -186,6 +202,8 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.PictureEdit imageEdit1;
-        private DevExpress.XtraEditors.ButtonEdit txtMK;
+        private DevExpress.XtraEditors.TextEdit txtUsername;
+        private DevExpress.XtraEditors.ButtonEdit txtPass;
+        private DevExpress.XtraEditors.CheckEdit checkGhiNho;
     }
 }

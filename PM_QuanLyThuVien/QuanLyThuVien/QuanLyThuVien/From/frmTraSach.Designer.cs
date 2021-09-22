@@ -31,6 +31,7 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txtNgaySinh = new DevExpress.XtraEditors.DateEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txtEmail = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -42,7 +43,6 @@
             this.txtTenDG = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtMaDG = new DevExpress.XtraEditors.TextEdit();
-            this.txtNgaySinh = new DevExpress.XtraEditors.TextEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -63,12 +63,13 @@
             this.tablePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNgaySinh.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNgaySinh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenDG.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaDG.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNgaySinh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
@@ -96,7 +97,7 @@
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(1281, 239);
+            this.layoutControl1.Size = new System.Drawing.Size(1088, 239);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -111,12 +112,13 @@
             this.tablePanel1.Name = "tablePanel1";
             this.tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
-            this.tablePanel1.Size = new System.Drawing.Size(1257, 215);
+            this.tablePanel1.Size = new System.Drawing.Size(1064, 215);
             this.tablePanel1.TabIndex = 4;
             // 
             // groupControl1
             // 
             this.tablePanel1.SetColumn(this.groupControl1, 0);
+            this.groupControl1.Controls.Add(this.txtNgaySinh);
             this.groupControl1.Controls.Add(this.labelControl6);
             this.groupControl1.Controls.Add(this.txtEmail);
             this.groupControl1.Controls.Add(this.labelControl5);
@@ -128,14 +130,30 @@
             this.groupControl1.Controls.Add(this.txtTenDG);
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Controls.Add(this.txtMaDG);
-            this.groupControl1.Controls.Add(this.txtNgaySinh);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(3, 3);
             this.groupControl1.Name = "groupControl1";
             this.tablePanel1.SetRow(this.groupControl1, 0);
-            this.groupControl1.Size = new System.Drawing.Size(423, 209);
+            this.groupControl1.Size = new System.Drawing.Size(357, 209);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Thông tin độc giả";
+            // 
+            // txtNgaySinh
+            // 
+            this.txtNgaySinh.EditValue = null;
+            this.txtNgaySinh.Location = new System.Drawing.Point(124, 84);
+            this.txtNgaySinh.Name = "txtNgaySinh";
+            this.txtNgaySinh.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgaySinh.Properties.Appearance.Options.UseFont = true;
+            this.txtNgaySinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtNgaySinh.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtNgaySinh.Properties.EditFormat.FormatString = "dd/mm/yyyy";
+            this.txtNgaySinh.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.txtNgaySinh.Properties.ReadOnly = true;
+            this.txtNgaySinh.Size = new System.Drawing.Size(208, 22);
+            this.txtNgaySinh.TabIndex = 15;
             // 
             // labelControl6
             // 
@@ -153,6 +171,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Properties.Appearance.Options.UseFont = true;
+            this.txtEmail.Properties.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(208, 22);
             this.txtEmail.TabIndex = 4;
             // 
@@ -172,6 +191,7 @@
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT.Properties.Appearance.Options.UseFont = true;
+            this.txtSDT.Properties.ReadOnly = true;
             this.txtSDT.Size = new System.Drawing.Size(208, 22);
             this.txtSDT.TabIndex = 5;
             // 
@@ -191,6 +211,7 @@
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.Properties.Appearance.Options.UseFont = true;
+            this.txtDiaChi.Properties.ReadOnly = true;
             this.txtDiaChi.Size = new System.Drawing.Size(208, 22);
             this.txtDiaChi.TabIndex = 6;
             // 
@@ -220,6 +241,7 @@
             this.txtTenDG.Name = "txtTenDG";
             this.txtTenDG.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenDG.Properties.Appearance.Options.UseFont = true;
+            this.txtTenDG.Properties.ReadOnly = true;
             this.txtTenDG.Size = new System.Drawing.Size(208, 22);
             this.txtTenDG.TabIndex = 7;
             // 
@@ -239,38 +261,29 @@
             this.txtMaDG.Name = "txtMaDG";
             this.txtMaDG.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaDG.Properties.Appearance.Options.UseFont = true;
+            this.txtMaDG.Properties.ReadOnly = true;
             this.txtMaDG.Size = new System.Drawing.Size(208, 22);
             this.txtMaDG.TabIndex = 8;
-            // 
-            // txtNgaySinh
-            // 
-            this.txtNgaySinh.EditValue = new System.DateTime(2021, 9, 19, 9, 47, 27, 932);
-            this.txtNgaySinh.Location = new System.Drawing.Point(124, 81);
-            this.txtNgaySinh.Name = "txtNgaySinh";
-            this.txtNgaySinh.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgaySinh.Properties.Appearance.Options.UseFont = true;
-            this.txtNgaySinh.Size = new System.Drawing.Size(208, 22);
-            this.txtNgaySinh.TabIndex = 15;
             // 
             // groupControl2
             // 
             this.tablePanel1.SetColumn(this.groupControl2, 1);
             this.groupControl2.Controls.Add(this.gridControl2);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(432, 3);
+            this.groupControl2.Location = new System.Drawing.Point(366, 3);
             this.groupControl2.Name = "groupControl2";
             this.tablePanel1.SetRow(this.groupControl2, 0);
-            this.groupControl2.Size = new System.Drawing.Size(822, 209);
+            this.groupControl2.Size = new System.Drawing.Size(695, 209);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "Độc giả";
             // 
             // gridControl2
             // 
             this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl2.Location = new System.Drawing.Point(2, 23);
+            this.gridControl2.Location = new System.Drawing.Point(2, 22);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(818, 184);
+            this.gridControl2.Size = new System.Drawing.Size(691, 185);
             this.gridControl2.TabIndex = 0;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -292,7 +305,7 @@
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1281, 239);
+            this.Root.Size = new System.Drawing.Size(1088, 239);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -300,7 +313,7 @@
             this.layoutControlItem1.Control = this.tablePanel1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1261, 219);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1068, 219);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -312,7 +325,7 @@
             this.layoutControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup1;
-            this.layoutControl2.Size = new System.Drawing.Size(1281, 384);
+            this.layoutControl2.Size = new System.Drawing.Size(1088, 384);
             this.layoutControl2.TabIndex = 1;
             this.layoutControl2.Text = "layoutControl2";
             // 
@@ -321,17 +334,17 @@
             this.groupControl3.Controls.Add(this.gridControl3);
             this.groupControl3.Location = new System.Drawing.Point(12, 12);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(1257, 360);
+            this.groupControl3.Size = new System.Drawing.Size(1064, 360);
             this.groupControl3.TabIndex = 0;
             this.groupControl3.Text = "Sách đang mượn";
             // 
             // gridControl3
             // 
             this.gridControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl3.Location = new System.Drawing.Point(2, 23);
+            this.gridControl3.Location = new System.Drawing.Point(2, 22);
             this.gridControl3.MainView = this.gridView3;
             this.gridControl3.Name = "gridControl3";
-            this.gridControl3.Size = new System.Drawing.Size(1253, 335);
+            this.gridControl3.Size = new System.Drawing.Size(1060, 336);
             this.gridControl3.TabIndex = 0;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -353,7 +366,7 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem3});
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1281, 384);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1088, 384);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem3
@@ -361,7 +374,7 @@
             this.layoutControlItem3.Control = this.groupControl3;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(1261, 364);
+            this.layoutControlItem3.Size = new System.Drawing.Size(1068, 364);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -394,13 +407,13 @@
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1281, 623);
+            this.ClientSize = new System.Drawing.Size(1088, 623);
             this.Controls.Add(this.layoutControl2);
             this.Controls.Add(this.layoutControl1);
             this.Font = new System.Drawing.Font("Tahoma", 10F);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmTraSach";
-            this.Text = "frmTraSach";
+            this.Text = "Trả sách";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
@@ -408,12 +421,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNgaySinh.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNgaySinh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenDG.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaDG.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNgaySinh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
@@ -465,6 +479,6 @@
         private DevExpress.XtraEditors.TextEdit txtTenDG;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.TextEdit txtMaDG;
-        private DevExpress.XtraEditors.TextEdit txtNgaySinh;
+        private DevExpress.XtraEditors.DateEdit txtNgaySinh;
     }
 }

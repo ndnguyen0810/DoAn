@@ -251,6 +251,7 @@
             this.txtMaLoaiSach.Name = "txtMaLoaiSach";
             this.txtMaLoaiSach.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtMaLoaiSach.Properties.Appearance.Options.UseFont = true;
+            this.txtMaLoaiSach.Properties.ReadOnly = true;
             this.txtMaLoaiSach.Size = new System.Drawing.Size(231, 22);
             this.txtMaLoaiSach.TabIndex = 0;
             // 
@@ -310,6 +311,7 @@
             this.txtMaVT.Name = "txtMaVT";
             this.txtMaVT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtMaVT.Properties.Appearance.Options.UseFont = true;
+            this.txtMaVT.Properties.ReadOnly = true;
             this.txtMaVT.Size = new System.Drawing.Size(225, 22);
             this.txtMaVT.TabIndex = 0;
             // 

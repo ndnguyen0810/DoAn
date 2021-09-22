@@ -367,3 +367,10 @@ F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuV
 F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.From.frmSachTrongThuVien.resources
 F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.From.frmThemTaiKhoan.resources
 F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.From.frmDatePitker.resources
+F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.From.frmDocGiaDangMuon.resources
+F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.From.frmNhanVien.resources
+F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.From.frmThanhVien.resources
+F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.From.frmThongTinPhanMem.resources
+F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.From.frmTimKiemDocGia.resources
+F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.From.frmTimKiemNhanVien.resources
+F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.From.frmTimKiemSach.resources

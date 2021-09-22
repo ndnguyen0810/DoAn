@@ -185,17 +185,47 @@ namespace QuanLyThuVien
         #region Hệ thống - Thêm tài khoản
         private void btnThemTK_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            Form frm = formCheck(typeof(frmThemTaiKhoan));
+            if (frm == null)
+            {
+                frmThemTaiKhoan f = new frmThemTaiKhoan();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                frm.Activate();
+            }
         }
 
         private void btnDoiMK_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            Form frm = formCheck(typeof(frmDoiMatKhau));
+            if (frm == null)
+            {
+                frmDoiMatKhau f = new frmDoiMatKhau();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                frm.Activate();
+            }
         }
 
         private void btnDoiTT_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            Form frm = formCheck(typeof(frmSuaTT));
+            if (frm == null)
+            {
+                frmSuaTT f = new frmSuaTT();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                frm.Activate();
+            }
         }
 
         private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
@@ -248,7 +278,17 @@ namespace QuanLyThuVien
         #region Hệ thống - Nhân viên
         private void btnNV_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            Form frm = formCheck(typeof(frmNhanVien));
+            if (frm == null)
+            {
+                frmNhanVien f = new frmNhanVien();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                frm.Activate();
+            }
         }
 
 
@@ -259,12 +299,32 @@ namespace QuanLyThuVien
 
         private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            Form frm = formCheck(typeof(frmThongTinPhanMem));
+            if (frm == null)
+            {
+                frmThongTinPhanMem f = new frmThongTinPhanMem();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                frm.Activate();
+            }
         }
 
         private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            Form frm = formCheck(typeof(frmThanhVien));
+            if (frm == null)
+            {
+                frmThanhVien f = new frmThanhVien();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                frm.Activate();
+            }
         }
 
         #endregion

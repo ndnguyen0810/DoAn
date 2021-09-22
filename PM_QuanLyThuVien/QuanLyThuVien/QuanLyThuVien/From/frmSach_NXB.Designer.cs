@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSach_NXB));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
-            this.gwNXB = new DevExpress.XtraGrid.GridControl();
+            this.gcNXB = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gwSach = new DevExpress.XtraGrid.GridControl();
+            this.gcSach = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gctLoaisach = new DevExpress.XtraEditors.GroupControl();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
@@ -43,8 +43,6 @@
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.xtVitri = new DevExpress.XtraEditors.TextEdit();
-            this.txtNXB = new DevExpress.XtraEditors.TextEdit();
             this.txtTenSach = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.txtNamXB = new DevExpress.XtraEditors.TextEdit();
@@ -72,18 +70,18 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.xtVitri = new DevExpress.XtraEditors.LookUpEdit();
+            this.txtNXB = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gwNXB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcNXB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gwSach)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gctLoaisach)).BeginInit();
             this.gctLoaisach.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xtVitri.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNXB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenSach.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNamXB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTacGia.Properties)).BeginInit();
@@ -99,6 +97,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtVitri.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNXB.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -120,8 +120,8 @@
             this.tablePanel1.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 31.16F),
             new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 28.84F)});
-            this.tablePanel1.Controls.Add(this.gwNXB);
-            this.tablePanel1.Controls.Add(this.gwSach);
+            this.tablePanel1.Controls.Add(this.gcNXB);
+            this.tablePanel1.Controls.Add(this.gcSach);
             this.tablePanel1.Controls.Add(this.gctLoaisach);
             this.tablePanel1.Controls.Add(this.groupControl3);
             this.tablePanel1.Location = new System.Drawing.Point(12, 12);
@@ -132,44 +132,44 @@
             this.tablePanel1.Size = new System.Drawing.Size(1168, 674);
             this.tablePanel1.TabIndex = 4;
             // 
-            // gwNXB
+            // gcNXB
             // 
-            this.tablePanel1.SetColumn(this.gwNXB, 1);
-            this.gwNXB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gwNXB.Location = new System.Drawing.Point(610, 240);
-            this.gwNXB.MainView = this.gridView2;
-            this.gwNXB.Name = "gwNXB";
-            this.tablePanel1.SetRow(this.gwNXB, 1);
-            this.gwNXB.Size = new System.Drawing.Size(555, 431);
-            this.gwNXB.TabIndex = 3;
-            this.gwNXB.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.tablePanel1.SetColumn(this.gcNXB, 1);
+            this.gcNXB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcNXB.Location = new System.Drawing.Point(610, 240);
+            this.gcNXB.MainView = this.gridView2;
+            this.gcNXB.Name = "gcNXB";
+            this.tablePanel1.SetRow(this.gcNXB, 1);
+            this.gcNXB.Size = new System.Drawing.Size(555, 431);
+            this.gcNXB.TabIndex = 3;
+            this.gcNXB.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
             // gridView2
             // 
-            this.gridView2.GridControl = this.gwNXB;
+            this.gridView2.GridControl = this.gcNXB;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsFind.AlwaysVisible = true;
             this.gridView2.OptionsFind.FindNullPrompt = "Bạn cần tìm gì ở đây...";
             this.gridView2.OptionsFind.FindPanelLocation = DevExpress.XtraGrid.Views.Grid.GridFindPanelLocation.Panel;
             this.gridView2.OptionsFind.ShowFindButton = false;
             // 
-            // gwSach
+            // gcSach
             // 
-            this.tablePanel1.SetColumn(this.gwSach, 0);
-            this.gwSach.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gwSach.Location = new System.Drawing.Point(3, 240);
-            this.gwSach.MainView = this.gridView1;
-            this.gwSach.Name = "gwSach";
-            this.tablePanel1.SetRow(this.gwSach, 1);
-            this.gwSach.Size = new System.Drawing.Size(601, 431);
-            this.gwSach.TabIndex = 2;
-            this.gwSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.tablePanel1.SetColumn(this.gcSach, 0);
+            this.gcSach.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcSach.Location = new System.Drawing.Point(3, 240);
+            this.gcSach.MainView = this.gridView1;
+            this.gcSach.Name = "gcSach";
+            this.tablePanel1.SetRow(this.gcSach, 1);
+            this.gcSach.Size = new System.Drawing.Size(601, 431);
+            this.gcSach.TabIndex = 2;
+            this.gcSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
-            this.gridView1.GridControl = this.gwSach;
+            this.gridView1.GridControl = this.gcSach;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsFind.FindNullPrompt = "Bạn cần tìm gì ở đây...";
@@ -186,8 +186,6 @@
             this.gctLoaisach.Controls.Add(this.labelControl6);
             this.gctLoaisach.Controls.Add(this.labelControl4);
             this.gctLoaisach.Controls.Add(this.labelControl2);
-            this.gctLoaisach.Controls.Add(this.xtVitri);
-            this.gctLoaisach.Controls.Add(this.txtNXB);
             this.gctLoaisach.Controls.Add(this.txtTenSach);
             this.gctLoaisach.Controls.Add(this.labelControl5);
             this.gctLoaisach.Controls.Add(this.txtNamXB);
@@ -195,6 +193,8 @@
             this.gctLoaisach.Controls.Add(this.txtTacGia);
             this.gctLoaisach.Controls.Add(this.labelControl1);
             this.gctLoaisach.Controls.Add(this.txtMaSach);
+            this.gctLoaisach.Controls.Add(this.xtVitri);
+            this.gctLoaisach.Controls.Add(this.txtNXB);
             this.gctLoaisach.Location = new System.Drawing.Point(3, 3);
             this.gctLoaisach.Name = "gctLoaisach";
             this.tablePanel1.SetRow(this.gctLoaisach, 0);
@@ -276,24 +276,6 @@
             this.labelControl2.TabIndex = 1;
             this.labelControl2.Text = "Tên sách";
             // 
-            // xtVitri
-            // 
-            this.xtVitri.Location = new System.Drawing.Point(112, 202);
-            this.xtVitri.Name = "xtVitri";
-            this.xtVitri.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.xtVitri.Properties.Appearance.Options.UseFont = true;
-            this.xtVitri.Size = new System.Drawing.Size(269, 22);
-            this.xtVitri.TabIndex = 0;
-            // 
-            // txtNXB
-            // 
-            this.txtNXB.Location = new System.Drawing.Point(112, 132);
-            this.txtNXB.Name = "txtNXB";
-            this.txtNXB.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtNXB.Properties.Appearance.Options.UseFont = true;
-            this.txtNXB.Size = new System.Drawing.Size(269, 22);
-            this.txtNXB.TabIndex = 0;
-            // 
             // txtTenSach
             // 
             this.txtTenSach.Location = new System.Drawing.Point(112, 62);
@@ -357,6 +339,7 @@
             this.txtMaSach.Name = "txtMaSach";
             this.txtMaSach.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtMaSach.Properties.Appearance.Options.UseFont = true;
+            this.txtMaSach.Properties.ReadOnly = true;
             this.txtMaSach.Size = new System.Drawing.Size(269, 22);
             this.txtMaSach.TabIndex = 0;
             // 
@@ -514,6 +497,7 @@
             this.txtMaNXB.Name = "txtMaNXB";
             this.txtMaNXB.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtMaNXB.Properties.Appearance.Options.UseFont = true;
+            this.txtMaNXB.Properties.ReadOnly = true;
             this.txtMaNXB.Size = new System.Drawing.Size(212, 22);
             this.txtMaNXB.TabIndex = 0;
             // 
@@ -571,6 +555,30 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
+            // xtVitri
+            // 
+            this.xtVitri.Location = new System.Drawing.Point(112, 202);
+            this.xtVitri.Name = "xtVitri";
+            this.xtVitri.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.xtVitri.Properties.Appearance.Options.UseFont = true;
+            this.xtVitri.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.xtVitri.Properties.NullText = "";
+            this.xtVitri.Size = new System.Drawing.Size(269, 22);
+            this.xtVitri.TabIndex = 0;
+            // 
+            // txtNXB
+            // 
+            this.txtNXB.Location = new System.Drawing.Point(112, 132);
+            this.txtNXB.Name = "txtNXB";
+            this.txtNXB.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txtNXB.Properties.Appearance.Options.UseFont = true;
+            this.txtNXB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtNXB.Properties.NullText = "";
+            this.txtNXB.Size = new System.Drawing.Size(269, 22);
+            this.txtNXB.TabIndex = 0;
+            // 
             // frmSach_NXB
             // 
             this.Appearance.Options.UseFont = true;
@@ -587,15 +595,13 @@
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
             this.tablePanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gwNXB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcNXB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gwSach)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcSach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gctLoaisach)).EndInit();
             this.gctLoaisach.ResumeLayout(false);
             this.gctLoaisach.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xtVitri.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNXB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenSach.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNamXB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTacGia.Properties)).EndInit();
@@ -612,6 +618,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtVitri.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNXB.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -621,9 +629,9 @@
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.Utils.Layout.TablePanel tablePanel1;
-        private DevExpress.XtraGrid.GridControl gwNXB;
+        private DevExpress.XtraGrid.GridControl gcNXB;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        private DevExpress.XtraGrid.GridControl gwSach;
+        private DevExpress.XtraGrid.GridControl gcSach;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.GroupControl gctLoaisach;
         private DevExpress.XtraEditors.GroupControl groupControl3;
@@ -638,8 +646,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit xtVitri;
-        private DevExpress.XtraEditors.TextEdit txtNXB;
         private DevExpress.XtraEditors.TextEdit txtTenSach;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.TextEdit txtNamXB;
@@ -661,5 +667,7 @@
         private DevExpress.XtraEditors.TextEdit txtDiaChi;
         private DevExpress.XtraEditors.TextEdit txtWeb;
         private DevExpress.XtraEditors.TextEdit txtSDT;
+        private DevExpress.XtraEditors.LookUpEdit xtVitri;
+        private DevExpress.XtraEditors.LookUpEdit txtNXB;
     }
 }

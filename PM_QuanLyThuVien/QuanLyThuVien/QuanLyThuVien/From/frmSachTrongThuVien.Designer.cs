@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 484);
             this.Name = "frmSachTrongThuVien";
-            this.Text = "frmSachTrongThuVien";
+            this.Text = "Sách trong thư viện";
             this.ResumeLayout(false);
 
         }

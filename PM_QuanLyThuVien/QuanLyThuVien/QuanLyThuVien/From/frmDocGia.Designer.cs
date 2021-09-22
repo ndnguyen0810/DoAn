@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDocGia));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txtNgaySinh = new DevExpress.XtraEditors.DateEdit();
             this.btnLamMoi = new DevExpress.XtraEditors.SimpleButton();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
@@ -46,12 +47,11 @@
             this.txtTenDG = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtMaDG = new DevExpress.XtraEditors.TextEdit();
-            this.txtNgaySinh = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gcDocGia = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -59,18 +59,19 @@
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNgaySinh.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNgaySinh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenDG.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaDG.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNgaySinh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcDocGia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -91,6 +92,7 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.txtNgaySinh);
             this.groupControl1.Controls.Add(this.btnLamMoi);
             this.groupControl1.Controls.Add(this.btnXoa);
             this.groupControl1.Controls.Add(this.btnSua);
@@ -106,12 +108,27 @@
             this.groupControl1.Controls.Add(this.txtTenDG);
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Controls.Add(this.txtMaDG);
-            this.groupControl1.Controls.Add(this.txtNgaySinh);
             this.groupControl1.Location = new System.Drawing.Point(12, 12);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(1132, 203);
             this.groupControl1.TabIndex = 4;
             this.groupControl1.Text = "Độc giả/ Sinh Viên";
+            // 
+            // txtNgaySinh
+            // 
+            this.txtNgaySinh.EditValue = null;
+            this.txtNgaySinh.Location = new System.Drawing.Point(104, 84);
+            this.txtNgaySinh.Name = "txtNgaySinh";
+            this.txtNgaySinh.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgaySinh.Properties.Appearance.Options.UseFont = true;
+            this.txtNgaySinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtNgaySinh.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtNgaySinh.Properties.EditFormat.FormatString = "dd/mm/yyyy";
+            this.txtNgaySinh.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.txtNgaySinh.Size = new System.Drawing.Size(208, 22);
+            this.txtNgaySinh.TabIndex = 2;
             // 
             // btnLamMoi
             // 
@@ -123,6 +140,7 @@
             this.btnLamMoi.Size = new System.Drawing.Size(100, 33);
             this.btnLamMoi.TabIndex = 2;
             this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // btnXoa
             // 
@@ -134,6 +152,7 @@
             this.btnXoa.Size = new System.Drawing.Size(100, 33);
             this.btnXoa.TabIndex = 2;
             this.btnXoa.Text = "Xoá";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -145,6 +164,7 @@
             this.btnSua.Size = new System.Drawing.Size(100, 33);
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -156,6 +176,7 @@
             this.btnThem.Size = new System.Drawing.Size(100, 33);
             this.btnThem.TabIndex = 2;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // labelControl6
             // 
@@ -173,8 +194,9 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtEmail.Properties.Appearance.Options.UseFont = true;
+            this.txtEmail.Properties.MaxLength = 50;
             this.txtEmail.Size = new System.Drawing.Size(208, 22);
-            this.txtEmail.TabIndex = 0;
+            this.txtEmail.TabIndex = 5;
             // 
             // labelControl5
             // 
@@ -192,8 +214,9 @@
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtSDT.Properties.Appearance.Options.UseFont = true;
+            this.txtSDT.Properties.MaxLength = 10;
             this.txtSDT.Size = new System.Drawing.Size(208, 22);
-            this.txtSDT.TabIndex = 0;
+            this.txtSDT.TabIndex = 4;
             // 
             // labelControl4
             // 
@@ -211,8 +234,9 @@
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtDiaChi.Properties.Appearance.Options.UseFont = true;
+            this.txtDiaChi.Properties.MaxLength = 50;
             this.txtDiaChi.Size = new System.Drawing.Size(208, 22);
-            this.txtDiaChi.TabIndex = 0;
+            this.txtDiaChi.TabIndex = 3;
             // 
             // labelControl3
             // 
@@ -240,8 +264,9 @@
             this.txtTenDG.Name = "txtTenDG";
             this.txtTenDG.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtTenDG.Properties.Appearance.Options.UseFont = true;
+            this.txtTenDG.Properties.MaxLength = 50;
             this.txtTenDG.Size = new System.Drawing.Size(208, 22);
-            this.txtTenDG.TabIndex = 0;
+            this.txtTenDG.TabIndex = 1;
             // 
             // labelControl1
             // 
@@ -259,18 +284,9 @@
             this.txtMaDG.Name = "txtMaDG";
             this.txtMaDG.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtMaDG.Properties.Appearance.Options.UseFont = true;
+            this.txtMaDG.Properties.ReadOnly = true;
             this.txtMaDG.Size = new System.Drawing.Size(208, 22);
             this.txtMaDG.TabIndex = 0;
-            // 
-            // txtNgaySinh
-            // 
-            this.txtNgaySinh.EditValue = new System.DateTime(2021, 9, 19, 9, 47, 27, 932);
-            this.txtNgaySinh.Location = new System.Drawing.Point(104, 81);
-            this.txtNgaySinh.Name = "txtNgaySinh";
-            this.txtNgaySinh.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtNgaySinh.Properties.Appearance.Options.UseFont = true;
-            this.txtNgaySinh.Size = new System.Drawing.Size(208, 22);
-            this.txtNgaySinh.TabIndex = 3;
             // 
             // Root
             // 
@@ -302,7 +318,7 @@
             // 
             // layoutControl2
             // 
-            this.layoutControl2.Controls.Add(this.gridControl1);
+            this.layoutControl2.Controls.Add(this.gcDocGia);
             this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl2.Location = new System.Drawing.Point(0, 227);
             this.layoutControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -312,20 +328,20 @@
             this.layoutControl2.TabIndex = 1;
             this.layoutControl2.Text = "layoutControl2";
             // 
-            // gridControl1
+            // gcDocGia
             // 
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gridControl1.Location = new System.Drawing.Point(12, 12);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1132, 361);
-            this.gridControl1.TabIndex = 4;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gcDocGia.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gcDocGia.Location = new System.Drawing.Point(12, 12);
+            this.gcDocGia.MainView = this.gridView1;
+            this.gcDocGia.Name = "gcDocGia";
+            this.gcDocGia.Size = new System.Drawing.Size(1132, 361);
+            this.gcDocGia.TabIndex = 4;
+            this.gcDocGia.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.gcDocGia;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsFind.FindNullPrompt = "Bạn cần tìm gì ở đây...";
@@ -345,7 +361,7 @@
             // 
             // layoutControlItem2
             // 
-            this.layoutControlItem2.Control = this.gridControl1;
+            this.layoutControlItem2.Control = this.gcDocGia;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(1136, 365);
@@ -369,18 +385,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNgaySinh.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNgaySinh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSDT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDiaChi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenDG.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaDG.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNgaySinh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcDocGia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -411,10 +428,10 @@
         private DevExpress.XtraEditors.SimpleButton btnLamMoi;
         private DevExpress.XtraEditors.SimpleButton btnXoa;
         private DevExpress.XtraLayout.LayoutControl layoutControl2;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl gcDocGia;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DevExpress.XtraEditors.TextEdit txtNgaySinh;
+        private DevExpress.XtraEditors.DateEdit txtNgaySinh;
     }
 }
