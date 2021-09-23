@@ -145,6 +145,7 @@
             this.txtNgaySinh.Properties.ReadOnly = true;
             this.txtNgaySinh.Size = new System.Drawing.Size(208, 22);
             this.txtNgaySinh.TabIndex = 18;
+            this.txtNgaySinh.Visible = false;
             // 
             // labelControl6
             // 
@@ -165,6 +166,7 @@
             this.txtEmail.Properties.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(208, 22);
             this.txtEmail.TabIndex = 7;
+            this.txtEmail.Visible = false;
             // 
             // labelControl5
             // 
@@ -185,6 +187,7 @@
             this.txtSDT.Properties.ReadOnly = true;
             this.txtSDT.Size = new System.Drawing.Size(208, 22);
             this.txtSDT.TabIndex = 8;
+            this.txtSDT.Visible = false;
             // 
             // labelControl4
             // 
@@ -205,6 +208,7 @@
             this.txtDiaChi.Properties.ReadOnly = true;
             this.txtDiaChi.Size = new System.Drawing.Size(208, 22);
             this.txtDiaChi.TabIndex = 9;
+            this.txtDiaChi.Visible = false;
             // 
             // labelControl3
             // 
@@ -235,6 +239,7 @@
             this.txtTenDG.Properties.ReadOnly = true;
             this.txtTenDG.Size = new System.Drawing.Size(208, 22);
             this.txtTenDG.TabIndex = 10;
+            this.txtTenDG.Visible = false;
             // 
             // labelControl1
             // 
@@ -255,6 +260,7 @@
             this.txtMaDG.Properties.ReadOnly = true;
             this.txtMaDG.Size = new System.Drawing.Size(208, 22);
             this.txtMaDG.TabIndex = 11;
+            this.txtMaDG.Visible = false;
             // 
             // btnLamMoi
             // 

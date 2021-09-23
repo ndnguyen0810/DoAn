@@ -36,10 +36,10 @@
             this.gcSach = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gctLoaisach = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLamMoiSach = new DevExpress.XtraEditors.SimpleButton();
+            this.btnXoaSach = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSuaSach = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThemSach = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -50,13 +50,13 @@
             this.txtTacGia = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtMaSach = new DevExpress.XtraEditors.TextEdit();
-            this.xtVitri = new DevExpress.XtraEditors.LookUpEdit();
+            this.txtVitri = new DevExpress.XtraEditors.LookUpEdit();
             this.txtNXB = new DevExpress.XtraEditors.LookUpEdit();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLamMoiNXB = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThemNXB = new DevExpress.XtraEditors.SimpleButton();
+            this.btnXoaNXB = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSuaNXB = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
@@ -86,7 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNamXB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTacGia.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaSach.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtVitri.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtVitri.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNXB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
@@ -149,11 +149,14 @@
             // 
             this.gridView2.GridControl = this.gcNXB;
             this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsBehavior.Editable = false;
+            this.gridView2.OptionsBehavior.ReadOnly = true;
             this.gridView2.OptionsFind.AlwaysVisible = true;
             this.gridView2.OptionsFind.FindNullPrompt = "Bạn cần tìm gì ở đây...";
             this.gridView2.OptionsFind.FindPanelLocation = DevExpress.XtraGrid.Views.Grid.GridFindPanelLocation.Panel;
             this.gridView2.OptionsFind.ShowFindButton = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
+            this.gridView2.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView2_RowClick);
             // 
             // gcSach
             // 
@@ -172,19 +175,22 @@
             // 
             this.gridView1.GridControl = this.gcSach;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsBehavior.ReadOnly = true;
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsFind.FindNullPrompt = "Bạn cần tìm gì ở đây...";
             this.gridView1.OptionsFind.FindPanelLocation = DevExpress.XtraGrid.Views.Grid.GridFindPanelLocation.Panel;
             this.gridView1.OptionsFind.ShowFindButton = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
             // 
             // gctLoaisach
             // 
             this.tablePanel1.SetColumn(this.gctLoaisach, 0);
-            this.gctLoaisach.Controls.Add(this.simpleButton4);
-            this.gctLoaisach.Controls.Add(this.simpleButton3);
-            this.gctLoaisach.Controls.Add(this.simpleButton2);
-            this.gctLoaisach.Controls.Add(this.simpleButton1);
+            this.gctLoaisach.Controls.Add(this.btnLamMoiSach);
+            this.gctLoaisach.Controls.Add(this.btnXoaSach);
+            this.gctLoaisach.Controls.Add(this.btnSuaSach);
+            this.gctLoaisach.Controls.Add(this.btnThemSach);
             this.gctLoaisach.Controls.Add(this.labelControl6);
             this.gctLoaisach.Controls.Add(this.labelControl4);
             this.gctLoaisach.Controls.Add(this.labelControl2);
@@ -195,7 +201,7 @@
             this.gctLoaisach.Controls.Add(this.txtTacGia);
             this.gctLoaisach.Controls.Add(this.labelControl1);
             this.gctLoaisach.Controls.Add(this.txtMaSach);
-            this.gctLoaisach.Controls.Add(this.xtVitri);
+            this.gctLoaisach.Controls.Add(this.txtVitri);
             this.gctLoaisach.Controls.Add(this.txtNXB);
             this.gctLoaisach.Location = new System.Drawing.Point(3, 3);
             this.gctLoaisach.Name = "gctLoaisach";
@@ -204,49 +210,53 @@
             this.gctLoaisach.TabIndex = 0;
             this.gctLoaisach.Text = "Sách";
             // 
-            // simpleButton4
+            // btnLamMoiSach
             // 
-            this.simpleButton4.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.simpleButton4.Appearance.Options.UseFont = true;
-            this.simpleButton4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton4.ImageOptions.SvgImage")));
-            this.simpleButton4.Location = new System.Drawing.Point(417, 170);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(100, 30);
-            this.simpleButton4.TabIndex = 2;
-            this.simpleButton4.Text = "Làm mới";
+            this.btnLamMoiSach.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.btnLamMoiSach.Appearance.Options.UseFont = true;
+            this.btnLamMoiSach.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLamMoiSach.ImageOptions.SvgImage")));
+            this.btnLamMoiSach.Location = new System.Drawing.Point(417, 170);
+            this.btnLamMoiSach.Name = "btnLamMoiSach";
+            this.btnLamMoiSach.Size = new System.Drawing.Size(100, 30);
+            this.btnLamMoiSach.TabIndex = 2;
+            this.btnLamMoiSach.Text = "Làm mới";
+            this.btnLamMoiSach.Click += new System.EventHandler(this.btnLamMoiSach_Click);
             // 
-            // simpleButton3
+            // btnXoaSach
             // 
-            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.simpleButton3.Appearance.Options.UseFont = true;
-            this.simpleButton3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton3.ImageOptions.SvgImage")));
-            this.simpleButton3.Location = new System.Drawing.Point(417, 130);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(100, 30);
-            this.simpleButton3.TabIndex = 2;
-            this.simpleButton3.Text = "Xoá";
+            this.btnXoaSach.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.btnXoaSach.Appearance.Options.UseFont = true;
+            this.btnXoaSach.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnXoaSach.ImageOptions.SvgImage")));
+            this.btnXoaSach.Location = new System.Drawing.Point(417, 130);
+            this.btnXoaSach.Name = "btnXoaSach";
+            this.btnXoaSach.Size = new System.Drawing.Size(100, 30);
+            this.btnXoaSach.TabIndex = 2;
+            this.btnXoaSach.Text = "Xoá";
+            this.btnXoaSach.Click += new System.EventHandler(this.btnXoaSach_Click);
             // 
-            // simpleButton2
+            // btnSuaSach
             // 
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
-            this.simpleButton2.Location = new System.Drawing.Point(417, 90);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(100, 30);
-            this.simpleButton2.TabIndex = 2;
-            this.simpleButton2.Text = "Sửa";
+            this.btnSuaSach.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.btnSuaSach.Appearance.Options.UseFont = true;
+            this.btnSuaSach.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSuaSach.ImageOptions.SvgImage")));
+            this.btnSuaSach.Location = new System.Drawing.Point(417, 90);
+            this.btnSuaSach.Name = "btnSuaSach";
+            this.btnSuaSach.Size = new System.Drawing.Size(100, 30);
+            this.btnSuaSach.TabIndex = 2;
+            this.btnSuaSach.Text = "Sửa";
+            this.btnSuaSach.Click += new System.EventHandler(this.btnSuaSach_Click);
             // 
-            // simpleButton1
+            // btnThemSach
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.simpleButton1.Location = new System.Drawing.Point(417, 50);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(100, 30);
-            this.simpleButton1.TabIndex = 2;
-            this.simpleButton1.Text = "Thêm";
+            this.btnThemSach.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.btnThemSach.Appearance.Options.UseFont = true;
+            this.btnThemSach.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnThemSach.ImageOptions.SvgImage")));
+            this.btnThemSach.Location = new System.Drawing.Point(417, 50);
+            this.btnThemSach.Name = "btnThemSach";
+            this.btnThemSach.Size = new System.Drawing.Size(100, 30);
+            this.btnThemSach.TabIndex = 2;
+            this.btnThemSach.Text = "Thêm";
+            this.btnThemSach.Click += new System.EventHandler(this.btnThemSach_Click);
             // 
             // labelControl6
             // 
@@ -345,17 +355,17 @@
             this.txtMaSach.Size = new System.Drawing.Size(269, 22);
             this.txtMaSach.TabIndex = 0;
             // 
-            // xtVitri
+            // txtVitri
             // 
-            this.xtVitri.Location = new System.Drawing.Point(112, 202);
-            this.xtVitri.Name = "xtVitri";
-            this.xtVitri.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.xtVitri.Properties.Appearance.Options.UseFont = true;
-            this.xtVitri.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txtVitri.Location = new System.Drawing.Point(112, 202);
+            this.txtVitri.Name = "txtVitri";
+            this.txtVitri.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txtVitri.Properties.Appearance.Options.UseFont = true;
+            this.txtVitri.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.xtVitri.Properties.NullText = "";
-            this.xtVitri.Size = new System.Drawing.Size(269, 22);
-            this.xtVitri.TabIndex = 0;
+            this.txtVitri.Properties.NullText = "";
+            this.txtVitri.Size = new System.Drawing.Size(269, 22);
+            this.txtVitri.TabIndex = 0;
             // 
             // txtNXB
             // 
@@ -372,10 +382,10 @@
             // groupControl3
             // 
             this.tablePanel1.SetColumn(this.groupControl3, 1);
-            this.groupControl3.Controls.Add(this.simpleButton8);
-            this.groupControl3.Controls.Add(this.simpleButton5);
-            this.groupControl3.Controls.Add(this.simpleButton7);
-            this.groupControl3.Controls.Add(this.simpleButton6);
+            this.groupControl3.Controls.Add(this.btnLamMoiNXB);
+            this.groupControl3.Controls.Add(this.btnThemNXB);
+            this.groupControl3.Controls.Add(this.btnXoaNXB);
+            this.groupControl3.Controls.Add(this.btnSuaNXB);
             this.groupControl3.Controls.Add(this.labelControl12);
             this.groupControl3.Controls.Add(this.labelControl11);
             this.groupControl3.Controls.Add(this.labelControl10);
@@ -395,49 +405,53 @@
             this.groupControl3.TabIndex = 0;
             this.groupControl3.Text = "Nhà Xuất Bản";
             // 
-            // simpleButton8
+            // btnLamMoiNXB
             // 
-            this.simpleButton8.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.simpleButton8.Appearance.Options.UseFont = true;
-            this.simpleButton8.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton8.ImageOptions.SvgImage")));
-            this.simpleButton8.Location = new System.Drawing.Point(383, 170);
-            this.simpleButton8.Name = "simpleButton8";
-            this.simpleButton8.Size = new System.Drawing.Size(100, 30);
-            this.simpleButton8.TabIndex = 2;
-            this.simpleButton8.Text = "Làm mới";
+            this.btnLamMoiNXB.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.btnLamMoiNXB.Appearance.Options.UseFont = true;
+            this.btnLamMoiNXB.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLamMoiNXB.ImageOptions.SvgImage")));
+            this.btnLamMoiNXB.Location = new System.Drawing.Point(383, 170);
+            this.btnLamMoiNXB.Name = "btnLamMoiNXB";
+            this.btnLamMoiNXB.Size = new System.Drawing.Size(100, 30);
+            this.btnLamMoiNXB.TabIndex = 2;
+            this.btnLamMoiNXB.Text = "Làm mới";
+            this.btnLamMoiNXB.Click += new System.EventHandler(this.btnLamMoiNXB_Click);
             // 
-            // simpleButton5
+            // btnThemNXB
             // 
-            this.simpleButton5.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.simpleButton5.Appearance.Options.UseFont = true;
-            this.simpleButton5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton5.ImageOptions.SvgImage")));
-            this.simpleButton5.Location = new System.Drawing.Point(383, 51);
-            this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(100, 30);
-            this.simpleButton5.TabIndex = 2;
-            this.simpleButton5.Text = "Thêm";
+            this.btnThemNXB.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.btnThemNXB.Appearance.Options.UseFont = true;
+            this.btnThemNXB.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnThemNXB.ImageOptions.SvgImage")));
+            this.btnThemNXB.Location = new System.Drawing.Point(383, 51);
+            this.btnThemNXB.Name = "btnThemNXB";
+            this.btnThemNXB.Size = new System.Drawing.Size(100, 30);
+            this.btnThemNXB.TabIndex = 2;
+            this.btnThemNXB.Text = "Thêm";
+            this.btnThemNXB.Click += new System.EventHandler(this.btnThemNXB_Click);
             // 
-            // simpleButton7
+            // btnXoaNXB
             // 
-            this.simpleButton7.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.simpleButton7.Appearance.Options.UseFont = true;
-            this.simpleButton7.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton7.ImageOptions.SvgImage")));
-            this.simpleButton7.Location = new System.Drawing.Point(383, 130);
-            this.simpleButton7.Name = "simpleButton7";
-            this.simpleButton7.Size = new System.Drawing.Size(100, 30);
-            this.simpleButton7.TabIndex = 2;
-            this.simpleButton7.Text = "Xoá";
+            this.btnXoaNXB.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.btnXoaNXB.Appearance.Options.UseFont = true;
+            this.btnXoaNXB.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnXoaNXB.ImageOptions.SvgImage")));
+            this.btnXoaNXB.Location = new System.Drawing.Point(383, 130);
+            this.btnXoaNXB.Name = "btnXoaNXB";
+            this.btnXoaNXB.Size = new System.Drawing.Size(100, 30);
+            this.btnXoaNXB.TabIndex = 2;
+            this.btnXoaNXB.Text = "Xoá";
+            this.btnXoaNXB.Click += new System.EventHandler(this.btnXoaNXB_Click);
             // 
-            // simpleButton6
+            // btnSuaNXB
             // 
-            this.simpleButton6.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.simpleButton6.Appearance.Options.UseFont = true;
-            this.simpleButton6.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton6.ImageOptions.SvgImage")));
-            this.simpleButton6.Location = new System.Drawing.Point(383, 90);
-            this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.Size = new System.Drawing.Size(100, 30);
-            this.simpleButton6.TabIndex = 2;
-            this.simpleButton6.Text = "Sửa";
+            this.btnSuaNXB.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.btnSuaNXB.Appearance.Options.UseFont = true;
+            this.btnSuaNXB.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSuaNXB.ImageOptions.SvgImage")));
+            this.btnSuaNXB.Location = new System.Drawing.Point(383, 90);
+            this.btnSuaNXB.Name = "btnSuaNXB";
+            this.btnSuaNXB.Size = new System.Drawing.Size(100, 30);
+            this.btnSuaNXB.TabIndex = 2;
+            this.btnSuaNXB.Text = "Sửa";
+            this.btnSuaNXB.Click += new System.EventHandler(this.btnSuaNXB_Click);
             // 
             // labelControl12
             // 
@@ -609,7 +623,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNamXB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTacGia.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaSach.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtVitri.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtVitri.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNXB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
@@ -640,10 +654,10 @@
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnLamMoiSach;
+        private DevExpress.XtraEditors.SimpleButton btnXoaSach;
+        private DevExpress.XtraEditors.SimpleButton btnSuaSach;
+        private DevExpress.XtraEditors.SimpleButton btnThemSach;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.TextEdit txtMaSach;
         private DevExpress.XtraEditors.LabelControl labelControl6;
@@ -654,10 +668,10 @@
         private DevExpress.XtraEditors.TextEdit txtNamXB;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.TextEdit txtTacGia;
-        private DevExpress.XtraEditors.SimpleButton simpleButton8;
-        private DevExpress.XtraEditors.SimpleButton simpleButton5;
-        private DevExpress.XtraEditors.SimpleButton simpleButton7;
-        private DevExpress.XtraEditors.SimpleButton simpleButton6;
+        private DevExpress.XtraEditors.SimpleButton btnLamMoiNXB;
+        private DevExpress.XtraEditors.SimpleButton btnThemNXB;
+        private DevExpress.XtraEditors.SimpleButton btnXoaNXB;
+        private DevExpress.XtraEditors.SimpleButton btnSuaNXB;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.TextEdit txtMaNXB;
@@ -670,7 +684,7 @@
         private DevExpress.XtraEditors.TextEdit txtDiaChi;
         private DevExpress.XtraEditors.TextEdit txtWeb;
         private DevExpress.XtraEditors.TextEdit txtSDT;
-        private DevExpress.XtraEditors.LookUpEdit xtVitri;
+        private DevExpress.XtraEditors.LookUpEdit txtVitri;
         private DevExpress.XtraEditors.LookUpEdit txtNXB;
     }
 }

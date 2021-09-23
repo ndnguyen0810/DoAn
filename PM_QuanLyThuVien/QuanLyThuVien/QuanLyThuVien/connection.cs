@@ -82,7 +82,7 @@ namespace QuanLyThuVien
                 foreach (DataRow row in dt.Rows) //Duyet cac dong trong bang
                 {
                     string idRow = row[0].ToString(); //Lay chuoi chua ID
-                    int i = Int32.Parse(idRow.Substring(idRow.Length - 4, 4)); //Cat chuoi lay ID
+                    int i = Int32.Parse(idRow.Substring(idRow.Length - 8, 8)); //Cat chuoi lay ID
                     if (i != count) //Sai thu tu
                     {
                         count = i - 1; //Gan ID ao bang ID that -1
@@ -105,17 +105,33 @@ namespace QuanLyThuVien
             }
             if (countRow < 10)
             {
-                id = preFix + "0000" + countRow; //U00009
+                id = preFix + "00000000" + countRow; //U00009
             }
             else if (countRow < 100)
             {
-                id = preFix + "000" + countRow; //U00999
+                id = preFix + "000000" + countRow; //U00999
             }
             else if (countRow < 10000)
             {
-                id = preFix + "0" + countRow; //U09999
+                id = preFix + "00000" + countRow; //U09999
             }
             else if (countRow < 100000)
+            {
+                id = preFix + "0000" + countRow; //U09999
+            }
+            else if (countRow < 1000000)
+            {
+                id = preFix + "000" + countRow; //U09999
+            }
+            else if (countRow < 10000000)
+            {
+                id = preFix + "00" + countRow; //U09999
+            }
+            else if (countRow < 100000000)
+            {
+                id = preFix + "0" + countRow; //U09999
+            }
+            else if (countRow < 1000000000)
             {
                 id = preFix + countRow; //U99999
             }
