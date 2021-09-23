@@ -19,14 +19,14 @@ namespace QuanLyThuVien.From
         }
 
         connection con =  new connection();
-        string query;
+        string query = "select * from docgia";
         string queryInsert;
         string queryUpdate;
         string queryDelete;
 
-        public void loadDocGia()
+        public  void loadDocGia()
         {
-            DataTable dt = con.readData(query);
+            DataTable dt = con.readData(connection.P_LoadDocGia);
             if (dt != null)
             {
                 gcDocGia.DataSource = dt;
@@ -123,6 +123,11 @@ namespace QuanLyThuVien.From
             txtSDT.Text = null;
             txtTenDG.Text = null;
             txtTenDG.Focus();
+        }
+
+        private void frmDocGia_Load(object sender, EventArgs e)
+        {
+            loadDocGia();
         }
     }
 }

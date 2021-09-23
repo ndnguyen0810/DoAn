@@ -19,8 +19,8 @@ namespace QuanLyThuVien.From
         }
 
         connection con = new connection();
-        string querySach;// = "select * from book";
-        string queryNXB; //= "select * from booktype";
+        string querySach="select * from sach";// = "select * from book";
+        string queryNXB="select * from NXB"; //= "select * from booktype";
 
 
         private void loadNXBOnSach()
@@ -36,19 +36,25 @@ namespace QuanLyThuVien.From
 
         private void loadSach()
         {
-            //DataTable dt = con.readData(sqlR);
-            //if (dt != null)
-            //{
-            //    gcSach.DataSource = dt;
-            //}
+            DataTable dt = con.readData(connection.P_LoadSach);
+            if (dt != null)
+            {
+                gcSach.DataSource = dt;
+            }
         }
         private void loadNXB()
         {
-            //DataTable dt = con.readData(sqlR);
-            //if (dt != null)
-            //{
-            //    gcSach.DataSource = dt;
-            //}
+            DataTable dt = con.readData(connection.P_LoadNXB);
+            if (dt != null)
+            {
+                gcNXB.DataSource = dt;
+            }
+        }
+
+        private void frmSach_NXB_Load(object sender, EventArgs e)
+        {
+            loadNXB();
+            loadSach();
         }
     }
 }

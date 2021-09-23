@@ -50,6 +50,8 @@
             this.txtTacGia = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtMaSach = new DevExpress.XtraEditors.TextEdit();
+            this.xtVitri = new DevExpress.XtraEditors.LookUpEdit();
+            this.txtNXB = new DevExpress.XtraEditors.LookUpEdit();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
@@ -70,8 +72,6 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.xtVitri = new DevExpress.XtraEditors.LookUpEdit();
-            this.txtNXB = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
@@ -86,6 +86,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNamXB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTacGia.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaSach.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtVitri.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNXB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
@@ -97,8 +99,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtVitri.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNXB.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -153,6 +153,7 @@
             this.gridView2.OptionsFind.FindNullPrompt = "Bạn cần tìm gì ở đây...";
             this.gridView2.OptionsFind.FindPanelLocation = DevExpress.XtraGrid.Views.Grid.GridFindPanelLocation.Panel;
             this.gridView2.OptionsFind.ShowFindButton = false;
+            this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
             // gcSach
             // 
@@ -175,6 +176,7 @@
             this.gridView1.OptionsFind.FindNullPrompt = "Bạn cần tìm gì ở đây...";
             this.gridView1.OptionsFind.FindPanelLocation = DevExpress.XtraGrid.Views.Grid.GridFindPanelLocation.Panel;
             this.gridView1.OptionsFind.ShowFindButton = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // gctLoaisach
             // 
@@ -342,6 +344,30 @@
             this.txtMaSach.Properties.ReadOnly = true;
             this.txtMaSach.Size = new System.Drawing.Size(269, 22);
             this.txtMaSach.TabIndex = 0;
+            // 
+            // xtVitri
+            // 
+            this.xtVitri.Location = new System.Drawing.Point(112, 202);
+            this.xtVitri.Name = "xtVitri";
+            this.xtVitri.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.xtVitri.Properties.Appearance.Options.UseFont = true;
+            this.xtVitri.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.xtVitri.Properties.NullText = "";
+            this.xtVitri.Size = new System.Drawing.Size(269, 22);
+            this.xtVitri.TabIndex = 0;
+            // 
+            // txtNXB
+            // 
+            this.txtNXB.Location = new System.Drawing.Point(112, 132);
+            this.txtNXB.Name = "txtNXB";
+            this.txtNXB.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txtNXB.Properties.Appearance.Options.UseFont = true;
+            this.txtNXB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtNXB.Properties.NullText = "";
+            this.txtNXB.Size = new System.Drawing.Size(269, 22);
+            this.txtNXB.TabIndex = 0;
             // 
             // groupControl3
             // 
@@ -555,30 +581,6 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // xtVitri
-            // 
-            this.xtVitri.Location = new System.Drawing.Point(112, 202);
-            this.xtVitri.Name = "xtVitri";
-            this.xtVitri.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.xtVitri.Properties.Appearance.Options.UseFont = true;
-            this.xtVitri.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.xtVitri.Properties.NullText = "";
-            this.xtVitri.Size = new System.Drawing.Size(269, 22);
-            this.xtVitri.TabIndex = 0;
-            // 
-            // txtNXB
-            // 
-            this.txtNXB.Location = new System.Drawing.Point(112, 132);
-            this.txtNXB.Name = "txtNXB";
-            this.txtNXB.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtNXB.Properties.Appearance.Options.UseFont = true;
-            this.txtNXB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtNXB.Properties.NullText = "";
-            this.txtNXB.Size = new System.Drawing.Size(269, 22);
-            this.txtNXB.TabIndex = 0;
-            // 
             // frmSach_NXB
             // 
             this.Appearance.Options.UseFont = true;
@@ -591,6 +593,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmSach_NXB";
             this.Text = "Sách";
+            this.Load += new System.EventHandler(this.frmSach_NXB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
@@ -606,6 +609,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNamXB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTacGia.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaSach.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtVitri.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNXB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             this.groupControl3.PerformLayout();
@@ -618,8 +623,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtVitri.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNXB.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -17,5 +17,33 @@ namespace QuanLyThuVien.From
         {
             InitializeComponent();
         }
+
+        connection con = new connection();
+        string querySach = "select * from sach";
+        string queryDocGia = "select * from docgia"; 
+
+        private void loadSach()
+        {
+            DataTable dt = con.readData(querySach);
+            if (dt != null)
+            {
+                gcSach.DataSource = dt;
+            }
+        }
+
+        private void loadDocGia()
+        {
+            DataTable dt = con.readData(queryDocGia);
+            if (dt != null)
+            {
+                gcDocGia.DataSource = dt;
+            }
+        }
+
+        private void frmPhieuMuon_Load(object sender, EventArgs e)
+        {
+            loadDocGia();
+            loadSach();
+        }
     }
 }

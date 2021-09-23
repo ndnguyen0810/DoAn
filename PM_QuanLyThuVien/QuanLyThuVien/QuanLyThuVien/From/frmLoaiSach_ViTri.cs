@@ -17,5 +17,35 @@ namespace QuanLyThuVien.From
         {
             InitializeComponent();
         }
+
+        connection con = new connection();
+        string queryLoaiSach = "select * from Loaisach"; //= "select * from booktype";
+        string queryViTri= "select *  from VITRI";
+
+ 
+        private void loadLoaiSach()
+        {
+            DataTable dt = con.readData(connection.P_LoadDocGia);
+            if (dt != null)
+            {
+                gwLoaiSach.DataSource = dt;
+                
+            }
+        }
+
+        private void loadViTri()
+        {
+            DataTable dt = con.readData(connection.P_LoadViTri);
+            if (dt != null)
+            {
+                gwVT.DataSource = dt;
+            }
+        }
+
+        private void frmLoaiSach_ViTri_Load(object sender, EventArgs e)
+        {
+            loadLoaiSach();
+            loadViTri();
+        }
     }
 }

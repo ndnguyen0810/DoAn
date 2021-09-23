@@ -343,6 +343,9 @@
             // 
             this.gridView1.GridControl = this.gcDocGia;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.MouseUp;
+            this.gridView1.OptionsBehavior.ReadOnly = true;
+            this.gridView1.OptionsClipboard.AllowCopy = DevExpress.Utils.DefaultBoolean.False;
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsFind.FindNullPrompt = "Bạn cần tìm gì ở đây...";
             this.gridView1.OptionsFind.FindPanelLocation = DevExpress.XtraGrid.Views.Grid.GridFindPanelLocation.Panel;
@@ -380,6 +383,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmDocGia";
             this.Text = "Độc giả";
+            this.Load += new System.EventHandler(this.frmDocGia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

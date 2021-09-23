@@ -17,5 +17,35 @@ namespace QuanLyThuVien.From
         {
             InitializeComponent();
         }
+        connection con = new connection();
+        string queryLoaiSach = "select * from Loaisach"; //= "select * from booktype";
+        string queryViTri = "select *  from VITRI";
+
+
+        public void loadNhanVien()
+        {
+            DataTable dt = con.readData(connection.P_LoadNhanVien);
+            if (dt != null)
+            {
+                gcNhanVien.DataSource = dt;
+
+            }
+        }
+
+        private void loadChucVu()
+        {
+            DataTable dt = con.readData(connection.P_LoadChucVu);
+            if (dt != null)
+            {
+                gcChucVu.DataSource = dt;
+
+            }
+        }
+
+        private void frmNhanVien_Load(object sender, EventArgs e)
+        {
+            loadNhanVien();
+            loadChucVu();
+        }
     }
 }
