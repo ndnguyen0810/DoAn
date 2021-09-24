@@ -142,10 +142,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtNgaySinh.Properties.EditFormat.FormatString = "dd/mm/yyyy";
             this.txtNgaySinh.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.txtNgaySinh.Properties.ReadOnly = true;
             this.txtNgaySinh.Size = new System.Drawing.Size(208, 22);
             this.txtNgaySinh.TabIndex = 18;
-            this.txtNgaySinh.Visible = false;
             // 
             // labelControl6
             // 
@@ -163,10 +161,8 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtEmail.Properties.Appearance.Options.UseFont = true;
-            this.txtEmail.Properties.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(208, 22);
             this.txtEmail.TabIndex = 7;
-            this.txtEmail.Visible = false;
             // 
             // labelControl5
             // 
@@ -184,10 +180,8 @@
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtSDT.Properties.Appearance.Options.UseFont = true;
-            this.txtSDT.Properties.ReadOnly = true;
             this.txtSDT.Size = new System.Drawing.Size(208, 22);
             this.txtSDT.TabIndex = 8;
-            this.txtSDT.Visible = false;
             // 
             // labelControl4
             // 
@@ -205,10 +199,8 @@
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtDiaChi.Properties.Appearance.Options.UseFont = true;
-            this.txtDiaChi.Properties.ReadOnly = true;
             this.txtDiaChi.Size = new System.Drawing.Size(208, 22);
             this.txtDiaChi.TabIndex = 9;
-            this.txtDiaChi.Visible = false;
             // 
             // labelControl3
             // 
@@ -236,10 +228,8 @@
             this.txtTenDG.Name = "txtTenDG";
             this.txtTenDG.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtTenDG.Properties.Appearance.Options.UseFont = true;
-            this.txtTenDG.Properties.ReadOnly = true;
             this.txtTenDG.Size = new System.Drawing.Size(208, 22);
             this.txtTenDG.TabIndex = 10;
-            this.txtTenDG.Visible = false;
             // 
             // labelControl1
             // 
@@ -260,7 +250,6 @@
             this.txtMaDG.Properties.ReadOnly = true;
             this.txtMaDG.Size = new System.Drawing.Size(208, 22);
             this.txtMaDG.TabIndex = 11;
-            this.txtMaDG.Visible = false;
             // 
             // btnLamMoi
             // 
@@ -343,10 +332,13 @@
             // 
             this.gridView1.GridControl = this.gcDocGia;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsBehavior.ReadOnly = true;
             this.gridView1.OptionsFind.AlwaysVisible = true;
             this.gridView1.OptionsFind.FindPanelLocation = DevExpress.XtraGrid.Views.Grid.GridFindPanelLocation.Panel;
             this.gridView1.OptionsFind.ShowFindButton = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
             // 
             // groupControl3
             // 
@@ -424,7 +416,7 @@
             this.Font = new System.Drawing.Font("Tahoma", 10F);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmPhieuMuon";
-            this.Text = "Phiếu mượn";
+            this.Text = "Mượn sách";
             this.Load += new System.EventHandler(this.frmPhieuMuon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
             this.tablePanel1.ResumeLayout(false);

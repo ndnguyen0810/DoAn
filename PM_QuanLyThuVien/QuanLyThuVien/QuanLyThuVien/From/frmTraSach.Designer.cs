@@ -140,11 +140,16 @@
             // 
             // txtNgaySinh
             // 
+            this.txtNgaySinh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtNgaySinh.EditValue = null;
             this.txtNgaySinh.Location = new System.Drawing.Point(124, 84);
             this.txtNgaySinh.Name = "txtNgaySinh";
+            this.txtNgaySinh.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtNgaySinh.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgaySinh.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtNgaySinh.Properties.Appearance.Options.UseBackColor = true;
             this.txtNgaySinh.Properties.Appearance.Options.UseFont = true;
+            this.txtNgaySinh.Properties.Appearance.Options.UseForeColor = true;
             this.txtNgaySinh.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtNgaySinh.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -167,10 +172,15 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtEmail.Location = new System.Drawing.Point(124, 172);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtEmail.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtEmail.Properties.Appearance.Options.UseBackColor = true;
             this.txtEmail.Properties.Appearance.Options.UseFont = true;
+            this.txtEmail.Properties.Appearance.Options.UseForeColor = true;
             this.txtEmail.Properties.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(208, 22);
             this.txtEmail.TabIndex = 4;
@@ -187,10 +197,15 @@
             // 
             // txtSDT
             // 
+            this.txtSDT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtSDT.Location = new System.Drawing.Point(124, 142);
             this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtSDT.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDT.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtSDT.Properties.Appearance.Options.UseBackColor = true;
             this.txtSDT.Properties.Appearance.Options.UseFont = true;
+            this.txtSDT.Properties.Appearance.Options.UseForeColor = true;
             this.txtSDT.Properties.ReadOnly = true;
             this.txtSDT.Size = new System.Drawing.Size(208, 22);
             this.txtSDT.TabIndex = 5;
@@ -207,10 +222,15 @@
             // 
             // txtDiaChi
             // 
+            this.txtDiaChi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtDiaChi.Location = new System.Drawing.Point(124, 114);
             this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtDiaChi.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtDiaChi.Properties.Appearance.Options.UseBackColor = true;
             this.txtDiaChi.Properties.Appearance.Options.UseFont = true;
+            this.txtDiaChi.Properties.Appearance.Options.UseForeColor = true;
             this.txtDiaChi.Properties.ReadOnly = true;
             this.txtDiaChi.Size = new System.Drawing.Size(208, 22);
             this.txtDiaChi.TabIndex = 6;
@@ -237,13 +257,19 @@
             // 
             // txtTenDG
             // 
+            this.txtTenDG.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.txtTenDG.Location = new System.Drawing.Point(124, 55);
             this.txtTenDG.Name = "txtTenDG";
+            this.txtTenDG.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTenDG.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenDG.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtTenDG.Properties.Appearance.Options.UseBackColor = true;
             this.txtTenDG.Properties.Appearance.Options.UseFont = true;
+            this.txtTenDG.Properties.Appearance.Options.UseForeColor = true;
             this.txtTenDG.Properties.ReadOnly = true;
             this.txtTenDG.Size = new System.Drawing.Size(208, 22);
             this.txtTenDG.TabIndex = 7;
+            this.txtTenDG.UseWaitCursor = true;
             // 
             // labelControl1
             // 
@@ -259,8 +285,12 @@
             // 
             this.txtMaDG.Location = new System.Drawing.Point(124, 26);
             this.txtMaDG.Name = "txtMaDG";
+            this.txtMaDG.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtMaDG.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaDG.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtMaDG.Properties.Appearance.Options.UseBackColor = true;
             this.txtMaDG.Properties.Appearance.Options.UseFont = true;
+            this.txtMaDG.Properties.Appearance.Options.UseForeColor = true;
             this.txtMaDG.Properties.ReadOnly = true;
             this.txtMaDG.Size = new System.Drawing.Size(208, 22);
             this.txtMaDG.TabIndex = 8;
@@ -292,11 +322,14 @@
             // 
             this.gridView2.GridControl = this.gcDocGia;
             this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsBehavior.Editable = false;
+            this.gridView2.OptionsBehavior.ReadOnly = true;
             this.gridView2.OptionsFind.AlwaysVisible = true;
             this.gridView2.OptionsFind.FindNullPrompt = "Bạn cần tìm cái gì...";
             this.gridView2.OptionsFind.FindPanelLocation = DevExpress.XtraGrid.Views.Grid.GridFindPanelLocation.Panel;
             this.gridView2.OptionsFind.ShowFindButton = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
+            this.gridView2.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView2_RowClick);
             // 
             // Root
             // 

@@ -43,5 +43,15 @@ namespace QuanLyThuVien.From
             loadSachDangMuon();
             loadDocGia();
         }
+
+        private void gridView2_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            txtMaDG.EditValue = gridView2.GetRowCellValue(e.RowHandle, gridView2.Columns[0].ToString()).ToString();
+            txtTenDG.EditValue = gridView2.GetRowCellValue(e.RowHandle, gridView2.Columns[1].ToString()).ToString();
+            txtDiaChi.EditValue = gridView2.GetRowCellValue(e.RowHandle, gridView2.Columns[3].ToString()).ToString();
+            txtNgaySinh.EditValue = Convert.ToDateTime(gridView2.GetRowCellValue(e.RowHandle, gridView2.Columns[2].ToString())).ToString("dd/MM/yyyy");
+            txtSDT.EditValue = gridView2.GetRowCellValue(e.RowHandle, gridView2.Columns[4].ToString()).ToString();
+            txtEmail.EditValue = gridView2.GetRowCellValue(e.RowHandle, gridView2.Columns[5].ToString()).ToString();
+        }
     }
 }

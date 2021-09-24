@@ -25,7 +25,7 @@ namespace QuanLyThuVien.From
  
         private void loadLoaiSach()
         {
-            DataTable dt = con.readData(connection.P_LoadDocGia);
+            DataTable dt = con.readData(connection.P_LoadLoaiSach);
             if (dt != null)
             {
                 gwLoaiSach.DataSource = dt;

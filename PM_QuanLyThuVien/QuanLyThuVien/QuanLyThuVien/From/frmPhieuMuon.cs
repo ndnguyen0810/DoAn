@@ -24,7 +24,7 @@ namespace QuanLyThuVien.From
 
         private void loadSach()
         {
-            DataTable dt = con.readData(querySach);
+            DataTable dt = con.readData(connection.P_LoadSach);
             if (dt != null)
             {
                 gcSach.DataSource = dt;
@@ -33,7 +33,7 @@ namespace QuanLyThuVien.From
 
         private void loadDocGia()
         {
-            DataTable dt = con.readData(queryDocGia);
+            DataTable dt = con.readData(connection.P_LoadDocGia);
             if (dt != null)
             {
                 gcDocGia.DataSource = dt;
@@ -44,6 +44,20 @@ namespace QuanLyThuVien.From
         {
             loadDocGia();
             loadSach();
+        }
+
+        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            Convert.ToDateTime(gridView1.GetRowCellValue(e.RowHandle, "Năm sinh").ToString()).ToString("dd/MM/yyyy");
+
+            txtDiaChi.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[3].ToString()).ToString();
+            txtMaDG.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[0].ToString()).ToString();
+            txtTenDG.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[1].ToString()).ToString();
+
+            txtNgaySinh.EditValue = Convert.ToDateTime(gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[2].ToString())).ToString("dd/MM/yyyy");
+
+            txtEmail.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[5].ToString()).ToString();
+            txtSDT.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[4].ToString()).ToString();
         }
     }
 }

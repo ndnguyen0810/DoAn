@@ -267,12 +267,12 @@ namespace QuanLyThuVien.From
 
         private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            txtMaDG.EditValue = gridView1.GetRowCellValue(e.RowHandle, "Mã độc giả").ToString();
-            txtTenDG.EditValue = gridView1.GetRowCellValue(e.RowHandle, "Họ và tên").ToString();
-            txtDiaChi.EditValue = gridView1.GetRowCellValue(e.RowHandle, "Địa chỉ").ToString();
-            txtNgaySinh.EditValue = Convert.ToDateTime(gridView1.GetRowCellValue(e.RowHandle, "Năm sinh").ToString()).ToString("dd/MM/yyyy");
-            txtSDT.EditValue = gridView1.GetRowCellValue(e.RowHandle, "Số điện thoại").ToString();
-            txtEmail.EditValue = gridView1.GetRowCellValue(e.RowHandle, "EMAIL").ToString();
+            txtMaDG.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[0].ToString()).ToString();
+            txtTenDG.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[1].ToString()).ToString();
+            txtDiaChi.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[3].ToString()).ToString();
+            txtNgaySinh.EditValue = Convert.ToDateTime(gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[2].ToString())).ToString("dd/MM/yyyy");
+            txtSDT.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[4].ToString()).ToString();
+            txtEmail.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[5].ToString()).ToString();
 
             //Convert.ToDateTime(txtNgaySinh.EditValue.ToString()).ToString("dd/MM/yyy")
         }
