@@ -26,23 +26,23 @@ namespace QuanLyThuVien.From
 
         private void loadNXBOnSach()
         {
-            DataTable dt = con.readData(queryNXB);
+            DataTable dt = con.readData("select MANXB, TENNXB  from NXB");
             if (dt != null)
             {
-                txtNXB.Properties.DataSource = dt;
-                txtNXB.Properties.DisplayMember = "TenNXB";
-                txtNXB.Properties.ValueMember = "MaNXB";
+                lookUpEditNXB.Properties.DataSource = dt;
+                lookUpEditNXB.Properties.DisplayMember = "TENNXB";
+                lookUpEditNXB.Properties.ValueMember = "MANXB";
             }
         }
 
         private void Loadvitri()
         {
-            DataTable dt = con.readData(queryVT);
+            DataTable dt = con.readData("select MAVT, TENVITRI from VITRI");
             if (dt != null)
             {
-                txtVitri.Properties.DataSource = dt;
-                txtVitri.Properties.DisplayMember = "TenVT";
-                txtVitri.Properties.ValueMember = "MaVT";
+                lookUpEditVT.Properties.DataSource = dt;
+                lookUpEditVT.Properties.DisplayMember = "TENVITRI";
+                lookUpEditVT.Properties.ValueMember = "MAVT";
             }
         }
 
@@ -73,39 +73,45 @@ namespace QuanLyThuVien.From
 
         private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            txtMaSach.EditValue= gridView1.GetRowCellValue(e.RowHandle, "Mã sách").ToString();
-            txtNXB.EditValue = gridView1.GetRowCellValue(e.RowHandle, "Nhà xuất bản").ToString();
-            txtTenSach.EditValue = gridView1.GetRowCellValue(e.RowHandle, "Tên sách").ToString();
-            txtTacGia.EditValue = gridView1.GetRowCellValue(e.RowHandle, "Tác giả").ToString();
-            txtNamXB.EditValue = gridView1.GetRowCellValue(e.RowHandle, "Năm xuất bản").ToString();
+            txtMaSach.EditValue= gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[0].ToString()).ToString();
+            txtTenSach.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[1].ToString()).ToString();   
+            txtTacGia.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[2].ToString()).ToString();
+            txtSoLuong.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[3].ToString()).ToString();
+            lookUpEditNXB.Text = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[4].ToString()).ToString();
+            txtNamXB.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[5].ToString()).ToString();
+            lookUpEditVT.Text = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[6].ToString()).ToString();
+           
 
         }
 
         private void gridView2_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            txtMaNXB.EditValue=gridView2.GetRowCellValue(e.RowHandle, "Mã nhà xuất bản").ToString(); 
-            txtTenNXB.EditValue=gridView2.GetRowCellValue(e.RowHandle, "Tên nhà xuất bản").ToString(); 
-            txtDiaChi.EditValue= gridView2.GetRowCellValue(e.RowHandle, "Địa chỉ").ToString(); 
-            txtSDT.EditValue= gridView2.GetRowCellValue(e.RowHandle, "Số điện thoại").ToString(); 
-            txtWeb.EditValue = gridView2.GetRowCellValue(e.RowHandle, "Websize").ToString();
-            txtEmail.EditValue = gridView2.GetRowCellValue(e.RowHandle, "Email").ToString();
+            txtMaNXB.EditValue=gridView2.GetRowCellValue(e.RowHandle, gridView2.Columns[0].ToString()).ToString();
+            txtTenNXB.EditValue= gridView2.GetRowCellValue(e.RowHandle, gridView2.Columns[1].ToString()).ToString();
+            txtDiaChi.EditValue= gridView2.GetRowCellValue(e.RowHandle, gridView2.Columns[2].ToString()).ToString();
+            txtSDT.EditValue=gridView2.GetRowCellValue(e.RowHandle, gridView2.Columns[3].ToString()).ToString();
+            txtEmail.EditValue= gridView2.GetRowCellValue(e.RowHandle, gridView2.Columns[4].ToString()).ToString();
+            txtWeb.EditValue = gridView2.GetRowCellValue(e.RowHandle, gridView2.Columns[5].ToString()).ToString();
         }
+       
+        
         #region Sach Edit
 
         private void btnThemSach_Click(object sender, EventArgs e)
         {
-            string masach = txtMaSach.EditValue.ToString();
-            string nxb= (txtNXB.EditValue.ToString()) ;
+           // string masach = txtMaSach.EditValue.ToString();
+            string nxb= lookUpEditNXB.EditValue.ToString() ;
             string tensach= txtTenSach.EditValue.ToString();
             string tacgia= txtTacGia.EditValue.ToString() ;
-            int namxb= Convert.ToInt32(txtNamXB.EditValue.ToString()) ;
-            string vitri =txtVitri.EditValue.ToString() ;
+            int soluong = Int32.Parse(txtSoLuong.EditValue.ToString());
+            int namxb= Int32.Parse(txtNamXB.EditValue.ToString()) ;
+            string vitri =lookUpEditVT.EditValue.ToString() ;
             
             #region checknull
-            if ((txtNXB.EditValue == null) || (txtNXB.EditValue.ToString().Equals("")))
+            if ((lookUpEditNXB.EditValue == null) || (lookUpEditNXB.EditValue.ToString().Equals("")))
             {
                 XtraMessageBox.Show("Bạn chưa nhập tên độc giả\r\nVui lòng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtNXB.Focus();
+                lookUpEditNXB.Focus();
                 return;
             }
 
@@ -116,15 +122,13 @@ namespace QuanLyThuVien.From
                 return;
             }
 
-            if ((txtDiaChi.EditValue == null) || (txtDiaChi.EditValue.ToString().Equals("")))
+            if ((txtTenSach.EditValue == null) || (txtTenSach.EditValue.ToString().Equals("")))
             {
-                XtraMessageBox.Show("Bạn chưa nhập địa chỉ\r\nVui lòng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtDiaChi.Focus();
+                XtraMessageBox.Show("Bạn chưa nhập tên sách\r\nVui lòng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtTenSach.Focus();
                 return;
             }
-
-            namxb = -1;
-            
+        
             try
             {               
                 if ((namxb < 1) || (namxb > DateTime.Now.Year))
@@ -142,16 +146,45 @@ namespace QuanLyThuVien.From
                 return;
             }
 
+            try
+            {
+                if (soluong < 0)
+                {
+                    XtraMessageBox.Show("Số lượng không được nhỏ hơn 0\r\nVui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNamXB.Focus();
+                    return;
+                }
+            }
+            catch(Exception)
+            {
+                XtraMessageBox.Show("Số lượng phải là số\r\nVui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtNamXB.Focus();
+                return;
+            }
+
+            if ((lookUpEditVT.EditValue == null) || (lookUpEditVT.EditValue.ToString().Equals("")))
+            {
+                XtraMessageBox.Show("Bạn chưa chọn vị trí\r\nVui lòng chọn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lookUpEditNXB.Focus();
+                return;
+            }
 
             #endregion
 
-            string queryInsert = string.Format("insert into sach values('{0}',N'{1}',N'{2}','{3}',{4},'{5}' )", con.creatId("MS", querySach), tensach, tacgia, nxb, namxb, vitri);
+            string queryInsert = string.Format("insert into SACH values('{0}',N'{1}',N'{2}',{3},{4},'{5}','{6}')", con.creatId("MS", querySach), tensach, tacgia,soluong,namxb, nxb, vitri);
+            if (connection.checkName(querySach, txtTenSach, "tensach") == true)
+            {
+                XtraMessageBox.Show("Tên sách có tên \"" + txtTenSach.EditValue.ToString() + "\" đã tồn tại\r\nVui lòng nhập tên khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnLamMoiSach.PerformClick();
+                return;
+            }
 
             if (con.exeData(queryInsert))
             {
                 loadSach();
                 XtraMessageBox.Show("Thêm sách thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 btnLamMoiSach.PerformClick();
+                XtraMessageBox.Show(queryInsert);
             }
             else
             {
@@ -166,14 +199,15 @@ namespace QuanLyThuVien.From
             string masach = txtMaSach.EditValue.ToString();           
             string tensach = txtTenSach.EditValue.ToString();         
             string tacgia = txtTacGia.EditValue.ToString();
-            string nxb = (txtNXB.EditValue.ToString());
+            string nxb = lookUpEditNXB.EditValue.ToString();
             int namxb = Convert.ToInt32(txtNamXB.EditValue.ToString());
-            string vitri = txtVitri.EditValue.ToString();
+            string vitri = lookUpEditVT.EditValue.ToString();
+            int soluong = Int32.Parse(txtSoLuong.EditValue.ToString());
 
             #region check null          
             if ((txtMaSach.EditValue == null) || (txtMaSach.EditValue.ToString().Equals("")))
             {
-                XtraMessageBox.Show("Bạn chọn chưa chọn sách\r\nVui lòng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                XtraMessageBox.Show("Bạn chọn chưa chọn sách\r\nVui lòng chọn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtMaSach.Focus();
                 return;
             }
@@ -192,10 +226,10 @@ namespace QuanLyThuVien.From
                 return;
             }
 
-            if ((txtNXB.EditValue == null) || (txtDiaChi.EditValue.ToString().Equals("")))
+            if ((lookUpEditNXB.SelectedText == null) || (lookUpEditNXB.EditValue.ToString().Equals("")))
             {
                 XtraMessageBox.Show("Nhà xuất bản không được phép để trống\r\nVui lòng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtNXB.Focus();
+                lookUpEditNXB.Focus();
                 return;
             }
 
@@ -205,8 +239,6 @@ namespace QuanLyThuVien.From
                 txtSDT.Focus();
                 return;
             }
-
-            namxb = -1;
 
             try
             {
@@ -225,17 +257,52 @@ namespace QuanLyThuVien.From
                 return;
             }
 
-            if ((txtVitri.EditValue == null) )
+            try
             {
-                XtraMessageBox.Show("Bạn chưa nhập vị trí\r\nVui lòng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (soluong < 0)
+                {
+                    XtraMessageBox.Show("Số lượng không được nhỏ hơn 0\r\nVui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNamXB.Focus();
+                    return;
+                }
+            }
+            catch (Exception)
+            {
+                XtraMessageBox.Show("Số lượng phải là số\r\nVui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtNamXB.Focus();
+                return;
+            }
+
+            if ((lookUpEditVT.EditValue == null) )
+            {
+                XtraMessageBox.Show("Bạn chưa chọn vị trí\r\nVui lòng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtEmail.Focus();
                 return;
             }
            
             #endregion
 
-            string queryUpdate = string.Format("update sach set tensach=N'{0}',tacgia=N'{1}', nxb='{2}', namxb={3},vitri='{4}' where masach='{5}' ", tensach, tacgia, nxb, namxb, vitri, masach);
-
+            string queryUpdate = string.Format("update sach set tensach=N'{0}',tacgia=N'{1}', manxb='{2}', namxb={3}, soluong= {4},mavt='{5}' where masach='{6}' ", tensach, tacgia, nxb, namxb,soluong, vitri, masach);
+            if (connection.checkName(querySach, txtTenSach, "tensach") == true)
+            {
+                XtraMessageBox.Show("Tên sách có tên \"" + txtTenSach.EditValue.ToString() + "\" đã tồn tại\r\nVui lòng nhập tên khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnLamMoiSach.PerformClick();
+                return;
+            }          
+            if (XtraMessageBox.Show("Bạn có chắc chắn muốn sửa sách đang chọn?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (con.exeData(queryUpdate))
+                {
+                    loadSach();
+                    XtraMessageBox.Show("Sửa sách thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnLamMoiSach.PerformClick();
+                }
+                else
+                {
+                    XtraMessageBox.Show("Sửa sách thất bại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   
+                }
+            }
 
         }
 
@@ -269,12 +336,13 @@ namespace QuanLyThuVien.From
         private void btnLamMoiSach_Click(object sender, EventArgs e)
         {
             txtMaSach.EditValue =null;
-            txtNXB.EditValue = null;
+            lookUpEditNXB.EditValue = null;
             txtTenSach.EditValue = null;
             txtTacGia.EditValue = null;
             txtNamXB.EditValue = null;
-            txtVitri.EditValue = null;
+            lookUpEditVT.EditValue = null;
             txtTenSach.Focus();
+            txtSoLuong.EditValue = null;
         }
 
         #endregion

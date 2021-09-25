@@ -165,11 +165,32 @@ namespace QuanLyThuVien
             }
         }
 
+        //check cùng tên trong bảg
+        public static bool checkName(string query, TextEdit textEdit, string column)
+        {
+            bool checkName = false;
+            connection con = new connection();
+            DataTable dt = new DataTable();
+            dt =  con.readData(query);
+            if (dt != null)
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    if (textEdit.EditValue.ToString().Trim().Equals(dr[column].ToString()))
+                    {
+                        checkName = true;
+                       // return true;
+                        break;
+                    }
+                }
+            }
+            return checkName;
+        }
 
         //cột có tên
 
         public static string P_LoadDocGia = "select MADG as [Mã độc giả],HOTEN as [Họ và tên], NAMSINH as [Năm sinh],DIACHI as [Địa chỉ],SDT as [Số điện thoại],Email from DOCGIA";
-        public static string P_LoadSach= "select MASACH as [Mã sách],TENSACH as [Tên sách],TACGIA as [Tác giả],SoLuong as [Số lượng],	NAMXB as [Năm xuất bản],xb.TENNXB as [Nhà xuất bản],vt.TENVITRI as [Vị trí] from SACH  s, NXB xb, VITRI vt        where s.MANXB= xb.MANXB           and vt.MAVT=s.MAVT";
+        public static string P_LoadSach= "select MASACH as [Mã sách],TENSACH as [Tên sách],TACGIA as [Tác giả],SoLuong as [Số lượng], xb.TENNXB as [Nhà xuất bản], NAMXB as [Năm xuất bản], vt.TENVITRI as [Vị trí] from SACH  s, NXB xb, VITRI vt        where s.MANXB= xb.MANXB           and vt.MAVT=s.MAVT";
         public static string P_LoadNXB = "select MANXB as [Mã nhà xuất bản],TENNXB as [Tên nhà xuất bản],Diachi as [Địa chỉ],   sdt as [Số điện thoại],email as [Email], websize as [Websize] from NXB";
         public static string P_LoadLoaiSach = "select MALOAI as[Mã loại], TENLOAI as[Tên loại], vt.TENVITRI as[Tên vị trí] from LOAISACH ls, VITRI vt  where ls.MaVT= vt.MAVT";
         public static string P_LoadViTri= "select MAVT as[Mã vị trí], TENVITRI as[Tên vị trí] from VITRI";

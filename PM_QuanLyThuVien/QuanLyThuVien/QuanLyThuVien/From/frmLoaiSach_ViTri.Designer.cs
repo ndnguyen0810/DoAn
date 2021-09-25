@@ -58,7 +58,6 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
@@ -141,6 +140,7 @@
             // gwLoaiSach
             // 
             this.tablePanel1.SetColumn(this.gwLoaiSach, 0);
+            this.gwLoaiSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gwLoaiSach.Location = new System.Drawing.Point(3, 177);
             this.gwLoaiSach.MainView = this.gridView1;
             this.gwLoaiSach.Name = "gwLoaiSach";
@@ -166,7 +166,6 @@
             // gctLoaisach
             // 
             this.tablePanel1.SetColumn(this.gctLoaisach, 0);
-            this.gctLoaisach.Controls.Add(this.labelControl6);
             this.gctLoaisach.Controls.Add(this.lkupViTri);
             this.gctLoaisach.Controls.Add(this.btnLamMoiLS);
             this.gctLoaisach.Controls.Add(this.btnXoaLS);
@@ -427,14 +426,6 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(499, 57);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(63, 13);
-            this.labelControl6.TabIndex = 5;
-            this.labelControl6.Text = "labelControl6";
-            // 
             // frmLoaiSach_ViTri
             // 
             this.Appearance.Options.UseFont = true;
@@ -504,6 +495,5 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LookUpEdit lkupViTri;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
     }
 }

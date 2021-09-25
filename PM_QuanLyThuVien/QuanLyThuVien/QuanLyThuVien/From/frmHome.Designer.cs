@@ -49,7 +49,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1198, 521);
+            this.ControlBox = false;
             this.Controls.Add(this.pictureEdit1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmHome";
             this.Text = "Trang chủ";
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
