@@ -20,7 +20,34 @@ namespace QuanLyThuVien
         {
             InitializeComponent();
         }
+        connection con = new connection();
 
+        public string fullname = frmLogin.fullname;// = frmLogin;
+       // string chucvu = frmLogin.CHUCVU;
+
+        private void loadFrom()
+        {
+            barHeaderItem1.Caption = "Xin chào: " + fullname;
+            //bool check = false;
+            //string sql = "select mod from users where id_user = '" + id + "'";
+            //DataTable dt = new DataTable();
+            //dt = con.readData(sql);
+            //if (dt != null)
+            //{
+            //    foreach (DataRow dr in dt.Rows)
+            //    {
+            //        check = Convert.ToBoolean(dr["mod"]);
+            //    }
+            //}
+            //if (!check)
+            //{
+            //    rbNhanVien.Visible = false;
+            //    rbThuVien.Visible = false;
+            //}
+            //frmHome frm = new frmHome();
+            //frm.MdiParent = this;
+            //frm.Show();
+        }
         private Form formCheck(Type ftype)
         {
             foreach (Form f in this.MdiChildren)
@@ -333,6 +360,7 @@ namespace QuanLyThuVien
         #region Event From
         private void frmMain_Load(object sender, EventArgs e)
         {
+            loadFrom();
             frmHome frm = new frmHome();
             frm.MdiParent = this;
             frm.Show();

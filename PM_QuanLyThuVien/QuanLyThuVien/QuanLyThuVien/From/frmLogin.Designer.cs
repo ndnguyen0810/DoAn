@@ -151,6 +151,7 @@
             this.txtPass.Properties.Click += new System.EventHandler(this.txtReNewPass_Properties_Click);
             this.txtPass.Size = new System.Drawing.Size(216, 22);
             this.txtPass.TabIndex = 19;
+            this.txtPass.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtPass_ButtonClick);
             // 
             // checkGhiNho
             // 
@@ -183,8 +184,10 @@
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.MaximizeBox = false;
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imageEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).EndInit();

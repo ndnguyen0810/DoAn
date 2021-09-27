@@ -224,6 +224,7 @@
             // 
             // txtTenDG
             // 
+            this.txtTenDG.Cursor = System.Windows.Forms.Cursors.No;
             this.txtTenDG.Location = new System.Drawing.Point(128, 64);
             this.txtTenDG.Name = "txtTenDG";
             this.txtTenDG.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
@@ -245,6 +246,7 @@
             // 
             this.txtMaDG.Location = new System.Drawing.Point(128, 35);
             this.txtMaDG.Name = "txtMaDG";
+            this.txtMaDG.Properties.AllowFocused = false;
             this.txtMaDG.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtMaDG.Properties.Appearance.Options.UseFont = true;
             this.txtMaDG.Properties.ReadOnly = true;

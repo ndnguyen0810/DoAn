@@ -81,12 +81,6 @@ namespace QuanLyThuVien.From
         #region Tài khoản Edit
         private void btnThem_Click(object sender, EventArgs e)
         {
-           // string matk = txtMaTK.EditValue.ToString();
-            string tentk = txtTaiKhoan.EditValue.ToString();
-            string mk = txtMatKhau.EditValue.ToString();
-            string nv = lookUpEditNV.EditValue.ToString();
-            string cv = lookUpEditCV.EditValue.ToString();
-
             if ((txtTaiKhoan.EditValue == null) || (txtTaiKhoan.EditValue.ToString().Equals("")))
             {
                 XtraMessageBox.Show("Tên tài khoản không được bỏ trống\r\nVui lòng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -112,10 +106,28 @@ namespace QuanLyThuVien.From
                 return;
             }
 
+
+            if (connection.checkName(queryTK, txtTaiKhoan, "TENTK") == true)
+            {
+                XtraMessageBox.Show("Tài khoản có tên \"" + txtTaiKhoan.EditValue.ToString() + "\" đã tồn tại\r\nVui lòng nhập tên khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnLamMoi.PerformClick();
+                return;
+            }
+
+
+            string tentk = txtTaiKhoan.EditValue.ToString();
+            string mk = txtMatKhau.EditValue.ToString();
+            string nv = lookUpEditNV.EditValue.ToString();
+            string cv = lookUpEditCV.EditValue.ToString();
+
             if (tentk.Length < 10)
             {
                 XtraMessageBox.Show("Tên tài khoản quá ngắn\r\nVui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+                return;
+            }
+            if (tentk.Length > 30)
+            {
+                XtraMessageBox.Show("Tên tài khoản quá dài\r\nVui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (mk.Length < 8)
@@ -125,20 +137,13 @@ namespace QuanLyThuVien.From
                 return;
             }
 
-            if(connection.checkName(queryTK,txtTaiKhoan, "TENTK")==true)
-            {
-                XtraMessageBox.Show("Tài khoản có tên \"" + txtTaiKhoan.EditValue.ToString() + "\" đã tồn tại\r\nVui lòng nhập tên khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                btnLamMoi.PerformClick();
-                return;
-            }
-            string queryInsert = string.Format("insert into TAIKHOAN values('{0}', '{1}', '{2}', '{3}', '{4}')", con.creatId("TK",queryTK), tentk, mk,nv,cv);
-
+            string queryInsert = string.Format("insert into TAIKHOAN values('{0}', '{1}', '{2}', '{3}', '{4}')", con.creatId("TK", queryTK), tentk, mk, nv, cv);
             if (con.exeData(queryInsert))
             {
                 loadTaiKhoan();
                 XtraMessageBox.Show("Thêm tài khoản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 btnLamMoi.PerformClick();
-               
+
             }
             else
             {
@@ -182,6 +187,56 @@ namespace QuanLyThuVien.From
             string mk = txtMatKhau.EditValue.ToString();
             string nv = lookUpEditNV.EditValue.ToString();
             string cv = lookUpEditCV.EditValue.ToString();
+
+            if ((txtMaTK.EditValue == null) || (txtMaTK.EditValue.ToString().Equals("")))
+            {
+                XtraMessageBox.Show("Tên tài khoản không được bỏ trống\r\nVui lòng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtMaTK.Focus();
+                return;
+            }
+            if ((txtTaiKhoan.EditValue == null) || (txtTaiKhoan.EditValue.ToString().Equals("")))
+            {
+                XtraMessageBox.Show("Tên tài khoản không được bỏ trống\r\nVui lòng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtTaiKhoan.Focus();
+                return;
+            }
+            if ((txtMatKhau.EditValue == null) || (txtMatKhau.EditValue.ToString().Equals("")))
+            {
+                XtraMessageBox.Show("Mật khẩu không được bỏ trống\r\nVui lòng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtMatKhau.Focus();
+                return;
+            }
+            if ((lookUpEditNV.EditValue == null) || (lookUpEditNV.EditValue.ToString().Equals("")))
+            {
+                XtraMessageBox.Show("Nhân viên không được bỏ trống\r\nVui lòng chọn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lookUpEditNV.Focus();
+                return;
+            }
+            if ((lookUpEditCV.EditValue == null) || (lookUpEditCV.EditValue.ToString().Equals("")))
+            {
+                XtraMessageBox.Show("Chức vụ không được bỏ trống\r\nVui lòng chọn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lookUpEditCV.Focus();
+                return;
+            }
+            if (XtraMessageBox.Show("Bạn có chắc chắn muốn sửa tài khoản đang chọn?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                string queryUpdate = string.Format("update taikhoan set tentk='{0}', matkhau='{1}',manv='{2}',macv='{3}' where matk='{4}'", tentk, mk, nv, cv, matk);
+
+                if (con.exeData(queryUpdate))
+                {
+                    loadTaiKhoan();
+                    XtraMessageBox.Show("Sửa tài khoản thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnLamMoi.PerformClick();
+                }
+                else
+                {
+                    XtraMessageBox.Show("Sửa tài khoản thất bại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    XtraMessageBox.Show(queryUpdate);
+                }
+
+            }
+
         }
 
 
