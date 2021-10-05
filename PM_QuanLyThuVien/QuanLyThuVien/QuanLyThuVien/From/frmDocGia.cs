@@ -212,7 +212,7 @@ namespace QuanLyThuVien.From
                 else
                 {
                     XtraMessageBox.Show("Sửa độc giả thất bại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    XtraMessageBox.Show(queryUpdate);
+                    
                 }
 
             }

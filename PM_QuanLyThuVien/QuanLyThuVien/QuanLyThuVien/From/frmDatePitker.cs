@@ -36,7 +36,9 @@ namespace QuanLyThuVien.From
                 XtraMessageBox.Show("Ngày hẹn trả sách không được nhỏ hơn ngày hiện tại\r\nVui lòng chọn lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            date = txtHanTra.EditValue.ToString();
+            //namsinh = Convert.ToDateTime(txtNgaySinh.EditValue.ToString()).ToString("dd/MM/yyy");
+            date = Convert.ToDateTime(txtHanTra.EditValue.ToString()).ToString("dd/MM/yyyy");
+          //  MessageBox.Show(date);
             DialogResult = DialogResult.OK;
             Close();
         }

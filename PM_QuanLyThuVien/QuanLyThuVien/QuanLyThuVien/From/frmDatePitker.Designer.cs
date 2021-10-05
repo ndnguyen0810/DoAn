@@ -80,7 +80,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtHanTra.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtHanTra.Properties.EditFormat.FormatString = "dd/mm/yyyy";
+            this.txtHanTra.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.txtHanTra.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.txtHanTra.Size = new System.Drawing.Size(193, 22);
             this.txtHanTra.TabIndex = 3;
@@ -98,6 +98,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmDatePitker";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hạn trả";
             this.Load += new System.EventHandler(this.frmDatePitker_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtHanTra.Properties.CalendarTimeProperties)).EndInit();

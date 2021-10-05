@@ -48,6 +48,15 @@ namespace QuanLyThuVien
             closeConnect();
             return check;
         }
+        //
+        public void Ex_vp(string str)
+        {
+            openConnect();
+            SqlCommand sc = new SqlCommand(str, con);
+            sc.ExecuteNonQuery();
+            closeConnect();
+
+        }
 
         //ReadData: Doc du lieu tu bang ra DataTable
         public DataTable readData(string cmd)

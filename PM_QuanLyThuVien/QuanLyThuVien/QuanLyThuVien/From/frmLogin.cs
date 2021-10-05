@@ -19,19 +19,24 @@ namespace QuanLyThuVien.From
         }
 
         connection con = new connection();
+        //gán biến mặc định trc cho tiện
         private const string MATK = "MATK";
+        private const string MANV = "MANV";
         private const string TENNV = "TENNV";
         private const string TENTK = "TENTK";
-        private const string PASS = "MATKHAU";
-        
-        public static string TEN = "TENNV";
-        public static string matk = "";
-        public static string username = "";
-        public static string pass = "";
-        //public static int mod = 0;
+        private const string MATKHAU = "MATKHAU";
+        private const string MACV = "MaCV";
+        private const string TENCV = "TenCV";
 
+
+        //biến liên thông
+        public static string username;
+        public static string password;
         public static string fullname;
-
+        public static string mataikhoan;
+        public static string macv;
+        public static string tencv;
+        public static string manv;
         private void btnXoa_Click(object sender, EventArgs e)
         {
 
@@ -49,10 +54,9 @@ namespace QuanLyThuVien.From
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-          //   Dispose(); //show thử
-            
-
-           MessageBox.Show(getInfo(TEN));
+            Dispose(); //show thử
+           
+          // MessageBox.Show(getInfo(MATK) + "\nMã tk: "+getInfo(MANV) +"\nMacv:" + getInfo(MACV) +"\nTenCV: "+ getInfo(TENCV));
 
         }
 
@@ -81,12 +85,16 @@ namespace QuanLyThuVien.From
 
             try
             {
-                matk = getInfo(MATK);
-                if (matk != "")
+                mataikhoan = getInfo(MATK);
+                if (mataikhoan != "")
                 {
                     username = getInfo(TENTK);
-                    pass = getInfo(PASS);
-                    fullname = getInfo(TEN);
+                    password = getInfo(MATKHAU);
+                    fullname = getInfo(TENNV);
+                    mataikhoan = getInfo(MATK);
+                    macv = getInfo(MACV);
+                    tencv = getInfo(TENNV);
+                    manv = getInfo(MANV);
                     frmMain frm = new frmMain();
                     this.Hide();
                     frm.ShowDialog();
