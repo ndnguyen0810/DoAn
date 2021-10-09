@@ -80,6 +80,10 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtHanTra.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtHanTra.Properties.CalendarTimeProperties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.txtHanTra.Properties.CalendarTimeProperties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.txtHanTra.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.txtHanTra.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.txtHanTra.Properties.EditFormat.FormatString = "dd/MM/yyyy";
             this.txtHanTra.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.txtHanTra.Size = new System.Drawing.Size(193, 22);

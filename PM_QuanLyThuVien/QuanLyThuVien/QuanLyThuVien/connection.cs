@@ -52,8 +52,15 @@ namespace QuanLyThuVien
         public void Ex_vp(string str)
         {
             openConnect();
-            SqlCommand sc = new SqlCommand(str, con);
-            sc.ExecuteNonQuery();
+            try
+            {
+                SqlCommand sc = new SqlCommand(str, con);
+                sc.ExecuteNonQuery();
+            }
+           catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message);
+            }
             closeConnect();
 
         }

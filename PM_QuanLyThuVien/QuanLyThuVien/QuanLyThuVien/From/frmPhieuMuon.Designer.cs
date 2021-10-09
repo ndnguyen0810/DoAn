@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPhieuMuon));
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -41,6 +42,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtNgaySinh = new DevExpress.XtraEditors.DateEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txtEmail = new DevExpress.XtraEditors.TextEdit();
@@ -79,6 +81,7 @@
             this.btnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colSoLuong = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHenTra = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -129,6 +132,7 @@
             // groupControl1
             // 
             this.tablePanel1.SetColumn(this.groupControl1, 0);
+            this.groupControl1.Controls.Add(this.textBox1);
             this.groupControl1.Controls.Add(this.txtNgaySinh);
             this.groupControl1.Controls.Add(this.labelControl6);
             this.groupControl1.Controls.Add(this.txtEmail);
@@ -150,6 +154,13 @@
             this.groupControl1.Size = new System.Drawing.Size(561, 221);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Phiếu mượn";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(350, 36);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 21);
+            this.textBox1.TabIndex = 19;
             // 
             // txtNgaySinh
             // 
@@ -495,6 +506,7 @@
             this.colHenTra});
             this.gvCTPM.GridControl = this.gcCTPM;
             this.gvCTPM.Name = "gvCTPM";
+            this.gvCTPM.OptionsBehavior.ReadOnly = true;
             this.gvCTPM.OptionsFind.AlwaysVisible = true;
             this.gvCTPM.OptionsFind.FindNullPrompt = "Bạn cần tìm gì ở đây...";
             this.gvCTPM.OptionsFind.FindPanelLocation = DevExpress.XtraGrid.Views.Grid.GridFindPanelLocation.Panel;
@@ -564,10 +576,19 @@
             // colHenTra
             // 
             this.colHenTra.Caption = "Hẹn Trả";
+            this.colHenTra.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.colHenTra.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.colHenTra.FieldName = "HENTRA";
+            this.colHenTra.GroupFormat.FormatString = "dd/MM/yyyy";
+            this.colHenTra.GroupFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.colHenTra.Name = "colHenTra";
             this.colHenTra.Visible = true;
             this.colHenTra.VisibleIndex = 4;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // frmPhieuMuon
             // 
@@ -656,5 +677,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDelete;
         private DevExpress.XtraGrid.Columns.GridColumn colSoLuong;
         private DevExpress.XtraGrid.Columns.GridColumn colHenTra;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

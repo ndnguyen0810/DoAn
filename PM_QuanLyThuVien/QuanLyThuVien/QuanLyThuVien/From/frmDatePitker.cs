@@ -18,11 +18,12 @@ namespace QuanLyThuVien.From
             InitializeComponent();
         }
 
-        public static string date = "";
+        public static DateTime date;//= DateTime.Now.ToString("dd/MM/yyyy");// = "";
         private void frmDatePitker_Load(object sender, EventArgs e)
         {
 
         }
+
 
         private void btnChon_Click(object sender, EventArgs e)
         {
@@ -36,16 +37,18 @@ namespace QuanLyThuVien.From
                 XtraMessageBox.Show("Ngày hẹn trả sách không được nhỏ hơn ngày hiện tại\r\nVui lòng chọn lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            //namsinh = Convert.ToDateTime(txtNgaySinh.EditValue.ToString()).ToString("dd/MM/yyy");
-            date = Convert.ToDateTime(txtHanTra.EditValue.ToString()).ToString("dd/MM/yyyy");
-          //  MessageBox.Show(date);
+            // Convert.ToDateTime(txtNgaySinh.EditValue.ToString()).ToString("dd/MM/yyy")
+
+            date = DateTime.Parse(txtHanTra.EditValue.ToString());
+           // MessageBox.Show(date.GetType().ToString());
             DialogResult = DialogResult.OK;
             Close();
         }
 
         private void btnHUy_Click(object sender, EventArgs e)
         {
-            DialogResult = DialogResult.Cancel;
+              DialogResult = DialogResult.Cancel;
+           // MessageBox.Show(date.GetType().ToString());
         }
     }
 }
