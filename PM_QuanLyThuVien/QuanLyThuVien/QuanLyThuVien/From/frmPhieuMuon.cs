@@ -176,11 +176,11 @@ namespace QuanLyThuVien.From
             int row_index = gvCTPM.FocusedRowHandle;
             bool check = false;
             string manv = frmLogin.manv;
-            string manv1 = "NV00000001";
+           // string manv1 = "NV00000001";
             string madg = txtMaDG.EditValue.ToString();
             string ngaymuon = DateTime.Now.ToString("MM/dd/yyyy").ToString();
             
-            string sqlInsertPM = string.Format("insert into PHIEUMUON values( '{0}', '{1}', '{2}', '{3}' ) ", con.creatId("PM", queryPM), manv1, madg, ngaymuon);
+            string sqlInsertPM = string.Format("insert into PHIEUMUON values( '{0}', '{1}', '{2}', '{3}',{4},{5} ) ", con.creatId("PM", queryPM), manv, madg, ngaymuon,0,1);
             string mapm = con.creatId("PM", queryPM);
 
             if (con.exeData(sqlInsertPM))
@@ -188,7 +188,7 @@ namespace QuanLyThuVien.From
                 foreach (DataRow item in dtSachMuon.Rows)
                 {
                     string hentra = Convert.ToDateTime(item["HENTRA"].ToString()).ToString("MM/dd/yyyy");
-                    sqlICTPM = string.Format("insert into CTPM values ('{0}', '{1}','{2}', {3})", mapm, item["MASACH"], hentra, item["SoLuong"]);
+                    sqlICTPM = string.Format("insert into CTPM values ('{0}', '{1}','{2}', {3}, {4})", mapm, item["MASACH"], hentra, item["SoLuong"],1);
                     con.Ex_vp(sqlICTPM);
                 }
                 check = true;

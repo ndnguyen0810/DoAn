@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.barHeaderItem1 = new DevExpress.XtraBars.BarHeaderItem();
             this.btnMuon = new DevExpress.XtraBars.BarButtonItem();
             this.btnTrasach = new DevExpress.XtraBars.BarButtonItem();
             this.btnDocGia = new DevExpress.XtraBars.BarButtonItem();
@@ -70,7 +71,7 @@
             this.repositoryItemHypertextLabel3 = new DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.barHeaderItem1 = new DevExpress.XtraBars.BarHeaderItem();
+            this.barBtnTTPM = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).BeginInit();
@@ -88,6 +89,7 @@
             this.ribbon.CaptionBarItemLinks.Add(this.barHeaderItem1);
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.barHeaderItem1,
             this.ribbon.ExpandCollapseItem,
             this.ribbon.SearchEditItem,
             this.btnMuon,
@@ -110,10 +112,10 @@
             this.btnLoaiSach_VT,
             this.btnSach,
             this.btnNV,
-            this.barHeaderItem1});
+            this.barBtnTTPM});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbon.MaxItemId = 50;
+            this.ribbon.MaxItemId = 51;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -128,6 +130,12 @@
             this.repositoryItemHypertextLabel3});
             this.ribbon.Size = new System.Drawing.Size(1136, 166);
             this.ribbon.StatusBar = this.ribbonStatusBar;
+            // 
+            // barHeaderItem1
+            // 
+            this.barHeaderItem1.Caption = "barHeaderItem1";
+            this.barHeaderItem1.Id = 49;
+            this.barHeaderItem1.Name = "barHeaderItem1";
             // 
             // btnMuon
             // 
@@ -329,6 +337,7 @@
             // 
             this.rbgSach.ItemLinks.Add(this.btnMuon);
             this.rbgSach.ItemLinks.Add(this.btnDocGia);
+            this.rbgSach.ItemLinks.Add(this.barBtnTTPM);
             this.rbgSach.ItemLinks.Add(this.btnTrasach);
             this.rbgSach.Name = "rbgSach";
             this.rbgSach.Text = "Sách";
@@ -449,11 +458,13 @@
             this.xtraTabbedMdiManager1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders;
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
-            // barHeaderItem1
+            // barBtnTTPM
             // 
-            this.barHeaderItem1.Caption = "barHeaderItem1";
-            this.barHeaderItem1.Id = 49;
-            this.barHeaderItem1.Name = "barHeaderItem1";
+            this.barBtnTTPM.Caption = "Thông tin phiếu mượn";
+            this.barBtnTTPM.Id = 50;
+            this.barBtnTTPM.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnTTPM.ImageOptions.SvgImage")));
+            this.barBtnTTPM.Name = "barBtnTTPM";
+            this.barBtnTTPM.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnTTPM_ItemClick);
             // 
             // frmMain
             // 
@@ -532,5 +543,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel repositoryItemHypertextLabel3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.BarHeaderItem barHeaderItem1;
+        private DevExpress.XtraBars.BarButtonItem barBtnTTPM;
     }
 }

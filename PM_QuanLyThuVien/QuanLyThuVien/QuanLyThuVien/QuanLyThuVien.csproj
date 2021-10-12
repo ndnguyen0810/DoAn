@@ -127,6 +127,12 @@
     <Compile Include="From\frmHome.Designer.cs">
       <DependentUpon>frmHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="From\frmInfoTPhieuMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From\frmInfoTPhieuMuon.Designer.cs">
+      <DependentUpon>frmInfoTPhieuMuon.cs</DependentUpon>
+    </Compile>
     <Compile Include="From\frmNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="From\frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="From\frmInfoTPhieuMuon.resx">
+      <DependentUpon>frmInfoTPhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From\frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
