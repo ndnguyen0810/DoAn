@@ -89,10 +89,10 @@ namespace QuanLyThuVien.From
                 XtraMessageBox.Show("Bạn chưa chọn độc giả\r\nVui lòng chọn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-
-            bool checkB = false;
+            bool checkB= false ;
             string sql = string.Format("select madg from PHieumuon where masach='{0}' and madg='{1}'", gvSach.GetRowCellValue(row_index, "MASACH"), txtMaDG.EditValue.ToString());
-
+            int sl = Int32.Parse(gvSach.GetRowCellValue(row_index, "SoLuong").ToString()); //lấy số lượng để cập nhật
+            string ms = gvSach.GetRowCellValue(row_index, "MASACH").ToString(); //lấy mã sách
             DataTable dt = new DataTable();
             dt = con.readData(sql);
            // kiem tra doc gia da muon sach A hay chua
@@ -112,6 +112,7 @@ namespace QuanLyThuVien.From
             if (checkB)
             {
                 XtraMessageBox.Show("Độc giả đã mượn sách này và chưa trả\r\nVui lòng chọn sách khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                checkB = false;
                 return;
             }
          
@@ -119,15 +120,17 @@ namespace QuanLyThuVien.From
             {
                 if (item["MASACH"].ToString().Equals(gvSach.GetRowCellValue(row_index, "MASACH").ToString()))
                 {
-                    check = true;
+                    check = true;                   
                     break;
                 }
+                
 
             }
 
             if (check)
             {
                 XtraMessageBox.Show("Bạn đã thêm sách này rồi\r\nVui lòng chọn sách khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                check = false;
                 return;
             }
 
@@ -138,13 +141,14 @@ namespace QuanLyThuVien.From
                 row["MASACH"] = gvSach.GetRowCellValue(row_index, "MASACH").ToString();
                 row["TENSACH"] = gvSach.GetRowCellValue(row_index, "TENSACH").ToString();
                 row["TACGIA"] = gvSach.GetRowCellValue(row_index, "TACGIA").ToString();
-                //row["NGAYMUON"] = DateTime.Now.ToString("dd/MM/yyyy").ToString();
+                row["NGAYMUON"] = DateTime.Now.ToString("dd/MM/yyyy");
                 row["HENTRA"] =  Convert.ToDateTime(frmDatePitker.date).ToString("dd/MM/yyyy");
                 row["SoLuong"] = 1;
-
                 dtSachMuon.Rows.Add(row);
                 loadSachMuon();
+                
             }
+            
         }
 
         private void btnDelete_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -160,9 +164,10 @@ namespace QuanLyThuVien.From
 
         string sqlICTPM;
         List<String> vp = new List<string>();
-
+       
         private void btnLapPhieuMuon_Click(object sender, EventArgs e)
         {
+            string trangthai = "Đang mượn";
             if ((txtMaDG.EditValue == null) || (txtMaDG.EditValue.ToString().Equals("")))
             {
                 XtraMessageBox.Show("Bạn chưa chọn độc giả\r\nVui lòng chọn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -176,11 +181,10 @@ namespace QuanLyThuVien.From
             int row_index = gvCTPM.FocusedRowHandle;
             bool check = false;
             string manv = frmLogin.manv;
-           // string manv1 = "NV00000001";
             string madg = txtMaDG.EditValue.ToString();
             string ngaymuon = DateTime.Now.ToString("MM/dd/yyyy").ToString();
-            
-            string sqlInsertPM = string.Format("insert into PHIEUMUON values( '{0}', '{1}', '{2}', '{3}',{4},{5} ) ", con.creatId("PM", queryPM), manv, madg, ngaymuon,0,1);
+           
+            string sqlInsertPM = string.Format("insert into PHIEUMUON values( '{0}', '{1}', '{2}', '{3}', {4}, N'{5}' ) ", con.creatId("PM", queryPM), manv, madg, ngaymuon,0, trangthai);
             string mapm = con.creatId("PM", queryPM);
 
             if (con.exeData(sqlInsertPM))
@@ -188,9 +192,14 @@ namespace QuanLyThuVien.From
                 foreach (DataRow item in dtSachMuon.Rows)
                 {
                     string hentra = Convert.ToDateTime(item["HENTRA"].ToString()).ToString("MM/dd/yyyy");
-                    sqlICTPM = string.Format("insert into CTPM values ('{0}', '{1}','{2}', {3}, {4})", mapm, item["MASACH"], hentra, item["SoLuong"],1);
+                    sqlICTPM = string.Format("insert into CTPM values ('{0}', '{1}','{2}', {3}, N'{4}')", mapm, item["MASACH"], hentra, item["SoLuong"], trangthai);
+                   
                     con.Ex_vp(sqlICTPM);
                 }
+                //int soluong = Int32.Parse(dtSachMuon.Rows.Count.ToString());
+                //string upPM = string.Format("update phieumuon set soluong={0} where mapm= '{1}'", soluong, mapm);
+               
+                //con.exeData(upPM);
                 check = true;
             }
             else

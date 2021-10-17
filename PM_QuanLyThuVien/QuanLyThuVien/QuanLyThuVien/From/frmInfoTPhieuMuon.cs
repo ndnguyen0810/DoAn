@@ -17,5 +17,46 @@ namespace QuanLyThuVien.From
         {
             InitializeComponent();
         }
+
+
+        connection con = new connection();
+        string sqlCTPM = "select  * from CTPM";
+        string sqlPM = "select * from Phieumuon";
+
+        #region load data
+        private void loadPhieuMuon()
+        {
+            DataTable dt = con.readData(sqlPM);
+            if (dt != null)
+            {
+                gcDocGia.DataSource = dt;
+            }
+        }
+
+        private void loadCTPM()
+        {
+            DataTable dt = con.readData(sqlCTPM);
+            if (dt != null)
+            {
+                gcDocGia.DataSource = dt;
+            }
+        }
+
+        private void loadDocGia()
+        {
+            DataTable dt = con.readData(connection.P_LoadDocGia);
+            if (dt != null)
+            {
+                gcDocGia.DataSource = dt;
+            }
+        }
+
+        #endregion
+        private void frmInfoTPhieuMuon_Load(object sender, EventArgs e)
+        {
+            loadDocGia();
+            loadPhieuMuon();
+            loadCTPM();
+        }
     }
 }

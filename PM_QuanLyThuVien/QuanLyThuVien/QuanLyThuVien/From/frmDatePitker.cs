@@ -21,7 +21,7 @@ namespace QuanLyThuVien.From
         public static DateTime date;//= DateTime.Now.ToString("dd/MM/yyyy");// = "";
         private void frmDatePitker_Load(object sender, EventArgs e)
         {
-
+            txtHanTra.Properties.MinValue =DateTime.Now;
         }
 
 

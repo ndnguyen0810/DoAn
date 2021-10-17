@@ -41,7 +41,6 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtNgaySinh = new DevExpress.XtraEditors.DateEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txtEmail = new DevExpress.XtraEditors.TextEdit();
@@ -130,7 +129,6 @@
             // groupControl1
             // 
             this.tablePanel1.SetColumn(this.groupControl1, 0);
-            this.groupControl1.Controls.Add(this.textBox1);
             this.groupControl1.Controls.Add(this.txtNgaySinh);
             this.groupControl1.Controls.Add(this.labelControl6);
             this.groupControl1.Controls.Add(this.txtEmail);
@@ -152,13 +150,6 @@
             this.groupControl1.Size = new System.Drawing.Size(561, 221);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Phiếu mượn";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(350, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
-            this.textBox1.TabIndex = 19;
             // 
             // txtNgaySinh
             // 
@@ -670,6 +661,5 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDelete;
         private DevExpress.XtraGrid.Columns.GridColumn colSoLuong;
         private DevExpress.XtraGrid.Columns.GridColumn colHenTra;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

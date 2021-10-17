@@ -140,7 +140,7 @@
             // 
             // txtPass
             // 
-            this.txtPass.EditValue = "adminadmin";
+            this.txtPass.EditValue = "admin";
             this.txtPass.Location = new System.Drawing.Point(222, 107);
             this.txtPass.Margin = new System.Windows.Forms.Padding(2);
             this.txtPass.Name = "txtPass";

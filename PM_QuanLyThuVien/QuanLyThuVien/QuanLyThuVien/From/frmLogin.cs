@@ -153,7 +153,16 @@ namespace QuanLyThuVien.From
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
+            //if (checkGhiNho.Checked == true)
+            //{
+            //    txtUsername.EditValue = username;
+            //    txtPass.EditValue = password;
+            //}
+            //else
+            //{
+            //    txtPass.EditValue = null;
+            //    txtUsername.EditValue = null;
+            //}
         }
 
         private void txtPass_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -167,5 +176,6 @@ namespace QuanLyThuVien.From
                 txtPass.Properties.UseSystemPasswordChar = true;
             }
         }
+
     }
 }
