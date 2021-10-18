@@ -63,10 +63,10 @@ namespace QuanLyThuVien
         #region Chức năng - sách
         private void btnMuon_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Form frm = formCheck(typeof(frmPhieuMuon));
+            Form frm = formCheck(typeof(frmMuonSach));
             if (frm == null)
             {
-                frmPhieuMuon f = new frmPhieuMuon();
+                frmMuonSach f = new frmMuonSach();
                 f.MdiParent = this;
                 f.Show();
             }
