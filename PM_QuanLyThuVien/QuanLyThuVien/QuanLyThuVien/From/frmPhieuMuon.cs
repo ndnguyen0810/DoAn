@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using QuanLyThuVien.Report;
 
 namespace QuanLyThuVien.From
 {
@@ -16,6 +17,15 @@ namespace QuanLyThuVien.From
         public frmPhieuMuon()
         {
             InitializeComponent();
+        }
+
+        rpPhieuMuon rpt = new rpPhieuMuon();
+
+        private void frmPhieuMuon_Load(object sender, EventArgs e)
+        {
+            this.rpt = frmMuonSach.rppm;
+            documentViewer1.PrintingSystem = rpt.PrintingSystem;
+            rpt.CreateDocument();
         }
     }
 }

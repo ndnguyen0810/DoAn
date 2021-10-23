@@ -99,39 +99,32 @@ namespace QuanLyThuVien.From
 
         private void btnThemSach_Click(object sender, EventArgs e)
         {
-           // string masach = txtMaSach.EditValue.ToString();
-            string nxb= lookUpEditNXB.EditValue.ToString() ;
-            string tensach= txtTenSach.EditValue.ToString();
-            string tacgia= txtTacGia.EditValue.ToString() ;
-            int soluong = Int32.Parse(txtSoLuong.EditValue.ToString());
-            int namxb= Int32.Parse(txtNamXB.EditValue.ToString()) ;
-            string vitri =lookUpEditVT.EditValue.ToString() ;
-            
-            #region checknull
+            #region checknull/ lỗi
             if ((lookUpEditNXB.EditValue == null) || (lookUpEditNXB.EditValue.ToString().Equals("")))
             {
                 XtraMessageBox.Show("Bạn chưa nhập tên độc giả\r\nVui lòng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                lookUpEditNXB.Focus();
+                //lookUpEditNXB.Focus();
                 return;
             }
 
             if ((txtTacGia.EditValue == null) || (txtTacGia.EditValue.ToString().Equals("")))
             {
                 XtraMessageBox.Show("Bạn chưa chọn tác giả\r\nVui lòng chọn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtTacGia.Focus();
+                //txtTacGia.Focus();
                 return;
             }
 
             if ((txtTenSach.EditValue == null) || (txtTenSach.EditValue.ToString().Equals("")))
             {
                 XtraMessageBox.Show("Bạn chưa nhập tên sách\r\nVui lòng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtTenSach.Focus();
+                //txtTenSach.Focus();
                 return;
             }
-        
+
+
             try
             {               
-                if ((namxb < 1) || (namxb > DateTime.Now.Year))
+                if ((Int32.Parse(txtNamXB.EditValue.ToString()) < 1) || (Int32.Parse(txtNamXB.EditValue.ToString()) > DateTime.Now.Year))
                 {
                     XtraMessageBox.Show("Năm xuất bản không được nhỏ hơn 1 hoặc lớn hơn năm hiện tại\r\nVui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtNamXB.Focus();
@@ -148,10 +141,10 @@ namespace QuanLyThuVien.From
 
             try
             {
-                if (soluong < 0)
+                if (Int32.Parse(txtSoLuong.EditValue.ToString()) < 0)
                 {
                     XtraMessageBox.Show("Số lượng không được nhỏ hơn 0\r\nVui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtNamXB.Focus();
+                    //txtNamXB.Focus();
                     return;
                 }
             }
@@ -168,6 +161,12 @@ namespace QuanLyThuVien.From
                 lookUpEditNXB.Focus();
                 return;
             }
+            string nxb = lookUpEditNXB.EditValue.ToString();
+            string tensach = txtTenSach.EditValue.ToString();
+            string tacgia = txtTacGia.EditValue.ToString();
+            int soluong = Int32.Parse(txtSoLuong.EditValue.ToString());
+            int namxb = Int32.Parse(txtNamXB.EditValue.ToString());
+            string vitri = lookUpEditVT.EditValue.ToString();
 
             #endregion
 
@@ -196,13 +195,7 @@ namespace QuanLyThuVien.From
 
         private void btnSuaSach_Click(object sender, EventArgs e)
         {
-            string masach = txtMaSach.EditValue.ToString();           
-            string tensach = txtTenSach.EditValue.ToString();         
-            string tacgia = txtTacGia.EditValue.ToString();
-            string nxb = lookUpEditNXB.EditValue.ToString();
-            int namxb = Convert.ToInt32(txtNamXB.EditValue.ToString());
-            string vitri = lookUpEditVT.EditValue.ToString();
-            int soluong = Int32.Parse(txtSoLuong.EditValue.ToString());
+            
 
             #region check null          
             if ((txtMaSach.EditValue == null) || (txtMaSach.EditValue.ToString().Equals("")))
@@ -239,7 +232,13 @@ namespace QuanLyThuVien.From
                 txtSDT.Focus();
                 return;
             }
-
+            string masach = txtMaSach.EditValue.ToString();
+            string tensach = txtTenSach.EditValue.ToString();
+            string tacgia = txtTacGia.EditValue.ToString();
+            string nxb = lookUpEditNXB.EditValue.ToString();
+            int namxb = Convert.ToInt32(txtNamXB.EditValue.ToString());
+            string vitri = lookUpEditVT.EditValue.ToString();
+            int soluong = Int32.Parse(txtSoLuong.EditValue.ToString());
             try
             {
                 if ((namxb < 1) || (namxb > DateTime.Now.Year))
@@ -578,5 +577,7 @@ namespace QuanLyThuVien.From
         }
 
         #endregion
+
+
     }
 }

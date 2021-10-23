@@ -77,13 +77,14 @@ namespace QuanLyThuVien.From
        
             if (con.exeData(queryU))
             {
-                XtraMessageBox.Show("Đổi mật khẩu thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                XtraMessageBox.Show("Đổi mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //this.Close();
                 btnLamMoi.PerformClick();
 
             }
             else
             {
-                XtraMessageBox.Show("Đổi mật khẩu thất bại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                XtraMessageBox.Show("Đổi mật khẩu thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -125,11 +126,11 @@ namespace QuanLyThuVien.From
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
-            //txtOldPass.EditValue = null;
-            //txtNewPass.EditValue = null;
-            //txtReNewPass.EditValue = null;
-            //txtOldPass.Focus();
-            MessageBox.Show("MK cũ: "+ pass+"\nMoi: "+ txtNewPass.EditValue.ToString());
+            txtOldPass.EditValue = null;
+            txtNewPass.EditValue = null;
+            txtReNewPass.EditValue = null;
+            txtOldPass.Focus();
+            //MessageBox.Show("MK cũ: "+ pass+"\nMoi: "+ txtNewPass.EditValue.ToString());
         }
     }
 }

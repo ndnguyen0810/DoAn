@@ -19,7 +19,7 @@ namespace QuanLyThuVien.From
         }
 
         connection con = new connection();
-        string queryLoaiSach = "select * from Loaisach"; //= "select * from booktype";
+        string queryLoaiSach = "select MALOAI,TENLOAI from Loaisach"; //= "select * from booktype";
         string queryViTri= "select *  from VITRI";
 
  
@@ -42,14 +42,14 @@ namespace QuanLyThuVien.From
             }
         }
 
-        private void loadVTonLS()
+        private void loadLSOnVT()
         {
-            DataTable dt = con.readData(queryViTri);
+            DataTable dt = con.readData(queryLoaiSach);
             if (dt != null)
             {
-                lkupViTri.Properties.DataSource = dt;
-                lkupViTri.Properties.DisplayMember = "TENVITRI";
-                lkupViTri.Properties.ValueMember = "MAVT";
+                lkupLS.Properties.DataSource = dt;
+                lkupLS.Properties.DisplayMember = "TENLOAI";
+                lkupLS.Properties.ValueMember = "MALOAI";
             }
         }
       
@@ -58,7 +58,7 @@ namespace QuanLyThuVien.From
         {
             loadLoaiSach();
             loadViTri();
-            loadVTonLS();
+            loadLSOnVT();
             
         }
 
@@ -71,17 +71,17 @@ namespace QuanLyThuVien.From
                 txtTenLoaiSach.Focus();
                 return;
             }
-            if ((lkupViTri.EditValue == null) || (lkupViTri.EditValue.ToString().Equals("")))
-            {
-                XtraMessageBox.Show("Bạn chưa chọn vị trí\r\nVui lòng chọn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtTenLoaiSach.Focus();
-                return;
-            }
+            //if ((lkupLS.EditValue == null) || (lkupLS.EditValue.ToString().Equals("")))
+            //{
+            //    XtraMessageBox.Show("Bạn chưa chọn vị trí\r\nVui lòng chọn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    txtTenLoaiSach.Focus();
+            //    return;
+            //}
 
             string tensach = txtTenLoaiSach.EditValue.ToString();
-            string vitri = lkupViTri.EditValue.ToString();
+           // string vitri = lkupLS.EditValue.ToString();
 
-            string queryInsert = string.Format("insert into loaisach values('{0}',N'{1}','{2}')", con.creatId("LS", queryLoaiSach), tensach,vitri);
+            string queryInsert = string.Format("insert into loaisach values('{0}',N'{1}')", con.creatId("LS", queryLoaiSach), tensach);
             if (connection.checkName(queryLoaiSach, txtTenLoaiSach, "tenloai") == true)
             {
                 XtraMessageBox.Show("Loại sách có tên \"" + txtTenLoaiSach.EditValue.ToString() + "\" đã tồn tại\r\nVui lòng nhập tên khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -116,22 +116,22 @@ namespace QuanLyThuVien.From
                 txtTenLoaiSach.Focus();
                 return;
             }
-            if ((lkupViTri.EditValue == null) || (lkupViTri.EditValue.ToString().Equals("")))
-            {
-                XtraMessageBox.Show("Bạn chưa chọn vị trí\r\nVui lòng chọn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtTenLoaiSach.Focus();
-                return;
-            }
+            //if ((lkupLS.EditValue == null) || (lkupLS.EditValue.ToString().Equals("")))
+            //{
+            //    XtraMessageBox.Show("Bạn chưa chọn vị trí\r\nVui lòng chọn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    txtTenLoaiSach.Focus();
+            //    return;
+            //}
             string masach = txtMaLoaiSach.EditValue.ToString();
             string tensach = txtTenLoaiSach.EditValue.ToString();
-            string vitri = lkupViTri.EditValue.ToString();
+           // string vitri = lkupLS.EditValue.ToString();
             if (connection.checkName(queryLoaiSach, txtTenLoaiSach, "tenloai") == true)
             {
                 XtraMessageBox.Show("Loại sách có tên \"" + txtTenLoaiSach.EditValue.ToString() + "\" đã tồn tại\r\nVui lòng nhập tên khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 btnLamMoiLS.PerformClick();
                 return;
             }
-            string queryInsert = string.Format("update sach set tensach = N'{0}',mavt= '{1}' where masach ='{2}'", tensach, vitri, masach);
+            string queryInsert = string.Format("update sach set tensach = N'{0}' where masach ='{1}'", tensach, masach);
             if (XtraMessageBox.Show("Bạn có chắc chắn muốn sửa loại sách đang chọn?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (con.exeData(queryInsert))
@@ -182,7 +182,7 @@ namespace QuanLyThuVien.From
         {
             txtMaLoaiSach.EditValue = null;
             txtTenLoaiSach.EditValue = null;
-            lkupViTri.EditValue = "";
+            lkupLS.EditValue = "";
             txtTenLoaiSach.Focus();
         }
 
@@ -304,14 +304,14 @@ namespace QuanLyThuVien.From
         #endregion
 
         #region show data gridview lên textbox
-        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e) //loai sach
         {
             txtMaLoaiSach.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[0].ToString()).ToString();
             txtTenLoaiSach.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[1].ToString()).ToString();
-            lkupViTri.Text = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[2].ToString()).ToString();
+           // lkupViTri.Text = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[2].ToString()).ToString();
         }
 
-        private void gridView2_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        private void gridView2_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e) //vi tri
         {
             txtMaVT.EditValue = gridView2.GetRowCellValue(e.RowHandle, gridView2.Columns[0].ToString()).ToString();
             txtTenVT.EditValue= gridView2.GetRowCellValue(e.RowHandle, gridView2.Columns[1].ToString()).ToString();
@@ -320,8 +320,7 @@ namespace QuanLyThuVien.From
 
 
 
-        #endregion
 
-       
+        #endregion
     }
 }

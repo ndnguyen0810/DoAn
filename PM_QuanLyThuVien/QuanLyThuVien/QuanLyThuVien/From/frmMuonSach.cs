@@ -236,15 +236,17 @@ namespace QuanLyThuVien.From
                 XtraMessageBox.Show("Lập phiếu mượn thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (XtraMessageBox.Show("Bạn có muốn xuất phiếu mượn không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    CreateCTPM();
-                    // tong = 0;
-                    soluong = Int32.Parse(dtSachMuon.Rows.Count.ToString());
+                    CreateCTPM();                  
+                    int TongSL = Int32.Parse(dtSachMuon.Rows.Count.ToString());
                     rpPhieuMuon rp = new rpPhieuMuon();
                     rp.DataSource = dtPhieuMuon;
-                    rp.initData(DateTime.Now.Day.ToString(), DateTime.Now.Month.ToString(), DateTime.Now.Year.ToString(),DateTime.Now.ToString("dd/MM/yyyy").ToString(), txtMaDG.EditValue.ToString(), txtTenDG.EditValue.ToString(), frmLogin.fullname,soluong);
+                    string ngay = DateTime.Now.Day.ToString();
+                    string thang = DateTime.Now.Month.ToString();
+                    string nam = DateTime.Now.Year.ToString();
+                    rp.initData(ngay,thang,nam,DateTime.Now.ToString("dd/MM/yyyy").ToString(), txtMaDG.EditValue.ToString(), txtTenDG.EditValue.ToString(), frmLogin.fullname, TongSL, mapm);
                     rppm = rp;
                    
-                    frmMuonSach frm = new frmMuonSach();
+                    frmPhieuMuon frm = new frmPhieuMuon();
                     frm.Show();
                 }
                 btnLamMoi.PerformClick();
@@ -268,6 +270,6 @@ namespace QuanLyThuVien.From
             dtSachMuon.Rows.Clear();
         }
 
-
+       
     }
 }

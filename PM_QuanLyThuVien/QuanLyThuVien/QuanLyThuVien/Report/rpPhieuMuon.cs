@@ -13,22 +13,24 @@ namespace QuanLyThuVien.Report
             InitializeComponent();
             this.PaperKind = System.Drawing.Printing.PaperKind.A5;
         }
-        public void initData(string ngay, string thang, string nam, string ngaymuon, string madg, string tendg, string tennv, int tong)
+        public void initData(string ngay, string thang, string nam, string ngaymuon, string madg, string tendg, string tennv, int tong, string mapm)
         {
             this.ngay.Value = ngay;
             this.thang.Value = thang;
             this.nam.Value = nam;
-            this.ngay.Value = ngaymuon;
+            this.ngaymuon.Value = ngaymuon;
             this.madg.Value = madg;
             this.tendg.Value = tendg;
             this.tennv.Value = tennv;
-
+            this.tong.Value = tong;
+            this.mapm.Value = mapm;
             txtSoluong.Text = String.Format("{0:N0}", tong);
             txtMaSach.DataBindings.Add("Text", DataSource, "MASACH");
             txtTenSach.DataBindings.Add("Text", DataSource, "TENSACH");
             txtTacGia.DataBindings.Add("Text", DataSource, "TACGIA");
             txtNgayHenTra.DataBindings.Add("Text", DataSource, "HENTRA");
             txtSoluong.DataBindings.Add("Text", DataSource, "SOLUONG");
+            
             
         }
     }
