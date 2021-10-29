@@ -125,7 +125,7 @@ namespace QuanLyThuVien.From
             try
             {
                 //
-                string sqlR = string.Format("select * from TAIKHOAN as tk, nhanvien as nv, chucvu as cv where tentk='{0}' and matkhau= '{1}' and tk.manv= nv.manv and tk.macv= cv.macv ", tentk, pass );
+                string sqlR = string.Format("select * from TAIKHOAN as tk, nhanvien as nv, chucvu as cv where tentk='{0}' and matkhau= '{1}' and tk.manv= nv.manv and tk.macv= cv.macv ", tentk, con.CreateMD5(pass));
                 DataTable dt = new DataTable();
                 dt = con.readData(sqlR);
                 if (dt != null)

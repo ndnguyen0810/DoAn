@@ -46,20 +46,40 @@ namespace QuanLyThuVien.From
                 txtNgaySinh.Focus();
                 return;
             }
-
-            if ((txtDiaChi.EditValue == null) || (txtDiaChi.EditValue.ToString().Equals("")))
-            {
-                XtraMessageBox.Show("Bạn chưa nhập địa chỉ\r\nVui lòng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtDiaChi.Focus();
-                return;
-            }
-
             if ((txtSDT.EditValue == null) || (txtSDT.EditValue.ToString().Equals("")))
             {
                 XtraMessageBox.Show("Bạn chưa nhập số điện thoại\r\nVui lòng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtSDT.Focus();
                 return;
             }
+            if ((cbbGioiTinh.SelectedItem.ToString() == null) )
+            {
+                XtraMessageBox.Show("Bạn chưa chọn giới tính\r\nVui lòng chọn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               
+                return;
+            }
+            if ((txtDiaChi.EditValue == null) || (txtDiaChi.EditValue.ToString().Equals("")))
+            {
+                XtraMessageBox.Show("Bạn chưa nhập địa chỉ\r\nVui lòng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtDiaChi.Focus();
+                return;
+            }
+            if ((txtEmail.EditValue == null) || (txtEmail.EditValue.ToString().Equals("")))
+            {
+                XtraMessageBox.Show("Bạn chưa nhập email\r\nVui lòng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtEmail.Focus();
+                return;
+            }
+            else
+            {
+                if (connection.CheckEmail(txtEmail.Text) == false)
+                {
+                    XtraMessageBox.Show("Bạn đã nhập sai email\r\nVui lòng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtEmail.Focus();
+                    return;
+                }
+            }
+
 
             int soDienThoai = 0;
             try
@@ -79,31 +99,16 @@ namespace QuanLyThuVien.From
                 return;
             }
 
-            if ((txtEmail.EditValue == null) || (txtEmail.EditValue.ToString().Equals("")))
-            {
-                XtraMessageBox.Show("Bạn chưa nhập email\r\nVui lòng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtEmail.Focus();
-                return;
-            }
-            else
-            {
-                if (connection.CheckEmail(txtEmail.Text)==false)
-                {
-                    XtraMessageBox.Show("Bạn đã nhập sai email\r\nVui lòng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtEmail.Focus();
-                    return;
-                }
-            }
-
             #endregion
-            //string madg = txtMaDG.EditValue.ToString();
+
             string tendg = txtTenDG.EditValue.ToString();
             string namsinh = Convert.ToDateTime(txtNgaySinh.EditValue.ToString()).ToString("dd/MM/yyy");
+            string gioitinh = cbbGioiTinh.SelectedItem.ToString();
             string diachi = txtDiaChi.EditValue.ToString();
             string sdt = txtSDT.EditValue.ToString();
             string email = txtEmail.EditValue.ToString();
 
-            string queryInsert = string.Format("insert into docgia values('{0}',N'{1}','{2}',N'{3}','{4}','{5}')", con.creatId("DG", query), tendg, namsinh, diachi, sdt, email);
+            string queryInsert = string.Format("insert into docgia values('{0}',N'{1}','{2}',N'{3}','{4}','{5}', N'{6}')", con.creatId("DG", query), tendg, namsinh, diachi, sdt, email,gioitinh);
 
             if (con.exeData(queryInsert))
             {
@@ -123,6 +128,7 @@ namespace QuanLyThuVien.From
             string madg = txtMaDG.EditValue.ToString();
             string tendg = txtTenDG.EditValue.ToString();
             string namsinh = Convert.ToDateTime(txtNgaySinh.EditValue.ToString()).ToString("dd/MM/yyy");
+            string gioitinh = cbbGioiTinh.SelectedItem.ToString();
             string diachi = txtDiaChi.EditValue.ToString();
             string sdt = txtSDT.EditValue.ToString();
             string email = txtEmail.EditValue.ToString();
@@ -201,7 +207,7 @@ namespace QuanLyThuVien.From
             if (XtraMessageBox.Show("Bạn có chắc chắn muốn sửa độc giả đang chọn?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
 
-                string queryUpdate = string.Format("update docgia set hoten=N'{0}', namsinh='{1}',diachi=N'{2}',sdt='{3}', email='{4}' where madg='{5}'", tendg, namsinh, diachi, sdt, email,madg);
+                string queryUpdate = string.Format("update docgia set hoten=N'{0}', namsinh='{1}',diachi=N'{2}',sdt='{3}', email='{4}' , gioitinh=N'{5}' where madg='{6}'", tendg, namsinh, diachi, sdt, email,gioitinh,madg);
 
                 if (con.exeData(queryUpdate))
                 {
@@ -269,12 +275,12 @@ namespace QuanLyThuVien.From
         {
             txtMaDG.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[0].ToString()).ToString();
             txtTenDG.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[1].ToString()).ToString();
-            txtDiaChi.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[3].ToString()).ToString();
             txtNgaySinh.EditValue = Convert.ToDateTime(gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[2].ToString())).ToString("dd/MM/yyyy");
-            txtSDT.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[4].ToString()).ToString();
-            txtEmail.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[5].ToString()).ToString();
+            cbbGioiTinh.Text = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[3].ToString()).ToString();
+            txtDiaChi.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[4].ToString()).ToString();
+            txtSDT.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[5].ToString()).ToString();
+            txtEmail.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[6].ToString()).ToString();
 
-            //Convert.ToDateTime(txtNgaySinh.EditValue.ToString()).ToString("dd/MM/yyy")
         }
     }
 }

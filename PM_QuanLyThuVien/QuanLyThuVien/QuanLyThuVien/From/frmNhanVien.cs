@@ -116,13 +116,14 @@ namespace QuanLyThuVien.From
             }
 
             string tennv = txtTenNV.EditValue.ToString();
-            string namsinh = Convert.ToDateTime(txtNgaySinh.EditValue.ToString()).ToString("dd/MM/yyy");
+            string namsinh = Convert.ToDateTime(txtNgaySinh.EditValue.ToString()).ToString("MM/dd/yyy");
             string diachi = txtDiaChi.EditValue.ToString();
             string sdt = txtSDT.EditValue.ToString();
             string email = txtEmail.EditValue.ToString();
-            string ngayvaolam = Convert.ToDateTime(txtNgayVaoLam.EditValue.ToString()).ToString("dd/MM/yyyy");
+            string ngayvaolam = Convert.ToDateTime(txtNgayVaoLam.EditValue.ToString()).ToString("MM/dd/yyyy");
+            string gioitinh = cbbGioitinh.SelectedItem.ToString();
 
-            string queryInsert = string.Format("insert into nhanvien values('{0}',N'{1}','{2}',N'{3}','{4}','{5}', '{6}')", con.creatId("NV", queryNV), tennv, namsinh, diachi, sdt, email,ngayvaolam);
+            string queryInsert = string.Format("insert into nhanvien values('{0}',N'{1}','{2}',N'{3}','{4}','{5}', '{6}',N'{7}')", con.creatId("NV", queryNV), tennv, namsinh, diachi, sdt, email,ngayvaolam, gioitinh);
 
             if (con.exeData(queryInsert))
             {
@@ -133,7 +134,7 @@ namespace QuanLyThuVien.From
             else
             {
                 XtraMessageBox.Show("Thêm nhân viên thất bại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                XtraMessageBox.Show(queryInsert);
+               
             }
         }
 
@@ -141,11 +142,12 @@ namespace QuanLyThuVien.From
         {
             string manv = txtMaNV.EditValue.ToString();
             string tendg = txtTenNV.EditValue.ToString();
-            string namsinh = Convert.ToDateTime(txtNgaySinh.EditValue.ToString()).ToString("dd/MM/yyy");
+            string namsinh = Convert.ToDateTime(txtNgaySinh.EditValue.ToString()).ToString("MM/dd/yyy");
             string diachi = txtDiaChi.EditValue.ToString();
             string sdt = txtSDT.EditValue.ToString();
             string email = txtEmail.EditValue.ToString();
-            string ngayvaolam = Convert.ToDateTime(txtNgayVaoLam.EditValue.ToString()).ToString("dd/MM/yyy");
+            string ngayvaolam = Convert.ToDateTime(txtNgayVaoLam.EditValue.ToString()).ToString("MM/dd/yyy");
+            string gioitinh = cbbGioitinh.SelectedItem.ToString();
 
             #region check null          
             if ((txtMaNV.EditValue == null) || (txtMaNV.EditValue.ToString().Equals("")))
@@ -228,7 +230,7 @@ namespace QuanLyThuVien.From
             if (XtraMessageBox.Show("Bạn có chắc chắn muốn sửa nhân viên đang chọn?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
 
-                string queryUpdate = string.Format("update nhanvien set tennv=N'{0}', namsinh='{1}',diachi=N'{2}',sdt='{3}', email='{4}', ngayvaolam= '{5}' where manv='{6}'", tendg, namsinh, diachi, sdt, email, ngayvaolam, manv);
+                string queryUpdate = string.Format("update nhanvien set tennv=N'{0}', namsinh='{1}',diachi=N'{2}',sdt='{3}', email='{4}', ngayvaolam= '{5}', gioitinh=N'{6}' where manv='{7}'", tendg, namsinh, diachi, sdt, email, ngayvaolam, gioitinh,manv);
 
                 if (con.exeData(queryUpdate))
                 {
@@ -293,10 +295,11 @@ namespace QuanLyThuVien.From
             txtMaNV.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[0].ToString()).ToString();
             txtTenNV.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[1].ToString()).ToString();
             txtNgaySinh.EditValue = Convert.ToDateTime(gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[2].ToString())).ToString("dd/MM/yyyy");
-            txtDiaChi.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[3].ToString()).ToString();
-            txtSDT.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[4].ToString()).ToString();
-            txtEmail.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[5].ToString()).ToString();
-            txtNgayVaoLam.EditValue = Convert.ToDateTime(gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[6].ToString())).ToString("dd/MM/yyyy");
+            cbbGioitinh.Text= gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[3].ToString()).ToString();
+            txtDiaChi.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[4].ToString()).ToString();
+            txtSDT.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[5].ToString()).ToString();
+            txtEmail.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[6].ToString()).ToString();
+            txtNgayVaoLam.EditValue = Convert.ToDateTime(gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[7].ToString())).ToString("dd/MM/yyyy");
         }
     }
 }

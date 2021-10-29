@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -203,14 +204,31 @@ namespace QuanLyThuVien
             return checkName;
         }
 
+        public string CreateMD5(string str)
+        {
+            MD5 mh = MD5.Create();
+            //Chuyển kiểu chuổi thành kiểu byte
+            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(str);
+            //mã hóa chuỗi đã chuyển
+            byte[] hash = mh.ComputeHash(inputBytes);
+            //tạo đối tượng StringBuilder (làm việc với kiểu dữ liệu lớn)
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = 0; i < hash.Length; i++)
+            {
+                sb.Append(hash[i].ToString("X2"));
+            }
+            return sb.ToString();
+        }
+
         //cột có tên
 
-        public static string P_LoadDocGia = "select MADG as [Mã độc giả],HOTEN as [Họ và tên], NAMSINH as [Năm sinh],DIACHI as [Địa chỉ],SDT as [Số điện thoại],Email from DOCGIA";
+        public static string P_LoadDocGia = "select MADG as [Mã độc giả],HOTEN as [Họ và tên], NAMSINH as [Năm sinh],GIOITINH as [Giới tính],DIACHI as [Địa chỉ],SDT as [Số điện thoại],Email from DOCGIA";
         public static string P_LoadSach= "select MASACH as [Mã sách],TENSACH as [Tên sách],TACGIA as [Tác giả],SoLuong as [Số lượng], xb.TENNXB as [Nhà xuất bản], NAMXB as [Năm xuất bản], vt.TENVITRI as [Vị trí] from SACH  s, NXB xb, VITRI vt        where s.MANXB= xb.MANXB           and vt.MAVT=s.MAVT";
         public static string P_LoadNXB = "select MANXB as [Mã nhà xuất bản],TENNXB as [Tên nhà xuất bản],Diachi as [Địa chỉ],   sdt as [Số điện thoại],email as [Email], websize as [Websize] from NXB";
         public static string P_LoadLoaiSach = "select MALOAI as[Mã loại], TENLOAI as[Tên loại] from LOAISACH ls";
         public static string P_LoadViTri= "select MAVT as[Mã vị trí], TENVITRI as[Tên vị trí], ls.TENLOAI as [Tên loại sách] from VITRI vt,LOAISACH ls where ls.MALOAI= vt.MALOAI";
-        public static string P_LoadNhanVien= "select MANV as[Mã nhân viên], TENNV as [Họ và tên], NAMSINH as[Năm sinh], Diachi as[Địa chỉ], SDT as [Số điện thoại], EMAIL as [Email], NgayVaoLam as [Ngày vào làm] from NHANVIEN";
+        public static string P_LoadNhanVien= "select MANV as[Mã nhân viên], TENNV as [Họ và tên], NAMSINH as[Ngày sinh], GioiTinh as[Giới tính], Diachi as[Địa chỉ], SDT as [Số điện thoại], EMAIL as [Email], NgayVaoLam as [Ngày vào làm] from NHANVIEN";
         public static string P_LoadChucVu = "select MACV as [Mã chức vụ], TENCV as [Tên chức vụ] from CHUCVU";
         public static string P_TaiKhoan = "select MaTK as[Mã tài khoản], TENTK as [Tên tài khoản], MATKHAU as [Mật khẩu], n.TENNV as [Tên nhân viên], c.TENCV as [Chức vụ] from TAIKHOAN t, CHUCVU c, NHANVIEN n where t.MACV= c.MACV and t.MANV= n.MANV";
 

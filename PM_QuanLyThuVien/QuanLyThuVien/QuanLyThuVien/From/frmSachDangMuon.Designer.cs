@@ -86,7 +86,6 @@
             this.gvSachDangMuon.OptionsFind.AlwaysVisible = true;
             this.gvSachDangMuon.OptionsFind.FindNullPrompt = "Bạn cần tìm gì...";
             this.gvSachDangMuon.OptionsFind.FindPanelLocation = DevExpress.XtraGrid.Views.Grid.GridFindPanelLocation.Panel;
-            this.gvSachDangMuon.OptionsView.ShowFooter = true;
             this.gvSachDangMuon.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn1

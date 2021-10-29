@@ -266,5 +266,17 @@ namespace QuanLyThuVien.From
             lookUpEditNV.Text = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[3].ToString()).ToString();
             lookUpEditCV.Text = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[4].ToString()).ToString();
         }
+
+        private void txtMatKhau_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            if (txtMatKhau.Properties.UseSystemPasswordChar)
+            {
+                txtMatKhau.Properties.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtMatKhau.Properties.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

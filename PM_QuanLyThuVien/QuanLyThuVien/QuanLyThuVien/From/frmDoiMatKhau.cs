@@ -58,7 +58,7 @@ namespace QuanLyThuVien.From
                 txtReNewPass.Focus();
                 return;
             }
-            if (!txtNewPass.EditValue.ToString().Equals(txtReNewPass.EditValue.ToString()))
+            if (!con.CreateMD5(txtNewPass.EditValue.ToString()).Equals(con.CreateMD5(txtReNewPass.EditValue.ToString())))
             {
                 XtraMessageBox.Show("Hai mật khẩu mới không trùng nhau\r\nVui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtReNewPass.Focus();
@@ -73,18 +73,20 @@ namespace QuanLyThuVien.From
             }
 
             string newpass = txtNewPass.EditValue.ToString();
-            string queryU = string.Format("update taikhoan set matkhau='{0}' where matk='{1}'", newpass, matk);
+            string queryU = string.Format("update taikhoan set matkhau='{0}' where matk='{1}'", con.CreateMD5(newpass), matk);
        
             if (con.exeData(queryU))
             {
                 XtraMessageBox.Show("Đổi mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //this.Close();
                 btnLamMoi.PerformClick();
+                
 
             }
             else
             {
                 XtraMessageBox.Show("Đổi mật khẩu thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(queryU);
             }
         }
 
