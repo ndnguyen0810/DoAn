@@ -174,16 +174,7 @@ namespace QuanLyThuVien.From
             }
             int soluongs = Int32.Parse(gvSach.GetRowCellValue(row_index, "SoLuong").ToString());
 
-            foreach (DataRow dr in dt.Rows)
-            {
-                if (dr["MASACH"].ToString() == ms)
-                {
-                    //MessageBox.Show("cccc");
-                    dr["SoLuong"] =soluongs-1 ;
-                }
-                dt.AcceptChanges();
-                dr.SetModified();
-            }
+           
 
         }
 
