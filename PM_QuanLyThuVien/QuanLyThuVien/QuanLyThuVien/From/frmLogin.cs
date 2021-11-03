@@ -56,7 +56,7 @@ namespace QuanLyThuVien.From
         {
             Dispose(); //show thử
            
-          // MessageBox.Show(getInfo(MATK) + "\nMã tk: "+getInfo(MANV) +"\nMacv:" + getInfo(MACV) +"\nTenCV: "+ getInfo(TENCV));
+            // MessageBox.Show(getInfo(MATK) + "\nMã tk: "+getInfo(MANV) +"\nMacv:" + getInfo(MACV) +"\nTenCV: "+ getInfo(TENCV));
 
         }
 
@@ -177,5 +177,9 @@ namespace QuanLyThuVien.From
             }
         }
 
+        private void btnDangNhap_MouseHover(object sender, EventArgs e)
+        {
+            btnDangNhap.BackColor = Color.AliceBlue;
+        }
     }
 }
