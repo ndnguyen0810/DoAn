@@ -22,6 +22,7 @@ namespace QuanLyThuVien.From
         private void frmDatePitker_Load(object sender, EventArgs e)
         {
             txtHanTra.Properties.MinValue =DateTime.Now;
+            txtHanTra.Properties.MaxValue =  DateTime.Now.AddDays(7);
         }
 
 

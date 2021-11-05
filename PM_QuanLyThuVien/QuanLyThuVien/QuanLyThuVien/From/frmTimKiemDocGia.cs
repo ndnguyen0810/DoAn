@@ -39,7 +39,7 @@ namespace QuanLyThuVien.From
 
         private void loadDG()
         {
-            DataTable dt = con.readData(sqlDG);
+            DataTable dt = con.readData(connection.P_LoadDocGia);
             if (dt != null)
             {
                 gcDG.DataSource = dt;

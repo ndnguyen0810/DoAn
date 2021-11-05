@@ -37,6 +37,8 @@ namespace QuanLyThuVien.From
                 gcSach.DataSource = dt;
             }
         }
+
+
         private void loadSachMuon()
         {
             gcCTPM.DataSource = dtSachMuon;
@@ -92,6 +94,8 @@ namespace QuanLyThuVien.From
             LoadCreateCTPM();
         }
 
+        public int soluonsach;
+
         private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
  
@@ -106,9 +110,12 @@ namespace QuanLyThuVien.From
             txtEmail.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[6].ToString()).ToString();
         }
         bool check; // Mặc định là f rồi
+
         private void btnAddSach_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             int row_index = gvSach.FocusedRowHandle;
+            //MessageBox.Show(row_index.ToString());
+
             if ((txtMaDG.EditValue == null) || (txtMaDG.EditValue.ToString().Equals("")))
             {
                 XtraMessageBox.Show("Bạn chưa chọn độc giả\r\nVui lòng chọn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -117,6 +124,7 @@ namespace QuanLyThuVien.From
             bool checkB= false ;
             string sql = string.Format("select madg from PHieumuon where masach='{0}' and madg='{1}'", gvSach.GetRowCellValue(row_index, "MASACH"), txtMaDG.EditValue.ToString());
             int sl = Int32.Parse(gvSach.GetRowCellValue(row_index, "SoLuong").ToString()); //lấy số lượng để cập nhật
+            soluonsach = sl;
             string ms = gvSach.GetRowCellValue(row_index, "MASACH").ToString(); //lấy mã sách
             DataTable dt = new DataTable();
             dt = con.readData(sql);
@@ -132,6 +140,11 @@ namespace QuanLyThuVien.From
                     }
                 }
                
+            }
+            if (sl <= 0)
+            {
+                MessageBox.Show("Sách đã hết, vui lòng chọn sách khác","Thông báo");
+                return;
             }
 
             if (checkB)
@@ -173,8 +186,9 @@ namespace QuanLyThuVien.From
                 loadSachMuon();  
             }
             int soluongs = Int32.Parse(gvSach.GetRowCellValue(row_index, "SoLuong").ToString());
-
            
+
+
 
         }
 
@@ -220,12 +234,14 @@ namespace QuanLyThuVien.From
                 {
                     string hentra = Convert.ToDateTime(item["HENTRA"].ToString()).ToString("MM/dd/yyyy");
                     sqlICTPM = string.Format("insert into CTPM values ('{0}', '{1}','{2}', {3}, N'{4}')", mapm, item["MASACH"], hentra, item["SoLuong"], trangthai);
-                   
+                    string upSach = string.Format("update sach set soluong={0} where masach='{1}'", soluonsach- Int32.Parse(item["soluong"].ToString()), item["MASACH"]);
                     con.Ex_vp(sqlICTPM);
+                    con.Ex_vp(upSach);
+                    loadSach();
                 }
                 soluong = Int32.Parse(dtSachMuon.Rows.Count.ToString());
                 string upPM = string.Format("update phieumuon set soluong={0} where mapm= '{1}'", soluong, mapm);
-
+                
                 con.exeData(upPM);
                 check = true;
             }
@@ -273,6 +289,8 @@ namespace QuanLyThuVien.From
             dtSachMuon.Rows.Clear();
         }
 
-       
+
+
+
     }
 }
