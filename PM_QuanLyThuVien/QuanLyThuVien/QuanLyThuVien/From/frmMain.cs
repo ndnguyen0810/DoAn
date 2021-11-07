@@ -94,20 +94,7 @@ namespace QuanLyThuVien
             }
         }
 
-        private void barBtnTTPM_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            Form frm = formCheck(typeof(frmInfoTPhieuMuon));
-            if (frm == null)
-            {
-                frmInfoTPhieuMuon f = new frmInfoTPhieuMuon();
-                f.MdiParent = this;
-                f.Show();
-            }
-            else
-            {
-                frm.Activate();
-            }
-        }
+
 
         private void btnTrasach_ItemClick(object sender, ItemClickEventArgs e)
         {

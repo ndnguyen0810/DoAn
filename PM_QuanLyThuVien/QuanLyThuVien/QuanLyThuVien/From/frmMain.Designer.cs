@@ -53,6 +53,11 @@
             this.btnSach = new DevExpress.XtraBars.BarButtonItem();
             this.btnNV = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnTTPM = new DevExpress.XtraBars.BarButtonItem();
+            this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemDateEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
+            this.barHeaderItem2 = new DevExpress.XtraBars.BarHeaderItem();
+            this.barHeaderItem3 = new DevExpress.XtraBars.BarHeaderItem();
+            this.barHeaderItem4 = new DevExpress.XtraBars.BarHeaderItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbgSach = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -72,12 +77,9 @@
             this.repositoryItemHypertextLabel3 = new DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
-            this.repositoryItemDateEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
-            this.barHeaderItem2 = new DevExpress.XtraBars.BarHeaderItem();
-            this.barHeaderItem3 = new DevExpress.XtraBars.BarHeaderItem();
-            this.barHeaderItem4 = new DevExpress.XtraBars.BarHeaderItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel1)).BeginInit();
@@ -87,8 +89,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit2.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3.CalendarTimeProperties)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -140,7 +140,7 @@
             this.repositoryItemDateEdit2,
             this.repositoryItemHypertextLabel3,
             this.repositoryItemDateEdit3});
-            this.ribbon.Size = new System.Drawing.Size(1136, 158);
+            this.ribbon.Size = new System.Drawing.Size(1136, 166);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // barHeaderItem1
@@ -342,7 +342,42 @@
             this.barBtnTTPM.Id = 50;
             this.barBtnTTPM.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnTTPM.ImageOptions.SvgImage")));
             this.barBtnTTPM.Name = "barBtnTTPM";
-            this.barBtnTTPM.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnTTPM_ItemClick);
+           // this.barBtnTTPM.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnTTPM_ItemClick);
+            // 
+            // barEditItem1
+            // 
+            this.barEditItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barEditItem1.Caption = "barEditItem1";
+            this.barEditItem1.Edit = this.repositoryItemDateEdit3;
+            this.barEditItem1.Id = 51;
+            this.barEditItem1.Name = "barEditItem1";
+            // 
+            // repositoryItemDateEdit3
+            // 
+            this.repositoryItemDateEdit3.AutoHeight = false;
+            this.repositoryItemDateEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEdit3.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEdit3.Name = "repositoryItemDateEdit3";
+            // 
+            // barHeaderItem2
+            // 
+            this.barHeaderItem2.Caption = "barHeaderItem2";
+            this.barHeaderItem2.Id = 52;
+            this.barHeaderItem2.Name = "barHeaderItem2";
+            // 
+            // barHeaderItem3
+            // 
+            this.barHeaderItem3.Caption = "barHeaderItem3";
+            this.barHeaderItem3.Id = 53;
+            this.barHeaderItem3.Name = "barHeaderItem3";
+            // 
+            // barHeaderItem4
+            // 
+            this.barHeaderItem4.Caption = "barHeaderItem4";
+            this.barHeaderItem4.Id = 54;
+            this.barHeaderItem4.Name = "barHeaderItem4";
             // 
             // ribbonPage1
             // 
@@ -357,7 +392,6 @@
             // 
             this.rbgSach.ItemLinks.Add(this.btnMuon);
             this.rbgSach.ItemLinks.Add(this.btnDocGia);
-            this.rbgSach.ItemLinks.Add(this.barBtnTTPM);
             this.rbgSach.ItemLinks.Add(this.btnTrasach);
             this.rbgSach.Name = "rbgSach";
             this.rbgSach.Text = "Sách";
@@ -468,51 +502,16 @@
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.barHeaderItem4);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 500);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 485);
             this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1136, 24);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1136, 39);
             // 
             // xtraTabbedMdiManager1
             // 
             this.xtraTabbedMdiManager1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders;
             this.xtraTabbedMdiManager1.MdiParent = this;
-            // 
-            // barEditItem1
-            // 
-            this.barEditItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.barEditItem1.Caption = "barEditItem1";
-            this.barEditItem1.Edit = this.repositoryItemDateEdit3;
-            this.barEditItem1.Id = 51;
-            this.barEditItem1.Name = "barEditItem1";
-            // 
-            // repositoryItemDateEdit3
-            // 
-            this.repositoryItemDateEdit3.AutoHeight = false;
-            this.repositoryItemDateEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemDateEdit3.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemDateEdit3.Name = "repositoryItemDateEdit3";
-            // 
-            // barHeaderItem2
-            // 
-            this.barHeaderItem2.Caption = "barHeaderItem2";
-            this.barHeaderItem2.Id = 52;
-            this.barHeaderItem2.Name = "barHeaderItem2";
-            // 
-            // barHeaderItem3
-            // 
-            this.barHeaderItem3.Caption = "barHeaderItem3";
-            this.barHeaderItem3.Id = 53;
-            this.barHeaderItem3.Name = "barHeaderItem3";
-            // 
-            // barHeaderItem4
-            // 
-            this.barHeaderItem4.Caption = "barHeaderItem4";
-            this.barHeaderItem4.Id = 54;
-            this.barHeaderItem4.Name = "barHeaderItem4";
             // 
             // frmMain
             // 
@@ -534,6 +533,8 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel1)).EndInit();
@@ -543,8 +544,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

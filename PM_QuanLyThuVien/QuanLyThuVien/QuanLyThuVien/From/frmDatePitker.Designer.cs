@@ -95,7 +95,7 @@
             // 
             // frmDatePitker
             // 
-            this.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.ForeColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseFont = true;

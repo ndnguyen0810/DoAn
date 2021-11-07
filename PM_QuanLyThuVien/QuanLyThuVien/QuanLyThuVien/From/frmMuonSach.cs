@@ -194,9 +194,11 @@ namespace QuanLyThuVien.From
 
         private void btnDelete_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
+            
             if (XtraMessageBox.Show("Bạn có chắc muốn xoá sách đang chọn?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 gvCTPM.DeleteSelectedRows();
+
             }
 
 

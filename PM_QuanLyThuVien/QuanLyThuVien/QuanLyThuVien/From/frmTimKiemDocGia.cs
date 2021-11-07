@@ -25,7 +25,7 @@ namespace QuanLyThuVien.From
         }
 
         connection con = new connection();
-        string sqlSach = "select pm.MAPM as[Mã phiếu mượn], s.TENSACH as[Mã sách],NGAYMUON as [Ngày mượn],HENTRA as[Hẹn trả], nv.TENNV as [Họ và tên] " +
+        string sqlSach = "select pm.MAPM as[Mã phiếu mượn], s.TENSACH as[Mã sách],NGAYMUON as [Ngày mượn],HENTRA as[Hẹn trả], nv.TENNV as [Người lập phiếu] " +
                          "from CTPM ct, PHIEUMUON pm, NHANVIEN nv, SACH s where pm.MAPM= ct.MAPM     and s.MASACH= ct.MASACH     and nv.MANV= pm.MANV";
         string sqlDG = "select madg as [Mã độc giả],HOTEN as [Họ và tên], sdt as [Số điện thoại] from DOCGIA";
         private void LoadSach()
@@ -48,7 +48,7 @@ namespace QuanLyThuVien.From
 
         private void showDGmuonSach(string madg)
         {
-            string sqlload = string.Format("select pm.MAPM as[Mã phiếu mượn], s.TENSACH as[Mã sách],NGAYMUON as [Ngày mượn],HENTRA as[Hẹn trả], nv.TENNV as [Họ và tên] " +
+            string sqlload = string.Format("select pm.MAPM as[Mã phiếu mượn], s.TENSACH as[Mã sách],NGAYMUON as [Ngày mượn],HENTRA as[Hẹn trả], nv.TENNV as [Người lập phiếu] " +
                          "from CTPM ct, PHIEUMUON pm, NHANVIEN nv, SACH s where pm.MAPM= ct.MAPM     and s.MASACH= ct.MASACH     and nv.MANV= pm.MANV and madg='{0}'", madg);
             DataTable dt = con.readData(sqlload);
             if (dt != null)
@@ -69,6 +69,11 @@ namespace QuanLyThuVien.From
             {
                 LoadSach();
             }
+        }
+
+        private void gvSach_DoubleClick(object sender, EventArgs e)
+        {
+            LoadSach();
         }
     }
 }

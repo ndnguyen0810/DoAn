@@ -86,6 +86,8 @@
             this.gridColumn8});
             this.gvSach.GridControl = this.gcSach;
             this.gvSach.Name = "gvSach";
+            this.gvSach.OptionsBehavior.Editable = false;
+            this.gvSach.OptionsBehavior.ReadOnly = true;
             this.gvSach.OptionsFind.AlwaysVisible = true;
             this.gvSach.OptionsFind.Behavior = DevExpress.XtraEditors.FindPanelBehavior.Filter;
             this.gvSach.OptionsFind.FindNullPrompt = "Bạn muốn tìm gì...";

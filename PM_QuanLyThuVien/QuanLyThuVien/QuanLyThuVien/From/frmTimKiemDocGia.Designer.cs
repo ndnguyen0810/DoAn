@@ -44,8 +44,8 @@
             // tablePanel1
             // 
             this.tablePanel1.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 20.54F),
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 39.46F)});
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 28.64F),
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 31.36F)});
             this.tablePanel1.Controls.Add(this.gcDG);
             this.tablePanel1.Controls.Add(this.gcSach);
             this.tablePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -53,7 +53,7 @@
             this.tablePanel1.Name = "tablePanel1";
             this.tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
-            this.tablePanel1.Size = new System.Drawing.Size(722, 343);
+            this.tablePanel1.Size = new System.Drawing.Size(1126, 429);
             this.tablePanel1.TabIndex = 1;
             // 
             // gcDG
@@ -64,7 +64,7 @@
             this.gcDG.MainView = this.gvDG;
             this.gcDG.Name = "gcDG";
             this.tablePanel1.SetRow(this.gcDG, 0);
-            this.gcDG.Size = new System.Drawing.Size(241, 337);
+            this.gcDG.Size = new System.Drawing.Size(531, 423);
             this.gcDG.TabIndex = 1;
             this.gcDG.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDG});
@@ -88,11 +88,11 @@
             // 
             this.tablePanel1.SetColumn(this.gcSach, 1);
             this.gcSach.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcSach.Location = new System.Drawing.Point(250, 3);
+            this.gcSach.Location = new System.Drawing.Point(540, 3);
             this.gcSach.MainView = this.gvSach;
             this.gcSach.Name = "gcSach";
             this.tablePanel1.SetRow(this.gcSach, 0);
-            this.gcSach.Size = new System.Drawing.Size(469, 337);
+            this.gcSach.Size = new System.Drawing.Size(583, 423);
             this.gcSach.TabIndex = 0;
             this.gcSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvSach});
@@ -105,12 +105,13 @@
             this.gvSach.OptionsFind.AlwaysVisible = true;
             this.gvSach.OptionsFind.FindPanelLocation = DevExpress.XtraGrid.Views.Grid.GridFindPanelLocation.Panel;
             this.gvSach.OptionsView.ShowGroupPanel = false;
+            this.gvSach.DoubleClick += new System.EventHandler(this.gvSach_DoubleClick);
             // 
             // frmTimKiemDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(722, 343);
+            this.ClientSize = new System.Drawing.Size(1126, 429);
             this.Controls.Add(this.tablePanel1);
             this.Name = "frmTimKiemDocGia";
             this.Text = "Tìm kiếm độc giả";
