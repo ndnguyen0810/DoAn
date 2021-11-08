@@ -237,6 +237,12 @@
     <Compile Include="From\frmTimKiemSach.Designer.cs">
       <DependentUpon>frmTimKiemSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="From\frmViPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From\frmViPham.Designer.cs">
+      <DependentUpon>frmViPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Report\rpPhieuMuon.cs">
@@ -313,6 +319,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="From\frmTimKiemSach.resx">
       <DependentUpon>frmTimKiemSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="From\frmViPham.resx">
+      <DependentUpon>frmViPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

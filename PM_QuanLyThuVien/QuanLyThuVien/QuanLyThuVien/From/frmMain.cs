@@ -110,6 +110,21 @@ namespace QuanLyThuVien
                 frm.Activate();
             }
         }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = formCheck(typeof(frmViPham));
+            if (frm == null)
+            {
+                frmViPham f = new frmViPham();
+                f.MdiParent = this;
+                f.Show();
+            }
+            else
+            {
+                frm.Activate();
+            }
+        }
         #endregion
 
 
@@ -383,6 +398,7 @@ namespace QuanLyThuVien
                 e.Cancel = true;
             }
         }
+
 
 
         #endregion

@@ -77,6 +77,7 @@
             this.repositoryItemHypertextLabel3 = new DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3.CalendarTimeProperties)).BeginInit();
@@ -123,10 +124,11 @@
             this.barEditItem1,
             this.barHeaderItem2,
             this.barHeaderItem3,
-            this.barHeaderItem4});
+            this.barHeaderItem4,
+            this.barButtonItem1});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbon.MaxItemId = 55;
+            this.ribbon.MaxItemId = 56;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -342,7 +344,6 @@
             this.barBtnTTPM.Id = 50;
             this.barBtnTTPM.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnTTPM.ImageOptions.SvgImage")));
             this.barBtnTTPM.Name = "barBtnTTPM";
-           // this.barBtnTTPM.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnTTPM_ItemClick);
             // 
             // barEditItem1
             // 
@@ -393,6 +394,7 @@
             this.rbgSach.ItemLinks.Add(this.btnMuon);
             this.rbgSach.ItemLinks.Add(this.btnDocGia);
             this.rbgSach.ItemLinks.Add(this.btnTrasach);
+            this.rbgSach.ItemLinks.Add(this.barButtonItem1);
             this.rbgSach.Name = "rbgSach";
             this.rbgSach.Text = "Sách";
             // 
@@ -513,6 +515,15 @@
             this.xtraTabbedMdiManager1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders;
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Xử lý vi phạm";
+            this.barButtonItem1.Id = 55;
+            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            // 
             // frmMain
             // 
             this.Appearance.Options.UseFont = true;
@@ -598,5 +609,6 @@
         private DevExpress.XtraBars.BarHeaderItem barHeaderItem2;
         private DevExpress.XtraBars.BarHeaderItem barHeaderItem3;
         private DevExpress.XtraBars.BarHeaderItem barHeaderItem4;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
     }
 }

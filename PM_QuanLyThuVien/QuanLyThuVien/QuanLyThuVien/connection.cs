@@ -224,7 +224,7 @@ namespace QuanLyThuVien
         //cột có tên
 
         public static string P_LoadDocGia = "select MADG as [Mã độc giả],HOTEN as [Họ và tên], NAMSINH as [Năm sinh],GIOITINH as [Giới tính],DIACHI as [Địa chỉ],SDT as [Số điện thoại],Email from DOCGIA";
-        public static string P_LoadSach= "select MASACH as [Mã sách],TENSACH as [Tên sách],TACGIA as [Tác giả],SoLuong as [Số lượng], xb.TENNXB as [Nhà xuất bản], NAMXB as [Năm xuất bản], vt.TENVITRI as [Vị trí] from SACH  s, NXB xb, VITRI vt        where s.MANXB= xb.MANXB           and vt.MAVT=s.MAVT";
+        public static string P_LoadSach= "select MASACH as [Mã sách],TENSACH as [Tên sách],TACGIA as [Tác giả],SoLuong as [Số lượng], GIATIEN as [Giá tiền], xb.TENNXB as [Nhà xuất bản], NAMXB as [Năm xuất bản], vt.TENVITRI as [Vị trí] from SACH  s, NXB xb, VITRI vt        where s.MANXB= xb.MANXB           and vt.MAVT=s.MAVT";
         public static string P_LoadNXB = "select MANXB as [Mã nhà xuất bản],TENNXB as [Tên nhà xuất bản],Diachi as [Địa chỉ],   sdt as [Số điện thoại],email as [Email], websize as [Websize] from NXB";
         public static string P_LoadLoaiSach = "select MALOAI as[Mã loại], TENLOAI as[Tên loại] from LOAISACH ls";
         public static string P_LoadViTri= "select MAVT as[Mã vị trí], TENVITRI as[Tên vị trí], ls.TENLOAI as [Tên loại sách] from VITRI vt,LOAISACH ls where ls.MALOAI= vt.MALOAI";

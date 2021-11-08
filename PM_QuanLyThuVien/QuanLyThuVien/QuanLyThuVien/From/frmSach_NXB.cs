@@ -77,10 +77,12 @@ namespace QuanLyThuVien.From
             txtTenSach.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[1].ToString()).ToString();   
             txtTacGia.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[2].ToString()).ToString();
             txtSoLuong.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[3].ToString()).ToString();
-            lookUpEditNXB.Text = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[4].ToString()).ToString();
-            txtNamXB.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[5].ToString()).ToString();
-            lookUpEditVT.Text = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[6].ToString()).ToString();
-           
+            txtGiaTien.Text = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[4].ToString()).ToString();
+            lookUpEditNXB.Text = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[5].ToString()).ToString();
+            txtNamXB.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[6].ToString()).ToString();
+            lookUpEditVT.Text = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[7].ToString()).ToString();
+            
+
 
         }
 
@@ -139,6 +141,7 @@ namespace QuanLyThuVien.From
                 return;
             }
 
+            
             try
             {
                 if (Int32.Parse(txtSoLuong.EditValue.ToString()) < 0)
@@ -161,16 +164,36 @@ namespace QuanLyThuVien.From
                 lookUpEditNXB.Focus();
                 return;
             }
+
+            try
+            {
+                if (Int32.Parse(txtGiaTien.EditValue.ToString()) < 0)
+                {
+                    XtraMessageBox.Show("Giá tiền không được nhỏ hơn 0\r\nVui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //txtNamXB.Focus();
+                    return;
+                }
+            }
+            catch (Exception)
+            {
+                XtraMessageBox.Show("Giá tiền phải là số\r\nVui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtNamXB.Focus();
+                return;
+            }
+
+
+            #endregion
+
             string nxb = lookUpEditNXB.EditValue.ToString();
             string tensach = txtTenSach.EditValue.ToString();
             string tacgia = txtTacGia.EditValue.ToString();
             int soluong = Int32.Parse(txtSoLuong.EditValue.ToString());
             int namxb = Int32.Parse(txtNamXB.EditValue.ToString());
             string vitri = lookUpEditVT.EditValue.ToString();
+            int gia = Int32.Parse(txtGiaTien.EditValue.ToString());
 
-            #endregion
+            string queryInsert = string.Format("insert into SACH values('{0}',N'{1}',N'{2}',{3},{4},'{5}','{6}',{7})", con.creatId("MS", querySach), tensach, tacgia,soluong,namxb, nxb, vitri,gia);
 
-            string queryInsert = string.Format("insert into SACH values('{0}',N'{1}',N'{2}',{3},{4},'{5}','{6}')", con.creatId("MS", querySach), tensach, tacgia,soluong,namxb, nxb, vitri);
             if (connection.checkName(querySach, txtTenSach, "tensach") == true)
             {
                 XtraMessageBox.Show("Tên sách có tên \"" + txtTenSach.EditValue.ToString() + "\" đã tồn tại\r\nVui lòng nhập tên khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -239,6 +262,8 @@ namespace QuanLyThuVien.From
             int namxb = Convert.ToInt32(txtNamXB.EditValue.ToString());
             string vitri = lookUpEditVT.EditValue.ToString();
             int soluong = Int32.Parse(txtSoLuong.EditValue.ToString());
+            int gia = Int32.Parse(txtGiaTien.EditValue.ToString());
+
             try
             {
                 if ((namxb < 1) || (namxb > DateTime.Now.Year))
@@ -281,13 +306,13 @@ namespace QuanLyThuVien.From
            
             #endregion
 
-            string queryUpdate = string.Format("update sach set tensach=N'{0}',tacgia=N'{1}', manxb='{2}', namxb={3}, soluong= {4},mavt='{5}' where masach='{6}' ", tensach, tacgia, nxb, namxb,soluong, vitri, masach);
-            if (connection.checkName(querySach, txtTenSach, "tensach") == true)
-            {
-                XtraMessageBox.Show("Tên sách có tên \"" + txtTenSach.EditValue.ToString() + "\" đã tồn tại\r\nVui lòng nhập tên khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                btnLamMoiSach.PerformClick();
-                return;
-            }          
+            string queryUpdate = string.Format("update sach set tensach=N'{0}',tacgia=N'{1}', manxb='{2}', namxb={3}, soluong= {4},mavt='{5}', giatien={6} where masach='{7}' ", tensach, tacgia, nxb, namxb,soluong, vitri,gia, masach);
+            //if (connection.checkName(querySach, txtTenSach, "tensach") == true)
+            //{
+            //    XtraMessageBox.Show("Tên sách có tên \"" + txtTenSach.EditValue.ToString() + "\" đã tồn tại\r\nVui lòng nhập tên khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    btnLamMoiSach.PerformClick();
+            //    return;
+            //}          
             if (XtraMessageBox.Show("Bạn có chắc chắn muốn sửa sách đang chọn?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (con.exeData(queryUpdate))
