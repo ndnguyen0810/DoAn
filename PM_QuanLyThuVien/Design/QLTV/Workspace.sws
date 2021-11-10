@@ -4,8 +4,9 @@
 
 <Workspace>
 	<Local Expanded="Yes">
-		<Model Expanded="Yes" ID="{1033407B-C47B-4B28-B5CC-C0A2CB475CDA}" Name="PDM_2" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="PDM_2.pdm"/>
-		<Model Expanded="Yes" ID="{5801CDAF-BEDE-4F56-A132-7B83AEDFF5F1}" Loaded="No" Name="CDM" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="CDM.cdm"/>
+		<Model Expanded="Yes" ID="{8DC96606-0EA6-4F94-8D55-54D29DD514E6}" Loaded="No" Name="QLTV" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="QLTV.prj"/>
+		<Model Expanded="Yes" ID="{69D1171F-E7EE-4795-9B0D-F31A1146140B}" Name="DFD_2" Type="{3D3C409C-B60D-430E-A1C4-B880653AC634}" URL="DFD_2.bpm"/>
+		<Model Expanded="Yes" ID="{94993E54-4C0E-425A-A2F3-EDA8191CD714}" Name="CDM" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="/github/doan/pm_quanlythuvien/design/qltv/cdm.cdm"/>
 	</Local>
 	<BrowserModule Name="Repository"/>
 </Workspace>

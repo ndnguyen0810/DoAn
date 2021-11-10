@@ -56,7 +56,10 @@ namespace QuanLyThuVien.From
                     con.exeData(sql);
                     //textBox1.Text = sql;
                 }
-
+                if(dr["Trạng thái"].Equals("Quá hạn"))
+                {
+                    
+                }
                 loadCTPM();
             }
         }
