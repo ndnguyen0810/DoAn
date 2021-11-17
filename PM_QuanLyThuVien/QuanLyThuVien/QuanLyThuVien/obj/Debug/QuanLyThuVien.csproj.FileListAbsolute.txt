@@ -402,3 +402,4 @@ F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\ja\DevExpr
 F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\ru\DevExpress.Web.Resources.v19.2.resources.dll
 F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.From.frmDangNhap.resources
 F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.From.frmViPham.resources
+F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.From.frmHoaDon.resources

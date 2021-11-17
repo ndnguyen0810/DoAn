@@ -39,11 +39,19 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleExpression formatConditionRuleExpression1 = new DevExpress.XtraEditors.FormatConditionRuleExpression();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
             this.tablePanel2 = new DevExpress.Utils.Layout.TablePanel();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
@@ -57,6 +65,8 @@
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnTraFull = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnPhat = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.gcDocGiaa = new DevExpress.XtraGrid.GridControl();
             this.gvDocGia = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -71,7 +81,6 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnGiaHan = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -85,6 +94,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gcPM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTraFull)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPhat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcDocGiaa)).BeginInit();
@@ -96,6 +106,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnGiaHan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTraSach)).BeginInit();
             this.SuspendLayout();
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.Caption = "Trạng thái";
+            this.gridColumn8.FieldName = "Trạng thái";
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.OptionsColumn.AllowEdit = false;
+            this.gridColumn8.OptionsColumn.ReadOnly = true;
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 7;
+            this.gridColumn8.Width = 77;
             // 
             // tablePanel1
             // 
@@ -117,8 +138,8 @@
             // 
             this.tablePanel1.SetColumn(this.tablePanel2, 0);
             this.tablePanel2.Columns.AddRange(new DevExpress.Utils.Layout.TablePanelColumn[] {
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 25.37F),
-            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 34.63F)});
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 28.02F),
+            new DevExpress.Utils.Layout.TablePanelColumn(DevExpress.Utils.Layout.TablePanelEntityStyle.Relative, 31.98F)});
             this.tablePanel2.Controls.Add(this.groupControl2);
             this.tablePanel2.Controls.Add(this.groupControl3);
             this.tablePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -142,7 +163,7 @@
             this.groupControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl2.Name = "groupControl2";
             this.tablePanel2.SetRow(this.groupControl2, 0);
-            this.groupControl2.Size = new System.Drawing.Size(471, 202);
+            this.groupControl2.Size = new System.Drawing.Size(521, 202);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "Thông tin phiếu mượn";
             // 
@@ -156,8 +177,9 @@
             this.gcPM.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gcPM.Name = "gcPM";
             this.gcPM.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.btnTraFull});
-            this.gcPM.Size = new System.Drawing.Size(467, 177);
+            this.btnTraFull,
+            this.btnPhat});
+            this.gcPM.Size = new System.Drawing.Size(517, 177);
             this.gcPM.TabIndex = 0;
             this.gcPM.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvPM});
@@ -172,7 +194,8 @@
             this.gridColumn15,
             this.gridColumn16,
             this.gridColumn17,
-            this.gridColumn18});
+            this.gridColumn18,
+            this.gridColumn19});
             this.gvPM.DetailHeight = 431;
             this.gvPM.GridControl = this.gcPM;
             this.gvPM.Name = "gvPM";
@@ -193,7 +216,7 @@
             this.gridColumn12.OptionsColumn.ReadOnly = true;
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 0;
-            this.gridColumn12.Width = 70;
+            this.gridColumn12.Width = 92;
             // 
             // gridColumn13
             // 
@@ -204,7 +227,7 @@
             this.gridColumn13.OptionsColumn.ReadOnly = true;
             this.gridColumn13.Visible = true;
             this.gridColumn13.VisibleIndex = 1;
-            this.gridColumn13.Width = 65;
+            this.gridColumn13.Width = 106;
             // 
             // gridColumn14
             // 
@@ -215,7 +238,7 @@
             this.gridColumn14.OptionsColumn.ReadOnly = true;
             this.gridColumn14.Visible = true;
             this.gridColumn14.VisibleIndex = 2;
-            this.gridColumn14.Width = 61;
+            this.gridColumn14.Width = 97;
             // 
             // gridColumn15
             // 
@@ -226,7 +249,7 @@
             this.gridColumn15.OptionsColumn.ReadOnly = true;
             this.gridColumn15.Visible = true;
             this.gridColumn15.VisibleIndex = 3;
-            this.gridColumn15.Width = 66;
+            this.gridColumn15.Width = 112;
             // 
             // gridColumn16
             // 
@@ -237,7 +260,7 @@
             this.gridColumn16.OptionsColumn.ReadOnly = true;
             this.gridColumn16.Visible = true;
             this.gridColumn16.VisibleIndex = 4;
-            this.gridColumn16.Width = 63;
+            this.gridColumn16.Width = 93;
             // 
             // gridColumn17
             // 
@@ -248,7 +271,7 @@
             this.gridColumn17.OptionsColumn.ReadOnly = true;
             this.gridColumn17.Visible = true;
             this.gridColumn17.VisibleIndex = 5;
-            this.gridColumn17.Width = 67;
+            this.gridColumn17.Width = 76;
             // 
             // gridColumn18
             // 
@@ -257,7 +280,7 @@
             this.gridColumn18.Name = "gridColumn18";
             this.gridColumn18.Visible = true;
             this.gridColumn18.VisibleIndex = 6;
-            this.gridColumn18.Width = 48;
+            this.gridColumn18.Width = 59;
             // 
             // btnTraFull
             // 
@@ -269,6 +292,25 @@
             this.btnTraFull.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnTraFull.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnTraFull_ButtonClick);
             // 
+            // gridColumn19
+            // 
+            this.gridColumn19.Caption = "Phạt";
+            this.gridColumn19.ColumnEdit = this.btnPhat;
+            this.gridColumn19.Name = "gridColumn19";
+            this.gridColumn19.Visible = true;
+            this.gridColumn19.VisibleIndex = 7;
+            this.gridColumn19.Width = 46;
+            // 
+            // btnPhat
+            // 
+            this.btnPhat.AutoHeight = false;
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            this.btnPhat.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.btnPhat.Name = "btnPhat";
+            this.btnPhat.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnPhat.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnPhat_ButtonClick);
+            // 
             // groupControl3
             // 
             this.groupControl3.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
@@ -276,11 +318,11 @@
             this.tablePanel2.SetColumn(this.groupControl3, 1);
             this.groupControl3.Controls.Add(this.gcDocGiaa);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl3.Location = new System.Drawing.Point(480, 4);
+            this.groupControl3.Location = new System.Drawing.Point(530, 4);
             this.groupControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl3.Name = "groupControl3";
             this.tablePanel2.SetRow(this.groupControl3, 0);
-            this.groupControl3.Size = new System.Drawing.Size(645, 202);
+            this.groupControl3.Size = new System.Drawing.Size(595, 202);
             this.groupControl3.TabIndex = 0;
             this.groupControl3.Text = "Thông tin độc giả";
             // 
@@ -293,7 +335,7 @@
             this.gcDocGiaa.MainView = this.gvDocGia;
             this.gcDocGiaa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gcDocGiaa.Name = "gcDocGiaa";
-            this.gcDocGiaa.Size = new System.Drawing.Size(641, 177);
+            this.gcDocGiaa.Size = new System.Drawing.Size(591, 177);
             this.gcDocGiaa.TabIndex = 0;
             this.gcDocGiaa.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDocGia});
@@ -367,6 +409,12 @@
             this.gridColumn9,
             this.gridColumn10});
             this.gvCTPM.DetailHeight = 431;
+            gridFormatRule1.Column = this.gridColumn8;
+            gridFormatRule1.Name = "Format0";
+            formatConditionRuleExpression1.Expression = "StartsWith(\'[Trạng thái]\', \'Q\')";
+            formatConditionRuleExpression1.PredefinedName = "Red Fill";
+            gridFormatRule1.Rule = formatConditionRuleExpression1;
+            this.gvCTPM.FormatRules.Add(gridFormatRule1);
             this.gvCTPM.GridControl = this.gcCTPM;
             this.gvCTPM.Name = "gvCTPM";
             this.gvCTPM.OptionsFind.AlwaysVisible = true;
@@ -458,17 +506,6 @@
             this.gridColumn7.VisibleIndex = 6;
             this.gridColumn7.Width = 66;
             // 
-            // gridColumn8
-            // 
-            this.gridColumn8.Caption = "Trạng thái";
-            this.gridColumn8.FieldName = "Trạng thái";
-            this.gridColumn8.Name = "gridColumn8";
-            this.gridColumn8.OptionsColumn.AllowEdit = false;
-            this.gridColumn8.OptionsColumn.ReadOnly = true;
-            this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 7;
-            this.gridColumn8.Width = 77;
-            // 
             // gridColumn9
             // 
             this.gridColumn9.Caption = "Gia hạn";
@@ -482,9 +519,9 @@
             // btnGiaHan
             // 
             this.btnGiaHan.AutoHeight = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
             this.btnGiaHan.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnGiaHan.Name = "btnGiaHan";
             this.btnGiaHan.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnGiaHan.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnGiaHan_ButtonClick);
@@ -502,9 +539,9 @@
             // btnTraSach
             // 
             this.btnTraSach.AutoHeight = false;
-            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
+            editorButtonImageOptions4.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions4.Image")));
             this.btnTraSach.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnTraSach.Name = "btnTraSach";
             this.btnTraSach.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnTraSach.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnTraSach_ButtonClick);
@@ -530,6 +567,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gcPM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvPM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnTraFull)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPhat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcDocGiaa)).EndInit();
@@ -578,5 +616,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnTraFull;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnPhat;
     }
 }

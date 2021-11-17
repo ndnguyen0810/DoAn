@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.Web.UI.WebControls;
 
 namespace QuanLyThuVien.From
 {
@@ -29,9 +30,10 @@ namespace QuanLyThuVien.From
                          "p.NGAYMUON as[Ngày mượn], c.HENTRA as[Hẹn trả], c.SOLUONG as[Số lượng], c.TRANGTHAI as[Trạng thái], c.mapm as[Mã phiếu mượn] from DOCGIA d, " +
                          "PHIEUMUON p,CTPM c, SACH s, NXB n where d.MADG= p.MADG and p.MAPM= c.MAPM and s.MANXB= n.MANXB and s.MASACH= c.MASACH and c.TRANGTHAI!=N'Đã trả'";
 
+        #region load
         private void FullLoad()
         {
-            loadCTPM();
+           // loadCTPM();
             loadDocGia();
             loadPhieuMuon();
             
@@ -56,12 +58,16 @@ namespace QuanLyThuVien.From
                     con.exeData(sql);
                     //textBox1.Text = sql;
                 }
-                if(dr["Trạng thái"].Equals("Quá hạn"))
-                {
-                    
-                }
-                loadCTPM();
+                
+               // loadCTPM();
             }
+            //foreach( DataGridViewRow row in dt.Rows)
+            //{
+            //    if (row.Cells[7].ToString()=="Quá hạn")
+            //    {
+            //        row.DefaultCellStyle.BackColor = Color.Red;
+            //    }
+            //}
         }
 
         public void loadPhieuMuon()
@@ -98,11 +104,13 @@ namespace QuanLyThuVien.From
             TrangThai();
         }
 
+        #endregion
+
         private void ShowCTPMonClickPM(string mapm)
         {
             string sqlload = string.Format("select s.MASACH as [Mã sách], s.TENSACH as [Tên sách],n.TENNXB as[Tên nhà xuất bản],s.NAMXB as[Năm xuất bản], " +
                 " p.NGAYMUON as[Ngày mượn], c.HENTRA as[Hẹn trả], c.SOLUONG as[Số lượng], c.TRANGTHAI as[Trạng thái], p.MaPM as [Mã phiếu mượn] from DOCGIA d, PHIEUMUON p,CTPM c, " +
-                "SACH s, NXB n where d.MADG= p.MADG and p.MAPM= c.MAPM and s.MANXB= n.MANXB and s.MASACH= c.MASACH and p.MAPM='{0}' and c.trangthai!=N'Đã trả'", mapm);
+                "SACH s, NXB n where d.MADG= p.MADG and p.MAPM= c.MAPM and s.MANXB= n.MANXB and s.MASACH= c.MASACH and p.MAPM='{0}'", mapm);
             DataTable dt = con.readData(sqlload);
             if (dt != null)
             {
@@ -206,7 +214,8 @@ namespace QuanLyThuVien.From
                 {
                     con.exeData(sqlTraSach);
                     con.exeData(sqlSLSach);
-                    
+                    ShowCTPMonClickPM(mapm);
+                    loadCTPM();
                 }
             }
             else
@@ -214,18 +223,18 @@ namespace QuanLyThuVien.From
                 btnTraSach.ReadOnly = true;
                 MessageBox.Show("Sách đã trả", "Thông báo");
             }
+            int index = gvPM.FocusedRowHandle;
+            string dtmaPM = gvPM.GetRowCellValue(index, "Mã phiếu mượn").ToString();
+            string dtctpm = string.Format("select * from CTPM   where mapm='{0}'", dtmaPM);
+            DataTable dt = con.readData(dtctpm);
 
-            DataTable dt = con.readData("select s.MASACH as [Mã sách], s.TENSACH as [Tên sách],n.TENNXB as[Tên nhà xuất bản],s.NAMXB as[Năm xuất bản], " +
-                " p.NGAYMUON as[Ngày mượn], c.HENTRA as[Hẹn trả], c.SOLUONG as[Số lượng], c.TRANGTHAI as[Trạng thái] from DOCGIA d, PHIEUMUON p,CTPM c, " +
-                "SACH s, NXB n where d.MADG= p.MADG and p.MAPM= c.MAPM and s.MANXB= n.MANXB and s.MASACH= c.MASACH and p.MAPM='{0}'");
-
-            string sqlUttPM = string.Format("update phieumuon set trangthai=N'{0}' where mapm='{1}' ", "Đã trả", "PM00000012");
+            string sqlUttPM = string.Format("update phieumuon set trangthai=N'{0}' where mapm='{1}' ", "Đã trả", dtmaPM);
             int dem = 0;
             foreach (DataRow dr in dt.Rows)
-            {
-                if (dr["Trạng thái"].Equals("Đang mượn"))
+            {             
+                if (dr["trangthai"].ToString()=="Đang mượn" && dr["MaPM"].ToString()==mapm)
                 {
-                    dem += 1;
+                    dem += 1;                    
                 }
             }
             if (dem <= 0)
@@ -233,7 +242,8 @@ namespace QuanLyThuVien.From
                 con.exeData(sqlUttPM);
             }
             loadPhieuMuon();
-            loadCTPM();
+            ShowCTPMonClickPM(dtctpm);
+            //loadCTPM();
         }
 
         private bool kiemtra()
@@ -292,6 +302,43 @@ namespace QuanLyThuVien.From
             }
             
           
+        }
+        public static string MAPM;
+
+        private void gvCTPM_RowStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs e)
+        {
+            int row_index = gvPM.FocusedRowHandle;
+           MAPM = gvPM.GetRowCellValue(row_index, "Mã phiếu mượn").ToString();
+            //DataTable dt = con.readData(sqlCTPM);
+
+            //foreach (DataGridViewRow row in dt.Rows)
+            //{
+            //    if (row.Cells[7].ToString() == "Quá hạn")
+            //    {
+            //        row.DefaultCellStyle.BackColor = Color.Red;
+            //    }
+            //
+
+        }
+
+        private void btnPhat_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            int row_index = gvPM.FocusedRowHandle;
+            MAPM = gvPM.GetRowCellValue(row_index, "Mã phiếu mượn").ToString();
+            MessageBox.Show(MAPM,"mapm");
+            frmViPham frm = new frmViPham();
+            //if (frm.ShowDialog() == DialogResult.OK)
+            //{
+            //    //DataRow row = dtSachMuon.NewRow();
+            //    //row["MASACH"] = gvSach.GetRowCellValue(row_index, "MASACH").ToString();
+            //    //row["TENSACH"] = gvSach.GetRowCellValue(row_index, "TENSACH").ToString();
+            //    //row["TACGIA"] = gvSach.GetRowCellValue(row_index, "TACGIA").ToString();
+            //    //row["NGAYMUON"] = DateTime.Now.ToString("dd/MM/yyyy");
+            //    //row["HENTRA"] = Convert.ToDateTime(frmDatePitker.date).ToString("dd/MM/yyyy");
+            //    //row["SoLuong"] = 1;
+            //    //dtSachMuon.Rows.Add(row);
+            //    //loadSachMuon();
+            //}
         }
     }
 }

@@ -236,7 +236,7 @@ namespace QuanLyThuVien.From
                 {
                     string hentra = Convert.ToDateTime(item["HENTRA"].ToString()).ToString("MM/dd/yyyy");
                     sqlICTPM = string.Format("insert into CTPM values ('{0}', '{1}','{2}', {3}, N'{4}')", mapm, item["MASACH"], hentra, item["SoLuong"], trangthai);
-                    string upSach = string.Format("update sach set soluong={0} where masach='{1}'", soluonsach- Int32.Parse(item["soluong"].ToString()), item["MASACH"]);
+                    string upSach = string.Format("update sach set soluong =soluong- {0} where masach='{1}'", item["SoLuong"], item["MASACH"]);
                     con.Ex_vp(sqlICTPM);
                     con.Ex_vp(upSach);
                     loadSach();

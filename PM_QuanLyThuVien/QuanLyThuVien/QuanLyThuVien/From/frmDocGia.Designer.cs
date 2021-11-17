@@ -213,17 +213,17 @@
             // 
             // pteDG
             // 
-            this.pteDG.Location = new System.Drawing.Point(35, 41);
+            this.pteDG.Location = new System.Drawing.Point(25, 26);
             this.pteDG.Name = "pteDG";
             this.pteDG.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pteDG.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.pteDG.Size = new System.Drawing.Size(180, 163);
+            this.pteDG.Size = new System.Drawing.Size(190, 178);
             this.pteDG.TabIndex = 20;
             // 
             // btnBrower
             // 
-            this.btnBrower.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.btnBrower.Location = new System.Drawing.Point(221, 43);
+            this.btnBrower.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnBrower.ImageOptions.Image")));
+            this.btnBrower.Location = new System.Drawing.Point(232, 26);
             this.btnBrower.Name = "btnBrower";
             this.btnBrower.Size = new System.Drawing.Size(75, 35);
             this.btnBrower.TabIndex = 19;
