@@ -99,12 +99,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="connection.cs" />
-    <Compile Include="From\frmDangNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="From\frmDangNhap.Designer.cs">
-      <DependentUpon>frmDangNhap.cs</DependentUpon>
-    </Compile>
     <Compile Include="From\frmDatePitker.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,9 +251,12 @@
     <Compile Include="Report\rpPhieuMuon.Designer.cs">
       <DependentUpon>rpPhieuMuon.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="From\frmDangNhap.resx">
-      <DependentUpon>frmDangNhap.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Report\rpPhieuPhat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rpPhieuPhat.Designer.cs">
+      <DependentUpon>rpPhieuPhat.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="From\frmDatePitker.resx">
       <DependentUpon>frmDatePitker.cs</DependentUpon>
     </EmbeddedResource>
@@ -344,6 +341,9 @@
     </Compile>
     <EmbeddedResource Include="Report\rpPhieuMuon.resx">
       <DependentUpon>rpPhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rpPhieuPhat.resx">
+      <DependentUpon>rpPhieuPhat.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">

@@ -63,6 +63,7 @@
             this.nam = new DevExpress.XtraReports.Parameters.Parameter();
             this.tong = new DevExpress.XtraReports.Parameters.Parameter();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
             this.xrBarCode1 = new DevExpress.XtraReports.UI.XRBarCode();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
@@ -91,7 +92,6 @@
             this.xrLine2 = new DevExpress.XtraReports.UI.XRLine();
             this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.mapm = new DevExpress.XtraReports.Parameters.Parameter();
-            this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
@@ -362,6 +362,7 @@
             // madg
             // 
             this.madg.Name = "madg";
+            this.madg.ValueInfo = "Mã độc giả";
             // 
             // tendg
             // 
@@ -418,6 +419,12 @@
             this.xrPictureBox1});
             this.PageHeader.HeightF = 275.8333F;
             this.PageHeader.Name = "PageHeader";
+            // 
+            // xrLine1
+            // 
+            this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(179.7917F, 245.1249F);
+            this.xrLine1.Name = "xrLine1";
+            this.xrLine1.SizeF = new System.Drawing.SizeF(245.2083F, 6.333389F);
             // 
             // xrBarCode1
             // 
@@ -748,12 +755,6 @@
             // mapm
             // 
             this.mapm.Name = "mapm";
-            // 
-            // xrLine1
-            // 
-            this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(179.7917F, 245.1249F);
-            this.xrLine1.Name = "xrLine1";
-            this.xrLine1.SizeF = new System.Drawing.SizeF(245.2083F, 6.333389F);
             // 
             // rpPhieuMuon
             // 

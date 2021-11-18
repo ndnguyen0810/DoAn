@@ -327,18 +327,18 @@ namespace QuanLyThuVien.From
             MAPM = gvPM.GetRowCellValue(row_index, "Mã phiếu mượn").ToString();
             MessageBox.Show(MAPM,"mapm");
             frmViPham frm = new frmViPham();
-            //if (frm.ShowDialog() == DialogResult.OK)
-            //{
-            //    //DataRow row = dtSachMuon.NewRow();
-            //    //row["MASACH"] = gvSach.GetRowCellValue(row_index, "MASACH").ToString();
-            //    //row["TENSACH"] = gvSach.GetRowCellValue(row_index, "TENSACH").ToString();
-            //    //row["TACGIA"] = gvSach.GetRowCellValue(row_index, "TACGIA").ToString();
-            //    //row["NGAYMUON"] = DateTime.Now.ToString("dd/MM/yyyy");
-            //    //row["HENTRA"] = Convert.ToDateTime(frmDatePitker.date).ToString("dd/MM/yyyy");
-            //    //row["SoLuong"] = 1;
-            //    //dtSachMuon.Rows.Add(row);
-            //    //loadSachMuon();
-            //}
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                //DataRow row = dtSachMuon.NewRow();
+                //row["MASACH"] = gvSach.GetRowCellValue(row_index, "MASACH").ToString();
+                //row["TENSACH"] = gvSach.GetRowCellValue(row_index, "TENSACH").ToString();
+                //row["TACGIA"] = gvSach.GetRowCellValue(row_index, "TACGIA").ToString();
+                //row["NGAYMUON"] = DateTime.Now.ToString("dd/MM/yyyy");
+                //row["HENTRA"] = Convert.ToDateTime(frmDatePitker.date).ToString("dd/MM/yyyy");
+                //row["SoLuong"] = 1;
+                //dtSachMuon.Rows.Add(row);
+                //loadSachMuon();
+            }
         }
     }
 }
