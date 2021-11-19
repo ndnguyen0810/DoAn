@@ -198,10 +198,7 @@ namespace QuanLyThuVien.From
             if (XtraMessageBox.Show("Bạn có chắc muốn xoá sách đang chọn?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 gvCTPM.DeleteSelectedRows();
-
             }
-
-
         }
 
 
