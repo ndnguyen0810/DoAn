@@ -403,3 +403,4 @@ F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\ru\DevExpr
 F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.From.frmViPham.resources
 F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.From.frmHoaDon.resources
 F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Report.rpPhieuPhat.resources
+F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.From.frmLyDoVP.resources

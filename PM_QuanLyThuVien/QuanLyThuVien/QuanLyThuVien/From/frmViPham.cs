@@ -73,23 +73,38 @@ namespace QuanLyThuVien.From
 
         private void btnLapPhieuPhat_Click(object sender, EventArgs e)
         {
-            if (XtraMessageBox.Show("Bạn có muốn xuất phiếu phạt không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                CreateCTVP();
-                int TongSL = Int32.Parse(dtViPham.Rows.Count.ToString());
-                rpPhieuMuon rp = new rpPhieuMuon();
-                rp.DataSource = dtPhieuMuon;
-                string ngay = DateTime.Now.Day.ToString();
-                string thang = DateTime.Now.Month.ToString();
-                string nam = DateTime.Now.Year.ToString();
-                rp.initData(ngay, thang, nam, DateTime.Now.ToString("dd/MM/yyyy").ToString(), txtMaDG.EditValue.ToString(), txtTenDG.EditValue.ToString(), frmLogin.fullname, TongSL, mapm);
-                rppm = rp;
+            //if (XtraMessageBox.Show("Bạn có muốn xuất phiếu phạt không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //{
+            //    CreateCTVP();
+            //    int TongSL = Int32.Parse(dtViPham.Rows.Count.ToString());
+            //    rpPhieuMuon rp = new rpPhieuMuon();
+            //    rp.DataSource = dtPhieuMuon;
+            //    string ngay = DateTime.Now.Day.ToString();
+            //    string thang = DateTime.Now.Month.ToString();
+            //    string nam = DateTime.Now.Year.ToString();
+            //    rp.initData(ngay, thang, nam, DateTime.Now.ToString("dd/MM/yyyy").ToString(), txtMaDG.EditValue.ToString(), txtTenDG.EditValue.ToString(), frmLogin.fullname, TongSL, mapm);
+            //    rppm = rp;
 
-                frmPhieuMuon frm = new frmPhieuMuon();
-                frm.Show();
-            }
+            //    frmPhieuMuon frm = new frmPhieuMuon();
+            //    frm.Show();
+            //}
         }
 
-
+        private void btnLydo_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            frmLyDoVP frm = new frmLyDoVP();
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                //DataRow row = dtSachMuon.NewRow();
+                //row["MASACH"] = gvSach.GetRowCellValue(row_index, "MASACH").ToString();
+                //row["TENSACH"] = gvSach.GetRowCellValue(row_index, "TENSACH").ToString();
+                //row["TACGIA"] = gvSach.GetRowCellValue(row_index, "TACGIA").ToString();
+                //row["NGAYMUON"] = DateTime.Now.ToString("dd/MM/yyyy");
+                //row["HENTRA"] = Convert.ToDateTime(frmDatePitker.date).ToString("dd/MM/yyyy");
+                //row["SoLuong"] = 1;
+                //dtSachMuon.Rows.Add(row);
+                //loadSachMuon();
+            }
+        }
     }
 }

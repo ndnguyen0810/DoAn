@@ -372,14 +372,14 @@
             this.gcCTPM.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcCTPM.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gcCTPM.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.gcCTPM.Location = new System.Drawing.Point(2, 22);
+            this.gcCTPM.Location = new System.Drawing.Point(2, 23);
             this.gcCTPM.MainView = this.gvCTPM;
             this.gcCTPM.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gcCTPM.Name = "gcCTPM";
             this.gcCTPM.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnTraSach,
             this.btnGiaHan});
-            this.gcCTPM.Size = new System.Drawing.Size(1124, 224);
+            this.gcCTPM.Size = new System.Drawing.Size(1124, 223);
             this.gcCTPM.TabIndex = 0;
             this.gcCTPM.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvCTPM});
@@ -411,7 +411,7 @@
             this.gvCTPM.DetailHeight = 431;
             gridFormatRule1.Column = this.gridColumn8;
             gridFormatRule1.Name = "Format0";
-            formatConditionRuleExpression1.Expression = "StartsWith(\'[Trạng thái]\', \'Q\')";
+            formatConditionRuleExpression1.Expression = "StartsWith(\'[Trạng thái]\', \'Quá hạn\')";
             formatConditionRuleExpression1.PredefinedName = "Red Fill";
             gridFormatRule1.Rule = formatConditionRuleExpression1;
             this.gvCTPM.FormatRules.Add(gridFormatRule1);
@@ -421,6 +421,7 @@
             this.gvCTPM.OptionsFind.FindNullPrompt = "Bạn cần tìm gì...";
             this.gvCTPM.OptionsFind.FindPanelLocation = DevExpress.XtraGrid.Views.Grid.GridFindPanelLocation.Panel;
             this.gvCTPM.OptionsFind.ShowFindButton = false;
+            this.gvCTPM.OptionsMenu.ShowConditionalFormattingItem = true;
             this.gvCTPM.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn11

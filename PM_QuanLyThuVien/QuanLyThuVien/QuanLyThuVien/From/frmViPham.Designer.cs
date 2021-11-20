@@ -28,6 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmViPham));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.tablePanel1 = new DevExpress.Utils.Layout.TablePanel();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.btnLapPhieuPhat = new DevExpress.XtraEditors.SimpleButton();
@@ -39,8 +45,9 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.cbbLoaiPhat = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.btnLydo = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -54,7 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcViPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvViPham)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbLoaiPhat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLydo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnXoa)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,13 +126,12 @@
             // gcViPham
             // 
             this.tablePanel1.SetColumn(this.gcViPham, 0);
-            this.gcViPham.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcViPham.Location = new System.Drawing.Point(3, 70);
             this.gcViPham.MainView = this.gvViPham;
             this.gcViPham.Name = "gcViPham";
             this.gcViPham.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnXoa,
-            this.cbbLoaiPhat});
+            this.btnLydo});
             this.tablePanel1.SetRow(this.gcViPham, 1);
             this.gcViPham.Size = new System.Drawing.Size(980, 296);
             this.gcViPham.TabIndex = 0;
@@ -143,6 +149,7 @@
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn4,
+            this.gridColumn10,
             this.gridColumn5,
             this.gridColumn6,
             this.gridColumn7,
@@ -156,129 +163,138 @@
             // 
             this.gridColumn1.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 10F);
             this.gridColumn1.AppearanceCell.Options.UseFont = true;
-            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.gridColumn1.AppearanceHeader.Options.UseFont = true;
             this.gridColumn1.Caption = "Mã sách";
             this.gridColumn1.FieldName = "Mã sách";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 106;
+            this.gridColumn1.Width = 67;
             // 
             // gridColumn2
             // 
             this.gridColumn2.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 10F);
             this.gridColumn2.AppearanceCell.Options.UseFont = true;
-            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.gridColumn2.AppearanceHeader.Options.UseFont = true;
             this.gridColumn2.Caption = "Tên sách";
             this.gridColumn2.FieldName = "Tên sách";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 106;
+            this.gridColumn2.Width = 67;
             // 
             // gridColumn3
             // 
             this.gridColumn3.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 10F);
             this.gridColumn3.AppearanceCell.Options.UseFont = true;
-            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.gridColumn3.AppearanceHeader.Options.UseFont = true;
             this.gridColumn3.Caption = "Ngày mượn";
             this.gridColumn3.FieldName = "Ngày mượn";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 106;
+            this.gridColumn3.Width = 67;
             // 
             // gridColumn4
             // 
             this.gridColumn4.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 10F);
             this.gridColumn4.AppearanceCell.Options.UseFont = true;
-            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.gridColumn4.AppearanceHeader.Options.UseFont = true;
             this.gridColumn4.Caption = "Hẹn trả";
             this.gridColumn4.FieldName = "Hẹn trả";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 106;
+            this.gridColumn4.Width = 67;
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.gridColumn10.AppearanceCell.Options.UseFont = true;
+            this.gridColumn10.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.gridColumn10.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn10.Caption = "Lý do phạt";
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 5;
+            this.gridColumn10.Width = 84;
             // 
             // gridColumn5
             // 
             this.gridColumn5.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 10F);
             this.gridColumn5.AppearanceCell.Options.UseFont = true;
-            this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.gridColumn5.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn5.Caption = "Lý do phạt";
-            this.gridColumn5.ColumnEdit = this.cbbLoaiPhat;
+            this.gridColumn5.Caption = "Chọn phạt";
+            this.gridColumn5.ColumnEdit = this.btnLydo;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
-            this.gridColumn5.Width = 106;
+            this.gridColumn5.Width = 80;
             // 
-            // cbbLoaiPhat
+            // btnLydo
             // 
-            this.cbbLoaiPhat.AutoHeight = false;
-            this.cbbLoaiPhat.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbbLoaiPhat.Items.AddRange(new object[] {
-            "Mất sách",
-            "Quá hạn",
-            "Hư hỏng trang, khổ 13x19",
-            "Hư hỏng trang, khổ 17x24",
-            "Hư hỏng trang, khổ 19x27"});
-            this.cbbLoaiPhat.Name = "cbbLoaiPhat";
+            this.btnLydo.AutoHeight = false;
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            this.btnLydo.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.btnLydo.Name = "btnLydo";
+            this.btnLydo.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnLydo.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnLydo_ButtonClick);
             // 
             // gridColumn6
             // 
             this.gridColumn6.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 10F);
             this.gridColumn6.AppearanceCell.Options.UseFont = true;
-            this.gridColumn6.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn6.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.gridColumn6.AppearanceHeader.Options.UseFont = true;
             this.gridColumn6.Caption = "Ghi chú";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 5;
-            this.gridColumn6.Width = 124;
+            this.gridColumn6.VisibleIndex = 6;
+            this.gridColumn6.Width = 61;
             // 
             // gridColumn7
             // 
             this.gridColumn7.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 10F);
             this.gridColumn7.AppearanceCell.Options.UseFont = true;
-            this.gridColumn7.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn7.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.gridColumn7.AppearanceHeader.Options.UseFont = true;
             this.gridColumn7.Caption = "Số lượng";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 6;
-            this.gridColumn7.Width = 124;
+            this.gridColumn7.VisibleIndex = 7;
+            this.gridColumn7.Width = 65;
             // 
             // gridColumn8
             // 
             this.gridColumn8.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 10F);
             this.gridColumn8.AppearanceCell.Options.UseFont = true;
-            this.gridColumn8.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn8.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.gridColumn8.AppearanceHeader.Options.UseFont = true;
             this.gridColumn8.Caption = "Thành tiền";
             this.gridColumn8.DisplayFormat.FormatString = "# ### VNĐ";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 7;
-            this.gridColumn8.Width = 119;
+            this.gridColumn8.VisibleIndex = 8;
+            this.gridColumn8.Width = 77;
             // 
             // gridColumn9
             // 
             this.gridColumn9.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 10F);
             this.gridColumn9.AppearanceCell.Options.UseFont = true;
-            this.gridColumn9.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn9.AppearanceHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.gridColumn9.AppearanceHeader.Options.UseFont = true;
             this.gridColumn9.Caption = "Xoá";
             this.gridColumn9.ColumnEdit = this.btnXoa;
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 8;
-            this.gridColumn9.Width = 58;
+            this.gridColumn9.VisibleIndex = 9;
+            this.gridColumn9.Width = 50;
             // 
             // btnXoa
             // 
@@ -307,7 +323,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcViPham)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvViPham)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbLoaiPhat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLydo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnXoa)).EndInit();
             this.ResumeLayout(false);
 
@@ -326,12 +342,13 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox cbbLoaiPhat;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnXoa;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraEditors.SimpleButton btnLapPhieuPhat;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnLydo;
     }
 }

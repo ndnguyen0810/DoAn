@@ -135,6 +135,12 @@
     <Compile Include="From\frmHome.Designer.cs">
       <DependentUpon>frmHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="From\frmLyDoVP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From\frmLyDoVP.Designer.cs">
+      <DependentUpon>frmLyDoVP.cs</DependentUpon>
+    </Compile>
     <Compile Include="From\frmTraSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="From\frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="From\frmLyDoVP.resx">
+      <DependentUpon>frmLyDoVP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From\frmTraSach.resx">
       <DependentUpon>frmTraSach.cs</DependentUpon>
