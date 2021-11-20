@@ -23,6 +23,7 @@ namespace QuanLyThuVien.From
 
         private void frmPhieuMuon_Load(object sender, EventArgs e)
         {
+           
             this.rpt = frmMuonSach.rppm;
             documentViewer1.PrintingSystem = rpt.PrintingSystem;
             rpt.CreateDocument();

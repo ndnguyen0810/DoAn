@@ -141,6 +141,12 @@
     <Compile Include="From\frmLyDoVP.Designer.cs">
       <DependentUpon>frmLyDoVP.cs</DependentUpon>
     </Compile>
+    <Compile Include="From\frmPhieuPhat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From\frmPhieuPhat.Designer.cs">
+      <DependentUpon>frmPhieuPhat.cs</DependentUpon>
+    </Compile>
     <Compile Include="From\frmTraSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -283,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="From\frmLyDoVP.resx">
       <DependentUpon>frmLyDoVP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="From\frmPhieuPhat.resx">
+      <DependentUpon>frmPhieuPhat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From\frmTraSach.resx">
       <DependentUpon>frmTraSach.cs</DependentUpon>

@@ -25,9 +25,13 @@ namespace QuanLyThuVien.From
             {
                 cbbLydo.Properties.Items.Add(ld);
             }
+            nudSL.Visible = false;
+            labelControl2.Visible = false;
+
         }
 
         public static string Lydo = "";
+        public static int SLTrang;
 
         private void btnChon_Click(object sender, EventArgs e)
         {
@@ -36,9 +40,16 @@ namespace QuanLyThuVien.From
                 XtraMessageBox.Show("Bạn chưa chọn lý do\r\nVui lòng chọn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-           
-            Lydo =cbbLydo.SelectedItem.ToString();
             
+            if(Int32.Parse(nudSL.Value.ToString()) == 0)
+            {
+                XtraMessageBox.Show("Vui lòng chọn số lượng trang hư hỏng", "Thông báo");
+                return;
+            }
+
+            SLTrang = Int32.Parse(nudSL.Value.ToString());
+            Lydo =cbbLydo.SelectedItem.ToString();
+                       
             DialogResult = DialogResult.OK;
             Close();
         }
@@ -46,6 +57,20 @@ namespace QuanLyThuVien.From
         private void btnHuy_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
+        }
+
+        private void cbbLydo_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cbbLydo.SelectedItem.ToString() != "Quá hạn")
+            {
+                nudSL.Visible = true;
+                labelControl2.Visible = true;
+            }
+            else
+            {
+                nudSL.Visible = false;
+                labelControl2.Visible = false;
+            }
         }
     }
 }

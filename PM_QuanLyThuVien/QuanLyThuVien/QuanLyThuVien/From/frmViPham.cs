@@ -18,17 +18,45 @@ namespace QuanLyThuVien.From
         {
             InitializeComponent();
         }
+
         public static rpPhieuPhat rppm = new rpPhieuPhat();
+        DataTable dtSachPhat;  //ds sách mượn để phạt
+        DataTable dtPhat; //ds phạt
+        //DataTable dtViPham = new DataTable(); //ds vi phạm
+
         private void frmViPham_Load(object sender, EventArgs e)
         {
-            load();           
+            loadSachDePhat();
+            loadPhat();
+            int row_index = gvViPham.FocusedRowHandle;
+            dtSachPhat = con.readData(sqlLoad);
+            foreach (DataRow dr in dtSachPhat.Rows)
+            {
+                DateTime hantra = DateTime.Parse(dr["Hẹn trả"].ToString());
+                DateTime now = DateTime.Today;
+                TimeSpan time = now - hantra;
+                int songay = Int32.Parse(time.Days.ToString());
+                if (songay>0)
+                {
+                    DataRow row = dtPhat.NewRow();
+                    row["Mã sách"] = dr["Mã sách"];
+                    row["Tên sách"] = dr["Tên sách"];
+                    row["Lý do phạt"] = "Quá hạn";
+                    row["Đơn vị tính"] = "Ngày";
+                    row["Số lượng"] = songay;
+                    row["Thành tiền"] = songay * 2000;
+                    dtPhat.Rows.Add(row);
+                    gcCTPhat.DataSource = dtPhat;
+                }
+            }            
         }
-        DataTable dtSachPhat;
+
+
         connection con =  new connection();
-        string sqlLoad = string.Format("select s.MASACH [Mã sách], s.TENSACH [Tên sách], p.NGAYMUON [Ngày mượn], c.HENTRA [Hẹn trả] from CTPM c, SACH s, " +
+        string sqlLoad = string.Format("select s.MASACH [Mã sách], s.TENSACH [Tên sách], s.NAMXB, p.NGAYMUON [Ngày mượn], c.HENTRA [Hẹn trả], s.GIATIEN from CTPM c, SACH s, " +
             "PHIEUMUON p where c.MAPM= p.MAPM and c.MASACH= s.MASACH and c.MAPM= '{0}' ",frmTraSach.MAPM );
 
-        private void load()
+        private void loadSachDePhat()
         {
             dtSachPhat = con.readData(sqlLoad);
             if (dtSachPhat != null)
@@ -37,28 +65,27 @@ namespace QuanLyThuVien.From
             }
         }
 
-        DataTable dtViPham = new DataTable();
+        
         private void CreateCTVP()
         {
-            dtViPham = new DataTable();
-            dtViPham.Columns.Add("MASACH");
-            dtViPham.Columns.Add("TENSACH");
-            dtViPham.Columns.Add("LYDOPHAT");
-            dtViPham.Columns.Add("GHICHU");
-            dtViPham.Columns.Add("SoLuong");
-            dtViPham.Columns["SoLuong"].DataType = typeof(Int32);
-            dtViPham.Columns.Add("Tien");
-            dtViPham.Columns["Tien"].DataType = typeof(Int32);
+            dtPhat = new DataTable();
+            dtPhat.Columns.Add("MASACH");
+            dtPhat.Columns.Add("TENSACH");
+            dtPhat.Columns.Add("LYDOPHAT");           
+            dtPhat.Columns.Add("SoLuong");
+            dtPhat.Columns["SoLuong"].DataType = typeof(Int32);
+            dtPhat.Columns.Add("Tien");
+            dtPhat.Columns["Tien"].DataType = typeof(Int32);
+
             foreach (DataRow item in dtSachPhat.Rows)
             {
-                DataRow row = dtViPham.NewRow();
-                row["MASACH"] = item["MASACH"];
-                row["TENSACH"] = item["TENSACH"];
-                row["LYDOPHAT"] = item["LYDOPHAT"];                
-                row["GHICHU"] = item["GHICHU"];
-                row["SOLUONG"] = item["SOLUONG"];
-                dtViPham.Rows.Add(row);
-                row["TIEN"] = item["TIEN"];
+                DataRow row = dtPhat.NewRow();
+                row["MASACH"] = item["Mã sách"];
+                row["TENSACH"] = item["Tên sách"];
+                row["LYDOPHAT"] = "";                                
+                row["SOLUONG"] = 1;
+                row["TIEN"] = 1;
+                dtPhat.Rows.Add(row);              
             }
         }
 
@@ -66,44 +93,106 @@ namespace QuanLyThuVien.From
         {
             if (XtraMessageBox.Show("Bạn có chắc muốn xoá sách đang chọn?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                gvViPham.DeleteSelectedRows();
+                gvCTPhat.DeleteSelectedRows();
 
             }
         }
 
-        private void btnLapPhieuPhat_Click(object sender, EventArgs e)
+        private void loadPhat()
         {
-            //if (XtraMessageBox.Show("Bạn có muốn xuất phiếu phạt không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            //{
-            //    CreateCTVP();
-            //    int TongSL = Int32.Parse(dtViPham.Rows.Count.ToString());
-            //    rpPhieuMuon rp = new rpPhieuMuon();
-            //    rp.DataSource = dtPhieuMuon;
-            //    string ngay = DateTime.Now.Day.ToString();
-            //    string thang = DateTime.Now.Month.ToString();
-            //    string nam = DateTime.Now.Year.ToString();
-            //    rp.initData(ngay, thang, nam, DateTime.Now.ToString("dd/MM/yyyy").ToString(), txtMaDG.EditValue.ToString(), txtTenDG.EditValue.ToString(), frmLogin.fullname, TongSL, mapm);
-            //    rppm = rp;
-
-            //    frmPhieuMuon frm = new frmPhieuMuon();
-            //    frm.Show();
-            //}
+            dtPhat = new DataTable();
+            dtPhat.Columns.Add("Mã sách");
+            dtPhat.Columns.Add("Tên sách");
+            dtPhat.Columns.Add("Lý do phạt");
+            dtPhat.Columns.Add("Đơn vị tính");
+            dtPhat.Columns.Add("Số lượng");          
+            dtPhat.Columns.Add("Thành tiền");          
         }
 
-        private void btnLydo_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        private void btnLydo_ButtonClick_1(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
+            int row_index = gvViPham.FocusedRowHandle;
             frmLyDoVP frm = new frmLyDoVP();
+
+            DateTime now = DateTime.Today;
+            DateTime ngaymuon = DateTime.Parse(gvViPham.GetRowCellValue(row_index, "Ngày mượn").ToString());
+            DateTime hantra = DateTime.Parse(gvViPham.GetRowCellValue(row_index, "Hẹn trả").ToString());
+
+            TimeSpan time = now- hantra;
+            TimeSpan quahan = hantra - ngaymuon;
+            
+            int songayquahan = int.Parse(time.Days.ToString());
             if (frm.ShowDialog() == DialogResult.OK)
             {
-                //DataRow row = dtSachMuon.NewRow();
-                //row["MASACH"] = gvSach.GetRowCellValue(row_index, "MASACH").ToString();
-                //row["TENSACH"] = gvSach.GetRowCellValue(row_index, "TENSACH").ToString();
-                //row["TACGIA"] = gvSach.GetRowCellValue(row_index, "TACGIA").ToString();
-                //row["NGAYMUON"] = DateTime.Now.ToString("dd/MM/yyyy");
-                //row["HENTRA"] = Convert.ToDateTime(frmDatePitker.date).ToString("dd/MM/yyyy");
-                //row["SoLuong"] = 1;
-                //dtSachMuon.Rows.Add(row);
-                //loadSachMuon();
+                string lydo= frmLyDoVP.Lydo.ToString();
+                DataRow row = dtPhat.NewRow();
+                int namxb = Int32.Parse(gvViPham.GetRowCellValue(row_index, "NAMXB").ToString());
+                int giasach= Int32.Parse(gvViPham.GetRowCellValue(row_index, "GIATIEN").ToString());
+                row["Mã sách"] = gvViPham.GetRowCellValue(row_index, "Mã sách").ToString();
+                row["Tên sách"] = gvViPham.GetRowCellValue(row_index, "Tên sách").ToString();
+                row["Lý do phạt"] = frmLyDoVP.Lydo.ToString();
+                row["Số lượng"] = frmLyDoVP.SLTrang;
+                int soluong = Int32.Parse(row["Số lượng"].ToString());
+                if (lydo=="Quá hạn")
+                {                  
+                    row["Đơn vị tính"] = "Ngày";                  
+                }
+                else
+                {
+                    row["Đơn vị tính"] = "Trang";
+                }
+                //thành tiền
+                if(lydo=="Mất sách")
+                {
+                    if (namxb <= 1998)
+                    {
+                        row["Thành tiền"] = giasach * 3;
+                    }
+                    else
+                    {
+                        row["Thành tiền"] = giasach;
+                    }
+                }
+                if (lydo == "Hư hỏng tài liệu khổ 13x19")
+                {
+                    row["Thành tiền"] = 1500*soluong;
+                }
+
+                if(lydo== "Hư hỏng tài liệu khổ 17x24")
+                {
+                    row["Thành tiền"] = 3000*soluong;
+                }
+
+                if(lydo== "Hư hỏng tài liệu khổ 19x27")
+                {
+                    row["Thành tiền"] = 3400*soluong;
+                }
+
+
+                dtPhat.Rows.Add(row);           
+                gcCTPhat.DataSource = dtPhat;
+
+            }
+        }
+
+        private void btnLapPhieu_Click(object sender, EventArgs e)
+        {
+            XtraMessageBox.Show("Lập phiếu mượn thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (XtraMessageBox.Show("Bạn có muốn xuất phiếu mượn không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                CreateCTVP();
+                int TongSL = Int32.Parse(dtPhat.Rows.Count.ToString());
+                rpPhieuPhat rp = new rpPhieuPhat();
+                rp.DataSource = dtPhat;
+                string ngay = DateTime.Now.Day.ToString();
+                string thang = DateTime.Now.Month.ToString();
+                string nam = DateTime.Now.Year.ToString();
+                rp.Data(ngay, thang, nam, DateTime.Now.ToString("dd/MM/yyyy").ToString(), frmTraSach.MAPM, frmLogin.fullname, frmLogin.fullname, TongSL, frmTraSach.MAPM);
+                
+                rppm = rp;
+
+                frmPhieuPhat frm = new frmPhieuPhat();
+                frm.Show();
             }
         }
     }

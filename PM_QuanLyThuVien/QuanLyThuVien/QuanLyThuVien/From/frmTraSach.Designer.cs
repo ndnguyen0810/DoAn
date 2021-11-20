@@ -60,6 +60,7 @@
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -191,6 +192,7 @@
             this.gridColumn12,
             this.gridColumn13,
             this.gridColumn14,
+            this.gridColumn20,
             this.gridColumn15,
             this.gridColumn16,
             this.gridColumn17,
@@ -239,6 +241,12 @@
             this.gridColumn14.Visible = true;
             this.gridColumn14.VisibleIndex = 2;
             this.gridColumn14.Width = 97;
+            // 
+            // gridColumn20
+            // 
+            this.gridColumn20.Caption = "Tên độc giả";
+            this.gridColumn20.FieldName = "Tên độc giả";
+            this.gridColumn20.Name = "gridColumn20";
             // 
             // gridColumn15
             // 
@@ -372,14 +380,14 @@
             this.gcCTPM.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcCTPM.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gcCTPM.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.gcCTPM.Location = new System.Drawing.Point(2, 23);
+            this.gcCTPM.Location = new System.Drawing.Point(2, 22);
             this.gcCTPM.MainView = this.gvCTPM;
             this.gcCTPM.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gcCTPM.Name = "gcCTPM";
             this.gcCTPM.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnTraSach,
             this.btnGiaHan});
-            this.gcCTPM.Size = new System.Drawing.Size(1124, 223);
+            this.gcCTPM.Size = new System.Drawing.Size(1124, 224);
             this.gcCTPM.TabIndex = 0;
             this.gcCTPM.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvCTPM});
@@ -557,6 +565,7 @@
             this.Font = new System.Drawing.Font("Tahoma", 10F);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmTraSach";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trả sách";
             this.Load += new System.EventHandler(this.frmInfoTPhieuMuon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).EndInit();
@@ -619,5 +628,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnTraFull;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnPhat;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
     }
 }

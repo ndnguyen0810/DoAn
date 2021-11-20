@@ -29,17 +29,22 @@
         private void InitializeComponent()
         {
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.cbbLydo = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.btnChon = new DevExpress.XtraEditors.SimpleButton();
-            this.cbbLydo = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.nudSL = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbbLydo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSL)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.nudSL);
+            this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.cbbLydo);
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Controls.Add(this.btnHuy);
@@ -48,9 +53,21 @@
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.ShowCaption = false;
-            this.groupControl1.Size = new System.Drawing.Size(298, 148);
+            this.groupControl1.Size = new System.Drawing.Size(308, 155);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "groupControl1";
+            // 
+            // cbbLydo
+            // 
+            this.cbbLydo.Location = new System.Drawing.Point(21, 50);
+            this.cbbLydo.Name = "cbbLydo";
+            this.cbbLydo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.cbbLydo.Properties.Appearance.Options.UseFont = true;
+            this.cbbLydo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbbLydo.Size = new System.Drawing.Size(248, 22);
+            this.cbbLydo.TabIndex = 3;
+            this.cbbLydo.SelectedValueChanged += new System.EventHandler(this.cbbLydo_SelectedValueChanged);
             // 
             // labelControl1
             // 
@@ -64,9 +81,9 @@
             // 
             // btnHuy
             // 
-            this.btnHuy.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.btnHuy.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.btnHuy.Appearance.Options.UseFont = true;
-            this.btnHuy.Location = new System.Drawing.Point(24, 90);
+            this.btnHuy.Location = new System.Drawing.Point(21, 113);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(97, 31);
             this.btnHuy.TabIndex = 1;
@@ -75,31 +92,38 @@
             // 
             // btnChon
             // 
-            this.btnChon.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.btnChon.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.btnChon.Appearance.Options.UseFont = true;
-            this.btnChon.Location = new System.Drawing.Point(172, 90);
+            this.btnChon.Location = new System.Drawing.Point(169, 113);
             this.btnChon.Name = "btnChon";
             this.btnChon.Size = new System.Drawing.Size(97, 31);
             this.btnChon.TabIndex = 1;
             this.btnChon.Text = "Chọn";
             this.btnChon.Click += new System.EventHandler(this.btnChon_Click);
             // 
-            // cbbLydo
+            // labelControl2
             // 
-            this.cbbLydo.Location = new System.Drawing.Point(21, 50);
-            this.cbbLydo.Name = "cbbLydo";
-            this.cbbLydo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.cbbLydo.Properties.Appearance.Options.UseFont = true;
-            this.cbbLydo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbbLydo.Size = new System.Drawing.Size(248, 22);
-            this.cbbLydo.TabIndex = 3;
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(21, 80);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(104, 17);
+            this.labelControl2.TabIndex = 4;
+            this.labelControl2.Text = "Số lượng trang";
+            // 
+            // nudSL
+            // 
+            this.nudSL.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.nudSL.Location = new System.Drawing.Point(149, 76);
+            this.nudSL.Name = "nudSL";
+            this.nudSL.Size = new System.Drawing.Size(120, 24);
+            this.nudSL.TabIndex = 5;
             // 
             // frmLyDoVP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(298, 148);
+            this.ClientSize = new System.Drawing.Size(308, 155);
             this.Controls.Add(this.groupControl1);
             this.MaximizeBox = false;
             this.Name = "frmLyDoVP";
@@ -110,6 +134,7 @@
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbbLydo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSL)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -121,5 +146,7 @@
         private DevExpress.XtraEditors.SimpleButton btnHuy;
         private DevExpress.XtraEditors.SimpleButton btnChon;
         private DevExpress.XtraEditors.ComboBoxEdit cbbLydo;
+        private System.Windows.Forms.NumericUpDown nudSL;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
     }
 }

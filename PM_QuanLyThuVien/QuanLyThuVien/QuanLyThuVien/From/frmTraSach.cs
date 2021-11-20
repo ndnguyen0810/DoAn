@@ -20,11 +20,16 @@ namespace QuanLyThuVien.From
         }
 
         connection con = new connection();
+        public static string MAPM;
+        public static string TENDG;
+        public static string MADG;
+
+
         string sqlDG = "select  DISTINCT docgia.MADG as[Mã độc giả] , HOTEN as [Họ và tên], NAMSINH [Năm sinh],GIOITINH [Giới tính] ," +
                        "DIACHI [Địa chỉ], SDT [Số điện thoại], EMAIL as[Email] from docgia, phieumuon where DOCGIA.MADG= PHIEUMUON.MADG and phieumuon.trangthai=N'Đang mượn'";
 
-        string sqlPM = "select MAPM [Mã phiếu mượn], MANV [Mã nhân viên],MADG [Mã độc giả], NGAYMUON [Ngày mượn], SOLUONG [Số lượng], " +
-                       "TRANGTHAI [Trạng thái] from PHIEUMUON where trangthai !=N'Đã trả'";
+        string sqlPM = "select MAPM [Mã phiếu mượn], MANV [Mã nhân viên],d.MADG [Mã độc giả], d.Hoten [Tên độc giả], NGAYMUON [Ngày mượn], SOLUONG [Số lượng], " +
+                       "TRANGTHAI [Trạng thái] from PHIEUMUON p , DOCGIA d where p.trangthai !=N'Đã trả' and d.MADG= p.MADG";
 
         string sqlCTPM = "select  s.MASACH as [Mã sách], s.TENSACH as [Tên sách],n.TENNXB as[Tên nhà xuất bản],s.NAMXB as[Năm xuất bản], " +
                          "p.NGAYMUON as[Ngày mượn], c.HENTRA as[Hẹn trả], c.SOLUONG as[Số lượng], c.TRANGTHAI as[Trạng thái], c.mapm as[Mã phiếu mượn] from DOCGIA d, " +
@@ -181,19 +186,19 @@ namespace QuanLyThuVien.From
                 {
                     if (con.exeData(sqlTraSach))
                     {
-                        MessageBox.Show("Baạn đã gia hạn sách đến ngày "+ hantra.ToString("dd/MM/yyyy"),"Thông báo");                       
+                        XtraMessageBox.Show("Baạn đã gia hạn sách đến ngày "+ hantra.ToString("dd/MM/yyyy"),"Thông báo");                       
                         loadCTPM();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Bạn không thể gia hạn sách này", "Thông báo");
+                    XtraMessageBox.Show("Bạn không thể gia hạn sách này", "Thông báo");
                     btnGiaHan.ReadOnly = true;
                 }
             }
             else
             {
-                MessageBox.Show("Bạn không thể gia hạn sách này", "Thông báo");
+                XtraMessageBox.Show("Bạn không thể gia hạn sách này", "Thông báo");
                 btnGiaHan.ReadOnly = true;
             }
         }
@@ -221,7 +226,7 @@ namespace QuanLyThuVien.From
             else
             {
                 btnTraSach.ReadOnly = true;
-                MessageBox.Show("Sách đã trả", "Thông báo");
+                XtraMessageBox.Show("Sách đã trả", "Thông báo");
             }
             int index = gvPM.FocusedRowHandle;
             string dtmaPM = gvPM.GetRowCellValue(index, "Mã phiếu mượn").ToString();
@@ -285,30 +290,31 @@ namespace QuanLyThuVien.From
                 {
                     if (con.exeData(uPM))
                     {
-                        MessageBox.Show("Trả sách thành công","Thông báo");
+                        XtraMessageBox.Show("Trả sách thành công","Thông báo");
                         loadCTPM();
                         loadPhieuMuon();
                     }
                     else
                     {
-                        MessageBox.Show("Trả sách thất bại","Thông báo");
+                        XtraMessageBox.Show("Trả sách thất bại","Thông báo");
                     }
                    
                 }
             }
             else
             {
-                MessageBox.Show("tb");
+                XtraMessageBox.Show("Thất bại","Thông báo");
             }
             
           
         }
-        public static string MAPM;
+        
 
         private void gvCTPM_RowStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs e)
         {
             int row_index = gvPM.FocusedRowHandle;
-           MAPM = gvPM.GetRowCellValue(row_index, "Mã phiếu mượn").ToString();
+            MAPM = gvPM.GetRowCellValue(row_index, "Mã phiếu mượn").ToString();
+            MADG= gvPM.GetRowCellValue(row_index, "Mã độc giả").ToString();
             //DataTable dt = con.readData(sqlCTPM);
 
             //foreach (DataGridViewRow row in dt.Rows)
@@ -325,7 +331,10 @@ namespace QuanLyThuVien.From
         {
             int row_index = gvPM.FocusedRowHandle;
             MAPM = gvPM.GetRowCellValue(row_index, "Mã phiếu mượn").ToString();
-            MessageBox.Show(MAPM,"mapm");
+            TENDG = gvPM.GetRowCellValue(row_index, "Tên độc giả").ToString();
+            MADG = gvPM.GetRowCellValue(row_index, "Mã độc giả").ToString();
+
+            
             frmViPham frm = new frmViPham();
             if (frm.ShowDialog() == DialogResult.OK)
             {
