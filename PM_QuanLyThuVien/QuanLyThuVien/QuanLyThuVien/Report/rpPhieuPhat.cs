@@ -29,9 +29,9 @@ namespace QuanLyThuVien.Report
             txtMaSach.DataBindings.Add("Text", DataSource, "MASACH");
             txtTenSach.DataBindings.Add("Text", DataSource, "TENSACH");
             txtTacGia.DataBindings.Add("Text", DataSource, "LYDOPHAT");
-            txtNgayHenTra.DataBindings.Add("Text", DataSource, "DONVITINH");
+            txtNgayHenTra.DataBindings.Add("Text", DataSource, "SOLUONG");
             txtSoluong.DataBindings.Add("Text", DataSource, "TIEN");
-
+            txtDVT.DataBindings.Add("Text", DataSource, "DONVITINH");
 
         }
     }

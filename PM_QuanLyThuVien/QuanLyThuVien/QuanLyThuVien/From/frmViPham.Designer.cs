@@ -113,7 +113,7 @@
             this.tablePanel1.Name = "tablePanel1";
             this.tablePanel1.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
-            this.tablePanel1.Size = new System.Drawing.Size(1070, 445);
+            this.tablePanel1.Size = new System.Drawing.Size(1070, 316);
             this.tablePanel1.TabIndex = 0;
             // 
             // tablePanel2
@@ -130,7 +130,7 @@
             this.tablePanel2.Rows.AddRange(new DevExpress.Utils.Layout.TablePanelRow[] {
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 58F),
             new DevExpress.Utils.Layout.TablePanelRow(DevExpress.Utils.Layout.TablePanelEntityStyle.Absolute, 26F)});
-            this.tablePanel2.Size = new System.Drawing.Size(564, 439);
+            this.tablePanel2.Size = new System.Drawing.Size(564, 310);
             this.tablePanel2.TabIndex = 3;
             // 
             // gcCTPhat
@@ -143,7 +143,7 @@
             this.gcCTPhat.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnXoa});
             this.tablePanel2.SetRow(this.gcCTPhat, 1);
-            this.gcCTPhat.Size = new System.Drawing.Size(558, 375);
+            this.gcCTPhat.Size = new System.Drawing.Size(558, 246);
             this.gcCTPhat.TabIndex = 6;
             this.gcCTPhat.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvCTPhat});
@@ -290,7 +290,7 @@
             this.groupControl1.Location = new System.Drawing.Point(3, 3);
             this.groupControl1.Name = "groupControl1";
             this.tablePanel1.SetRow(this.groupControl1, 0);
-            this.groupControl1.Size = new System.Drawing.Size(494, 439);
+            this.groupControl1.Size = new System.Drawing.Size(494, 310);
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "Danh sách phạt";
             // 
@@ -302,7 +302,7 @@
             this.gcViPham.Name = "gcViPham";
             this.gcViPham.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnLydo});
-            this.gcViPham.Size = new System.Drawing.Size(490, 415);
+            this.gcViPham.Size = new System.Drawing.Size(490, 286);
             this.gcViPham.TabIndex = 0;
             this.gcViPham.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvViPham});
@@ -417,8 +417,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1070, 445);
+            this.ClientSize = new System.Drawing.Size(1070, 316);
             this.Controls.Add(this.tablePanel1);
+            this.MaximizeBox = false;
             this.Name = "frmViPham";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xử lý vi phạm";

@@ -65,27 +65,30 @@ namespace QuanLyThuVien.From
             }
         }
 
-        
+        DataTable dtphieuphat;
         private void CreateCTVP()
         {
-            dtPhat = new DataTable();
-            dtPhat.Columns.Add("MASACH");
-            dtPhat.Columns.Add("TENSACH");
-            dtPhat.Columns.Add("LYDOPHAT");           
-            dtPhat.Columns.Add("SoLuong");
-            dtPhat.Columns["SoLuong"].DataType = typeof(Int32);
-            dtPhat.Columns.Add("Tien");
-            dtPhat.Columns["Tien"].DataType = typeof(Int32);
+            dtphieuphat = new DataTable();
+            dtphieuphat.Columns.Add("MASACH");
+            dtphieuphat.Columns.Add("TENSACH");
+            dtphieuphat.Columns.Add("LYDOPHAT");
+            dtphieuphat.Columns.Add("DONVITINH");
+            dtphieuphat.Columns.Add("SOLUONG");
+            dtphieuphat.Columns["SOLUONG"].DataType = typeof(Int32);
+            dtphieuphat.Columns.Add("TIEN");
+            dtphieuphat.Columns["TIEN"].DataType = typeof(Int32);
 
-            foreach (DataRow item in dtSachPhat.Rows)
+            foreach (DataRow item in dtPhat.Rows)
             {
-                DataRow row = dtPhat.NewRow();
+                DataRow row = dtphieuphat.NewRow();
                 row["MASACH"] = item["Mã sách"];
                 row["TENSACH"] = item["Tên sách"];
-                row["LYDOPHAT"] = "";                                
-                row["SOLUONG"] = 1;
-                row["TIEN"] = 1;
-                dtPhat.Rows.Add(row);              
+                row["LYDOPHAT"] = item["Lý do phạt"];
+                row["DONVITINH"] = item["Đơn vị tính"];
+                row["SOLUONG"] = item["Số lượng"];
+                row["TIEN"] = item["Thành tiền"];
+
+                dtphieuphat.Rows.Add(row);              
             }
         }
 
@@ -168,7 +171,6 @@ namespace QuanLyThuVien.From
                     row["Thành tiền"] = 3400*soluong;
                 }
 
-
                 dtPhat.Rows.Add(row);           
                 gcCTPhat.DataSource = dtPhat;
 
@@ -177,17 +179,21 @@ namespace QuanLyThuVien.From
 
         private void btnLapPhieu_Click(object sender, EventArgs e)
         {
-            XtraMessageBox.Show("Lập phiếu mượn thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            if (XtraMessageBox.Show("Bạn có muốn xuất phiếu mượn không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
+
+
+
+            XtraMessageBox.Show("Lập phiếu phạt thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (XtraMessageBox.Show("Bạn có muốn xuất phiếu phạt không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 CreateCTVP();
-                int TongSL = Int32.Parse(dtPhat.Rows.Count.ToString());
+                int TongSL = Convert.ToInt32(dtphieuphat.Compute("SUM(TIEN)", string.Empty));
                 rpPhieuPhat rp = new rpPhieuPhat();
-                rp.DataSource = dtPhat;
+                rp.DataSource = dtphieuphat;
                 string ngay = DateTime.Now.Day.ToString();
                 string thang = DateTime.Now.Month.ToString();
                 string nam = DateTime.Now.Year.ToString();
-                rp.Data(ngay, thang, nam, DateTime.Now.ToString("dd/MM/yyyy").ToString(), frmTraSach.MAPM, frmLogin.fullname, frmLogin.fullname, TongSL, frmTraSach.MAPM);
+                rp.Data(ngay, thang, nam, DateTime.Now.ToString("dd/MM/yyyy").ToString(), frmTraSach.MADG, frmTraSach.TENDG, frmLogin.fullname, TongSL, frmTraSach.MAPM);
                 
                 rppm = rp;
 
