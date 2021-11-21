@@ -28,7 +28,7 @@ namespace QuanLyThuVien
         private void loadFrom()
         {
             barHeaderItem1.Caption = "Xin chào: " + fullname;
-            barHeaderItem4.Caption = DateTime.Now.ToLongDateString();
+            barHeaderItem4.Caption = DateTime.Now.ToString();
             
             //bool check = false;
             //string sql = "select mod from users where id_user = '" + id + "'";

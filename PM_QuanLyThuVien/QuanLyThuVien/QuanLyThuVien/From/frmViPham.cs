@@ -56,6 +56,7 @@ namespace QuanLyThuVien.From
         string sqlLoad = string.Format("select s.MASACH [Mã sách], s.TENSACH [Tên sách], s.NAMXB, p.NGAYMUON [Ngày mượn], c.HENTRA [Hẹn trả], s.GIATIEN from CTPM c, SACH s, " +
             "PHIEUMUON p where c.MAPM= p.MAPM and c.MASACH= s.MASACH and c.MAPM= '{0}' ",frmTraSach.MAPM );
 
+        string sqlPP = "select * from phieuphat";
         private void loadSachDePhat()
         {
             dtSachPhat = con.readData(sqlLoad);
@@ -179,27 +180,66 @@ namespace QuanLyThuVien.From
 
         private void btnLapPhieu_Click(object sender, EventArgs e)
         {
-
-
-
-
-            XtraMessageBox.Show("Lập phiếu phạt thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            if (XtraMessageBox.Show("Bạn có muốn xuất phiếu phạt không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            CreateCTVP();
+            int row_index = gvCTPhat.FocusedRowHandle;
+            bool check = false;
+            string ngayphat = DateTime.Now.ToString("MM/dd/yyyy").ToString();
+            string insertPP = string.Format("insert into phieuphat values ('{0}', '{1}', '{2}', {3})", con.creatId("PP", sqlPP), frmTraSach.MAPM, ngayphat, 0);
+            
+            string mapp = con.creatId("PP", sqlPP);
+            int tongtien;
+            try
             {
-                CreateCTVP();
-                int TongSL = Convert.ToInt32(dtphieuphat.Compute("SUM(TIEN)", string.Empty));
-                rpPhieuPhat rp = new rpPhieuPhat();
-                rp.DataSource = dtphieuphat;
-                string ngay = DateTime.Now.Day.ToString();
-                string thang = DateTime.Now.Month.ToString();
-                string nam = DateTime.Now.Year.ToString();
-                rp.Data(ngay, thang, nam, DateTime.Now.ToString("dd/MM/yyyy").ToString(), frmTraSach.MADG, frmTraSach.TENDG, frmLogin.fullname, TongSL, frmTraSach.MAPM);
-                
-                rppm = rp;
+                if (con.exeData(insertPP))
+                {
+                    foreach (DataRow dr in dtphieuphat.Rows)
+                    {
+                        string sqlCPPP = string.Format("insert into ctpp values('{0}', '{1}', N'{2}', {3}, N'{4}', {5})", mapp, dr["MASACH"], dr["LYDOPHAT"], dr["SOLUONG"], dr["DONVITINH"], dr["TIEN"]);
 
-                frmPhieuPhat frm = new frmPhieuPhat();
-                frm.Show();
+                        con.Ex_vp(sqlCPPP);
+                        if (dr["LYDOPHAT"].ToString() != "Quá hạn")
+                        {
+                            string upSach = string.Format("update sach set soluong= soluong-1 where masach='{0}'", dr["MASACH"]);
+                            con.exeData(upSach);
+                        }
+                    }
+                    XtraMessageBox.Show("TC");
+                    string upTT = string.Format("update phieuphat set tongtienphat={0}", Convert.ToInt32(dtphieuphat.Compute("SUM(TIEN)", string.Empty)));
+                    con.exeData(upTT);
+                    check = true;
+                }
+
             }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message);
+            }
+
+            if (check)
+            {
+                XtraMessageBox.Show("Lập phiếu phạt thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (XtraMessageBox.Show("Bạn có muốn xuất phiếu phạt không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+
+                    int TongSL = Convert.ToInt32(dtphieuphat.Compute("SUM(TIEN)", string.Empty));
+                    rpPhieuPhat rp = new rpPhieuPhat();
+                    rp.DataSource = dtphieuphat;
+                    string ngay = DateTime.Now.Day.ToString();
+                    string thang = DateTime.Now.Month.ToString();
+                    string nam = DateTime.Now.Year.ToString();
+                    rp.Data(ngay, thang, nam, DateTime.Now.ToString("dd/MM/yyyy").ToString(), frmTraSach.MADG, frmTraSach.TENDG, frmLogin.fullname, TongSL, frmTraSach.MAPM);
+
+                    rppm = rp;
+
+                    frmPhieuPhat frm = new frmPhieuPhat();
+                    frm.Show();
+                }
+            }
+            else
+            {
+                XtraMessageBox.Show("Lập phiếu phạt thất bại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
         }
     }
 }
