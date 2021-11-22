@@ -269,6 +269,12 @@
     <Compile Include="Report\rpPhieuPhat.Designer.cs">
       <DependentUpon>rpPhieuPhat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\rpSachTrongThuVien.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rpSachTrongThuVien.Designer.cs">
+      <DependentUpon>rpSachTrongThuVien.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="From\frmDatePitker.resx">
       <DependentUpon>frmDatePitker.cs</DependentUpon>
     </EmbeddedResource>
@@ -362,6 +368,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\rpPhieuPhat.resx">
       <DependentUpon>rpPhieuPhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rpSachTrongThuVien.resx">
+      <DependentUpon>rpSachTrongThuVien.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">

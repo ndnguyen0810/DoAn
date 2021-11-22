@@ -13,6 +13,7 @@ namespace QuanLyThuVien.Report
             InitializeComponent();
             this.PaperKind = System.Drawing.Printing.PaperKind.A5;
         }
+        
         public void initData(string ngay, string thang, string nam, string ngaymuon, string madg, string tendg, string tennv, int tong, string mapm)
         {
             this.ngay.Value = ngay;
