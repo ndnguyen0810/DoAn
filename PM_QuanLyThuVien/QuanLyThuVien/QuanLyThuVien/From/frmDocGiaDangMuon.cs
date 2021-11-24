@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using QuanLyThuVien.Report;
 
 namespace QuanLyThuVien.From
 {
@@ -17,12 +18,14 @@ namespace QuanLyThuVien.From
         {
             InitializeComponent();
         }
-       
-       
+
+        public static rpDocGiaDangMuon rps = new rpDocGiaDangMuon();
 
         private void frmDocGiaDangMuon_Load(object sender, EventArgs e)
         {
-           
+          
+            documentViewer1.PrintingSystem = rps.PrintingSystem;
+            rps.CreateDocument();
             
         }
 

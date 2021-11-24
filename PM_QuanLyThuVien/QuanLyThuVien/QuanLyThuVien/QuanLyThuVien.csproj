@@ -257,6 +257,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\rpDocGiaDangMuon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rpDocGiaDangMuon.Designer.cs">
+      <DependentUpon>rpDocGiaDangMuon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rpSachDangMuon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rpSachDangMuon.Designer.cs">
+      <DependentUpon>rpSachDangMuon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\rpPhieuMuon.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -363,6 +375,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Report\rpDocGiaDangMuon.resx">
+      <DependentUpon>rpDocGiaDangMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rpSachDangMuon.resx">
+      <DependentUpon>rpSachDangMuon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\rpPhieuMuon.resx">
       <DependentUpon>rpPhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
