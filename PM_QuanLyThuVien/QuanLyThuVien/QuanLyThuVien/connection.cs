@@ -49,7 +49,28 @@ namespace QuanLyThuVien
             closeConnect();
             return check;
         }
-        //
+        
+        public  int ExSCL(string cmd)
+        {
+            openConnect();
+            int data;          
+            SqlCommand sc = new SqlCommand(cmd, con);
+            data = Int32.Parse(sc.ExecuteScalar().ToString());           
+            closeConnect();
+            return data;
+        }
+
+        public string mysqli_ex_data(string str)
+        {
+            string data;
+
+            con.Open();
+            SqlCommand mysql_cmd = new SqlCommand(str, con);
+            data = mysql_cmd.ExecuteScalar().ToString();
+            con.Close();
+            return data;
+        }
+
         public void Ex_vp(string str)
         {
             openConnect();
