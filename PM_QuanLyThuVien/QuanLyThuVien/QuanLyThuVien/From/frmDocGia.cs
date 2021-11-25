@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using QuanLyThuVien.Report;
 
 namespace QuanLyThuVien.From
 {
@@ -273,13 +274,32 @@ namespace QuanLyThuVien.From
 
         private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            txtMaDG.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[0].ToString()).ToString();
-            txtTenDG.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[1].ToString()).ToString();
-            txtNgaySinh.EditValue = Convert.ToDateTime(gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[2].ToString())).ToString("dd/MM/yyyy");
-            cbbGioiTinh.Text = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[3].ToString()).ToString();
-            txtDiaChi.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[4].ToString()).ToString();
-            txtSDT.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[5].ToString()).ToString();
-            txtEmail.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[6].ToString()).ToString();
+            txtMaDG.EditValue = gridView1.GetRowCellValue(e.RowHandle, "Mã đọc giả").ToString();
+            txtTenDG.EditValue = gridView1.GetRowCellValue(e.RowHandle, "Họ và tên").ToString();
+            txtNgaySinh.EditValue = Convert.ToDateTime(gridView1.GetRowCellValue(e.RowHandle, "Năm sinh")).ToString("dd/MM/yyyy");
+            cbbGioiTinh.Text = gridView1.GetRowCellValue(e.RowHandle, "Giới tính").ToString();
+            txtDiaChi.EditValue = gridView1.GetRowCellValue(e.RowHandle, "Địa chỉ").ToString();
+            txtSDT.EditValue = gridView1.GetRowCellValue(e.RowHandle, "Số điện thoại").ToString();
+            txtEmail.EditValue = gridView1.GetRowCellValue(e.RowHandle, "Email").ToString();
+
+        }
+
+
+        public static rpTheDocGia1 rppm = new rpTheDocGia1();
+        private void btnInthe_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            int idx = gridView1.FocusedRowHandle;
+            string madg = gridView1.GetRowCellValue(idx, "Mã đọc giả").ToString();
+            string hoten = gridView1.GetRowCellValue(idx, "Họ và tên").ToString();
+            string namsinh = Convert.ToDateTime(gridView1.GetRowCellValue(idx, "Năm sinh")).ToString("dd/MM/yyyy");
+            string ngaycap = DateTime.Today.ToShortDateString();
+            string hethan = DateTime.Today.AddMonths(3).ToShortDateString();
+            MessageBox.Show("ccc");
+            rpTheDocGia1 rp = new rpTheDocGia1();
+            rp.rpTheDG(madg, hoten, namsinh, ngaycap, hethan);
+            rppm = rp;
+            frmInTheDG frm = new frmInTheDG();
+            frm.Show();
 
         }
     }

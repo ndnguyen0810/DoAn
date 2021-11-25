@@ -142,6 +142,12 @@
     <Compile Include="From\frmHome.Designer.cs">
       <DependentUpon>frmHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="From\frmInTheDG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From\frmInTheDG.Designer.cs">
+      <DependentUpon>frmInTheDG.cs</DependentUpon>
+    </Compile>
     <Compile Include="From\frmLyDoVP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +300,12 @@
     <Compile Include="Report\rpSachTrongThuVien.Designer.cs">
       <DependentUpon>rpSachTrongThuVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\rpTheDocGia1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rpTheDocGia1.Designer.cs">
+      <DependentUpon>rpTheDocGia1.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="From\frmBieuDo1.resx">
       <DependentUpon>frmBieuDo1.cs</DependentUpon>
     </EmbeddedResource>
@@ -314,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="From\frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="From\frmInTheDG.resx">
+      <DependentUpon>frmInTheDG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From\frmLyDoVP.resx">
       <DependentUpon>frmLyDoVP.cs</DependentUpon>
@@ -399,6 +414,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\rpSachTrongThuVien.resx">
       <DependentUpon>rpSachTrongThuVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rpTheDocGia1.resx">
+      <DependentUpon>rpTheDocGia1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">

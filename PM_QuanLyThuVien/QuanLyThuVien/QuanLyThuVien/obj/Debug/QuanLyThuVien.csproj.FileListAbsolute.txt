@@ -411,3 +411,5 @@ F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuV
 F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\DevExpress.XtraCharts.v19.2.UI.dll
 F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\DevExpress.XtraCharts.v19.2.UI.xml
 F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.From.frmBieuDo1.resources
+F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.From.frmInTheDG.resources
+F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Report.rpTheDocGia1.resources
