@@ -22,6 +22,7 @@ namespace QuanLyThuVien.From
         private void frmBieuDo1_Load(object sender, EventArgs e)
         {
 
+            
         }
 
         connection con = new connection();
@@ -47,6 +48,7 @@ namespace QuanLyThuVien.From
                 ViPham.Points.Add(new SeriesPoint(i, cmd3));
 
             }
+            chartControl1.Series.Clear();
             chartControl1.Series.Add(DocGia);
             chartControl1.Series.Add(ViPham);
             chartControl1.Series.Add(SachMuon);
@@ -72,7 +74,7 @@ namespace QuanLyThuVien.From
 
             // Add a title to the chart (if necessary).
             chartControl1.Titles.Add(new ChartTitle());
-            chartControl1.Titles[0].Text = "A Line Chart";
+            chartControl1.Titles[0].Text = "GIÁ TRỊ GIA TĂNG THEO THÁNG";
 
             // Add the chart to the form.
             chartControl1.Dock = DockStyle.Fill;
@@ -81,10 +83,11 @@ namespace QuanLyThuVien.From
 
         private void btnTao_Click(object sender, EventArgs e)
         {
-            DateTime d1 = DateTime.Parse(dtpS.DateTime.ToString("MM/dd/yyyy")), 
-             d2 = DateTime.Parse(dtpE.DateTime.ToString("MM/dd/yyyy"));
-
+            DateTime d1 = DateTime.Parse(dtpS.DateTime.ToString("dd/MM/yyyy")),
+              d2 = DateTime.Parse(dtpE.DateTime.ToString("dd/MM/yyyy"));
             BieuDoLine(d1, d2);
+
+
         }
     }
 }

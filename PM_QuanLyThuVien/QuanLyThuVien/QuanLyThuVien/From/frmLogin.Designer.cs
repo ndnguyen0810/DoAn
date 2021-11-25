@@ -43,11 +43,9 @@
             this.imageEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.txtUsername = new DevExpress.XtraEditors.TextEdit();
             this.txtPass = new DevExpress.XtraEditors.ButtonEdit();
-            this.checkGhiNho = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.imageEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkGhiNho.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -68,7 +66,7 @@
             this.btnXoa.Appearance.Options.UseBorderColor = true;
             this.btnXoa.Appearance.Options.UseFont = true;
             this.btnXoa.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnXoa.Location = new System.Drawing.Point(103, 183);
+            this.btnXoa.Location = new System.Drawing.Point(104, 166);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(94, 34);
             this.btnXoa.TabIndex = 4;
@@ -82,7 +80,7 @@
             this.btnDangNhap.Appearance.Options.UseBorderColor = true;
             this.btnDangNhap.Appearance.Options.UseFont = true;
             this.btnDangNhap.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnDangNhap.Location = new System.Drawing.Point(222, 183);
+            this.btnDangNhap.Location = new System.Drawing.Point(223, 166);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(94, 34);
             this.btnDangNhap.TabIndex = 4;
@@ -99,7 +97,7 @@
             this.btnThoat.AppearanceHovered.BackColor = System.Drawing.Color.White;
             this.btnThoat.AppearanceHovered.Options.UseBackColor = true;
             this.btnThoat.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnThoat.Location = new System.Drawing.Point(342, 183);
+            this.btnThoat.Location = new System.Drawing.Point(343, 166);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(94, 34);
             this.btnThoat.TabIndex = 4;
@@ -169,16 +167,6 @@
             this.txtPass.TabIndex = 19;
             this.txtPass.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtPass_ButtonClick);
             // 
-            // checkGhiNho
-            // 
-            this.checkGhiNho.Location = new System.Drawing.Point(222, 143);
-            this.checkGhiNho.Name = "checkGhiNho";
-            this.checkGhiNho.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkGhiNho.Properties.Appearance.Options.UseFont = true;
-            this.checkGhiNho.Properties.Caption = "Ghi nhớ đăng nhập";
-            this.checkGhiNho.Size = new System.Drawing.Size(158, 21);
-            this.checkGhiNho.TabIndex = 20;
-            // 
             // frmLogin
             // 
             this.ActiveGlowColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
@@ -187,8 +175,7 @@
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(487, 248);
-            this.Controls.Add(this.checkGhiNho);
+            this.ClientSize = new System.Drawing.Size(487, 232);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
@@ -214,7 +201,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.checkGhiNho.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,6 +216,5 @@
         private DevExpress.XtraEditors.PictureEdit imageEdit1;
         private DevExpress.XtraEditors.TextEdit txtUsername;
         private DevExpress.XtraEditors.ButtonEdit txtPass;
-        private DevExpress.XtraEditors.CheckEdit checkGhiNho;
     }
 }

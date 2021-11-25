@@ -137,7 +137,7 @@ namespace QuanLyThuVien.From
                 return;
             }
 
-            string queryInsert = string.Format("insert into TAIKHOAN values('{0}', '{1}', '{2}', '{3}', '{4}')", con.creatId("TK", queryTK), tentk, mk, nv, cv);
+            string queryInsert = string.Format("insert into TAIKHOAN values('{0}', '{1}', '{2}', '{3}', '{4}')", con.creatId("TK", queryTK), tentk, con.CreateMD5(mk), nv, cv);
             if (con.exeData(queryInsert))
             {
                 loadTaiKhoan();
@@ -221,7 +221,7 @@ namespace QuanLyThuVien.From
             if (XtraMessageBox.Show("Bạn có chắc chắn muốn sửa tài khoản đang chọn?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
 
-                string queryUpdate = string.Format("update taikhoan set tentk='{0}', matkhau='{1}',manv='{2}',macv='{3}' where matk='{4}'", tentk, mk, nv, cv, matk);
+                string queryUpdate = string.Format("update taikhoan set tentk='{0}', matkhau='{1}',manv='{2}',macv='{3}' where matk='{4}'", tentk, con.CreateMD5(mk), nv, cv, matk);
 
                 if (con.exeData(queryUpdate))
                 {
