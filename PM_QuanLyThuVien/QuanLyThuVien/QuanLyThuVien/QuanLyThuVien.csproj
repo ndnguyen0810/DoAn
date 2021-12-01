@@ -399,6 +399,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Report\rpDocGiaDangMuon.resx">
       <DependentUpon>rpDocGiaDangMuon.cs</DependentUpon>
@@ -431,6 +432,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="books_97178.ico" />
+    <None Include="Resources\login.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
