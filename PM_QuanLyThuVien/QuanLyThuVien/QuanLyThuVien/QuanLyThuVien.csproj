@@ -432,6 +432,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="books_97178.ico" />
+    <None Include="Resources\1.png" />
     <None Include="Resources\login.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

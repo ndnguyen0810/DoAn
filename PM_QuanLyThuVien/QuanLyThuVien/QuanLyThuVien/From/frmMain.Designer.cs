@@ -78,6 +78,7 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.realTimeSource1 = new DevExpress.Data.RealTimeSource();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3.CalendarTimeProperties)).BeginInit();
@@ -517,6 +518,10 @@
             // 
             this.realTimeSource1.DisplayableProperties = null;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frmMain
             // 
             this.Appearance.Options.UseFont = true;
@@ -526,6 +531,7 @@
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMain";
@@ -603,5 +609,6 @@
         private DevExpress.XtraBars.BarHeaderItem barHeaderItem3;
         private DevExpress.XtraBars.BarHeaderItem barHeaderItem4;
         private DevExpress.Data.RealTimeSource realTimeSource1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
