@@ -28,7 +28,7 @@ namespace QuanLyThuVien
         private void loadFrom()
         {
             barHeaderItem1.Caption = "Xin chào: " + fullname;
-            barHeaderItem4.Caption = DateTime.Now.ToString();
+            barHeaderItem4.Caption = DateTime.Now.ToLongDateString();
 
             if (frmLogin.macv=="CV00000002")
             {
@@ -390,9 +390,6 @@ namespace QuanLyThuVien
 
         #endregion
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            barHeaderItem4.Caption = DateTime.Now.ToString();
-        }
+       
     }
 }

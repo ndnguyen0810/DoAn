@@ -22,6 +22,8 @@ namespace QuanLyThuVien.From
         DataTable dtSachMuon;
         DataTable dtPhieuMuon;
         DataTable dtSach;
+        DataTable dtDGMuonSach;
+        DataTable dtDG;
         public static rpPhieuMuon rppm = new rpPhieuMuon();
 
         connection con = new connection();
@@ -80,10 +82,10 @@ namespace QuanLyThuVien.From
         }
         private void loadDocGia()
         {
-            DataTable dt = con.readData(connection.P_LoadDocGia);
-            if (dt != null)
+            dtDG = con.readData(connection.P_LoadDocGia);
+            if (dtDG != null)
             {
-                gcDocGia.DataSource = dt;
+                gcDocGia.DataSource = dtDG;
             }
         }
 
@@ -109,21 +111,22 @@ namespace QuanLyThuVien.From
            
             txtSDT.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[5].ToString()).ToString();
             txtEmail.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[6].ToString()).ToString();
+            
+
         }
         bool check; // Mặc định là f rồi
 
         private void btnAddSach_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
+            
             int row_index = gvSach.FocusedRowHandle;
-            //MessageBox.Show(row_index.ToString());
-
             if ((txtMaDG.EditValue == null) || (txtMaDG.EditValue.ToString().Equals("")))
             {
                 XtraMessageBox.Show("Bạn chưa chọn độc giả\r\nVui lòng chọn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             bool checkB= false ;
-            string sql = string.Format("select madg from PHieumuon where masach='{0}' and madg='{1}'", gvSach.GetRowCellValue(row_index, "MASACH"), txtMaDG.EditValue.ToString());
+            string sql = string.Format("select madg from PHieumuon where masach='{0}' and madg='{1}' ", gvSach.GetRowCellValue(row_index, "MASACH"), txtMaDG.EditValue.ToString());
             int sl = Int32.Parse(gvSach.GetRowCellValue(row_index, "SoLuong").ToString()); //lấy số lượng để cập nhật
             soluonsach = sl;
             string ms = gvSach.GetRowCellValue(row_index, "MASACH").ToString(); //lấy mã sách
@@ -137,6 +140,7 @@ namespace QuanLyThuVien.From
                     if (gvSach.GetRowCellValue(row_index, "MASACH").ToString().Equals(dr["MASACH"].ToString()))
                     {
                         checkB = true;
+
                         break;
                     }
                 }
@@ -163,34 +167,51 @@ namespace QuanLyThuVien.From
                     break;
                 }                
             }
-
             if (check)
             {
                 XtraMessageBox.Show("Bạn đã thêm sách này rồi\r\nVui lòng chọn sách khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 check = false;
                 return;
             }
-            
-            
 
-            frmDatePitker frm = new frmDatePitker();
-            if (frm.ShowDialog() == DialogResult.OK)
+            if (txtMaDG.EditValue != null)
             {
-                DataRow row = dtSachMuon.NewRow();
-                row["MASACH"] = gvSach.GetRowCellValue(row_index, "MASACH").ToString();
-                row["TENSACH"] = gvSach.GetRowCellValue(row_index, "TENSACH").ToString();
-                row["TACGIA"] = gvSach.GetRowCellValue(row_index, "TACGIA").ToString();
-                row["NGAYMUON"] = DateTime.Now.ToString("dd/MM/yyyy");
-                row["HENTRA"] =  Convert.ToDateTime(frmDatePitker.date).ToString("dd/MM/yyyy");
-                row["SoLuong"] = 1;
-                dtSachMuon.Rows.Add(row);
-                loadSachMuon();  
+                string DemDGMuon = string.Format("select COUNT(trangthai) from PHIEUMUON where MADG='{0}' and TRANGTHAI=N'Đang mượn'", txtMaDG.EditValue.ToString());
+
+                if (con.ExSCL(DemDGMuon) > 0)
+                {
+                   
+                    XtraMessageBox.Show("Độc giả " + txtTenDG.EditValue.ToString() + " mượn sách chưa trả!\nVui lòng trả sách hoặc chọn độc giả khác!", "Thông báo");
+                    return;
+                }
+                else
+                {                                
+                   
+                    if (Int32.Parse(dtSachMuon.Rows.Count.ToString()) < 2)
+                    {
+                        frmDatePitker frm = new frmDatePitker();
+                        if (frm.ShowDialog() == DialogResult.OK)
+                        {
+                            DataRow row = dtSachMuon.NewRow();
+                            row["MASACH"] = gvSach.GetRowCellValue(row_index, "MASACH").ToString();
+                            row["TENSACH"] = gvSach.GetRowCellValue(row_index, "TENSACH").ToString();
+                            row["TACGIA"] = gvSach.GetRowCellValue(row_index, "TACGIA").ToString();
+                            row["NGAYMUON"] = DateTime.Now.ToString("dd/MM/yyyy");
+                            row["HENTRA"] = Convert.ToDateTime(frmDatePitker.date).ToString("dd/MM/yyyy");
+                            row["SoLuong"] = 1;
+                            dtSachMuon.Rows.Add(row);
+                            loadSachMuon();
+                        }
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("Bạn chỉ mượn được tối đa 2 quyển sách!", "Thông báo");
+                    }
+
+                }
             }
+  
             int soluongs = Int32.Parse(gvSach.GetRowCellValue(row_index, "SoLuong").ToString());
-           
-
-
-
         }
 
         private void btnDelete_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -226,6 +247,7 @@ namespace QuanLyThuVien.From
             string ngaymuon = DateTime.Now.ToString("MM/dd/yyyy").ToString();
            
             string sqlInsertPM = string.Format("insert into PHIEUMUON values( '{0}', '{1}', '{2}', '{3}', {4}, N'{5}' ) ", con.creatId("PM", queryPM), manv, madg, ngaymuon,0, trangthai);
+           
             string mapm = con.creatId("PM", queryPM);
             int soluong;
             if (con.exeData(sqlInsertPM))
@@ -272,7 +294,7 @@ namespace QuanLyThuVien.From
             }
             else
             {
-                XtraMessageBox.Show("Lập phiếu mượn thất bại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                XtraMessageBox.Show("Lập phiếu mượn thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 btnLamMoi.PerformClick();
             }
 
