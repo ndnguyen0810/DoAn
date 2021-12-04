@@ -106,12 +106,6 @@
     <Compile Include="From\frmBieuDo1.Designer.cs">
       <DependentUpon>frmBieuDo1.cs</DependentUpon>
     </Compile>
-    <Compile Include="From\frmDangNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="From\frmDangNhap.Designer.cs">
-      <DependentUpon>frmDangNhap.cs</DependentUpon>
-    </Compile>
     <Compile Include="From\frmDatePitker.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -314,9 +308,6 @@
     </Compile>
     <EmbeddedResource Include="From\frmBieuDo1.resx">
       <DependentUpon>frmBieuDo1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="From\frmDangNhap.resx">
-      <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From\frmDatePitker.resx">
       <DependentUpon>frmDatePitker.cs</DependentUpon>

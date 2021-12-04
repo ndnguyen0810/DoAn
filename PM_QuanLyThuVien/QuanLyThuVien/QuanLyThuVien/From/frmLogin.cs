@@ -95,7 +95,9 @@ namespace QuanLyThuVien.From
                     macv = getInfo(MACV);
                     tencv = getInfo(TENNV);
                     manv = getInfo(MANV);
-                    frmMain frm = new frmMain();
+                    string dangnhap = string.Format("insert into dangnhap (matk, thoigian) values('{0}','{1}')", mataikhoan, DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss").ToString());
+                    con.exeData(dangnhap);
+                     frmMain frm = new frmMain();
                     this.Hide();
                     frm.ShowDialog();
                     this.Dispose();

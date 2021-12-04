@@ -681,4 +681,3 @@ C:\Users\ADMIN\OneDrive\Máy tính\Nguyen\DoAn\PM_QuanLyThuVien\QuanLyThuVien\Qu
 C:\Users\ADMIN\OneDrive\Máy tính\Nguyen\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
 C:\Users\ADMIN\OneDrive\Máy tính\Nguyen\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
 F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csprojAssemblyReference.cache
-F:\GitHub\DoAn\PM_QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.From.frmDangNhap.resources
