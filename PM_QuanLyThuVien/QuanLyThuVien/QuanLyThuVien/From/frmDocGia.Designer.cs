@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDocGia));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -187,7 +187,7 @@
             this.layoutControl4.Location = new System.Drawing.Point(12, 90);
             this.layoutControl4.Name = "layoutControl4";
             this.layoutControl4.Root = this.layoutControlGroup4;
-            this.layoutControl4.Size = new System.Drawing.Size(1103, 37);
+            this.layoutControl4.Size = new System.Drawing.Size(1103, 35);
             this.layoutControl4.TabIndex = 30;
             this.layoutControl4.Text = "layoutControl4";
             // 
@@ -196,7 +196,7 @@
             this.layoutControlGroup4.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.layoutControlGroup4.GroupBordersVisible = false;
             this.layoutControlGroup4.Name = "layoutControlGroup4";
-            this.layoutControlGroup4.Size = new System.Drawing.Size(1103, 37);
+            this.layoutControlGroup4.Size = new System.Drawing.Size(1103, 35);
             this.layoutControlGroup4.TextVisible = false;
             // 
             // btnThem
@@ -204,36 +204,39 @@
             this.btnThem.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.btnThem.Appearance.Options.UseFont = true;
             this.btnThem.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnThem.ImageOptions.SvgImage")));
-            this.btnThem.Location = new System.Drawing.Point(12, 131);
+            this.btnThem.Location = new System.Drawing.Point(12, 129);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(272, 36);
+            this.btnThem.Size = new System.Drawing.Size(272, 38);
             this.btnThem.StyleController = this.layoutControl3;
             this.btnThem.TabIndex = 25;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
             this.btnSua.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.btnSua.Appearance.Options.UseFont = true;
             this.btnSua.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSua.ImageOptions.SvgImage")));
-            this.btnSua.Location = new System.Drawing.Point(288, 131);
+            this.btnSua.Location = new System.Drawing.Point(288, 129);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(273, 36);
+            this.btnSua.Size = new System.Drawing.Size(273, 38);
             this.btnSua.StyleController = this.layoutControl3;
             this.btnSua.TabIndex = 24;
             this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
             this.btnXoa.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.btnXoa.Appearance.Options.UseFont = true;
             this.btnXoa.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnXoa.ImageOptions.SvgImage")));
-            this.btnXoa.Location = new System.Drawing.Point(565, 131);
+            this.btnXoa.Location = new System.Drawing.Point(565, 129);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(272, 36);
+            this.btnXoa.Size = new System.Drawing.Size(272, 38);
             this.btnXoa.StyleController = this.layoutControl3;
             this.btnXoa.TabIndex = 23;
             this.btnXoa.Text = "Xoá";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // txtMaDG
             // 
@@ -284,12 +287,13 @@
             this.btnLamMoi.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.btnLamMoi.Appearance.Options.UseFont = true;
             this.btnLamMoi.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLamMoi.ImageOptions.SvgImage")));
-            this.btnLamMoi.Location = new System.Drawing.Point(841, 131);
+            this.btnLamMoi.Location = new System.Drawing.Point(841, 129);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(274, 36);
+            this.btnLamMoi.Size = new System.Drawing.Size(274, 38);
             this.btnLamMoi.StyleController = this.layoutControl3;
             this.btnLamMoi.TabIndex = 22;
             this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // txtEmail
             // 
@@ -364,9 +368,9 @@
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.btnThem;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 119);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 117);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(276, 40);
+            this.layoutControlItem3.Size = new System.Drawing.Size(276, 42);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -378,33 +382,33 @@
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(269, 26);
-            this.layoutControlItem6.Text = "Mã đọc giả";
+            this.layoutControlItem6.Text = "Mã độc giả";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(79, 17);
             // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.btnLamMoi;
-            this.layoutControlItem9.Location = new System.Drawing.Point(829, 119);
+            this.layoutControlItem9.Location = new System.Drawing.Point(829, 117);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(278, 40);
+            this.layoutControlItem9.Size = new System.Drawing.Size(278, 42);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnSua;
-            this.layoutControlItem4.Location = new System.Drawing.Point(276, 119);
+            this.layoutControlItem4.Location = new System.Drawing.Point(276, 117);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(277, 40);
+            this.layoutControlItem4.Size = new System.Drawing.Size(277, 42);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.btnXoa;
-            this.layoutControlItem5.Location = new System.Drawing.Point(553, 119);
+            this.layoutControlItem5.Location = new System.Drawing.Point(553, 117);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(276, 40);
+            this.layoutControlItem5.Size = new System.Drawing.Size(276, 42);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
@@ -427,7 +431,7 @@
             this.layoutControlItem11.Location = new System.Drawing.Point(269, 0);
             this.layoutControlItem11.Name = "layoutControlItem11";
             this.layoutControlItem11.Size = new System.Drawing.Size(486, 26);
-            this.layoutControlItem11.Text = "Tên đọc giả";
+            this.layoutControlItem11.Text = "Tên độc giả";
             this.layoutControlItem11.TextSize = new System.Drawing.Size(79, 17);
             // 
             // layoutControlItem12
@@ -479,7 +483,7 @@
             this.layoutControlItem14.Control = this.layoutControl4;
             this.layoutControlItem14.Location = new System.Drawing.Point(0, 78);
             this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(1107, 41);
+            this.layoutControlItem14.Size = new System.Drawing.Size(1107, 39);
             this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem14.TextVisible = false;
             // 
@@ -557,7 +561,7 @@
             // 
             // gridColumn1
             // 
-            this.gridColumn1.Caption = "Mã đọc giả";
+            this.gridColumn1.Caption = "Mã độc giả";
             this.gridColumn1.FieldName = "Mã đọc giả";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
@@ -644,9 +648,9 @@
             // btnInthe
             // 
             this.btnInthe.AutoHeight = false;
-            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
             this.btnInthe.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnInthe.Name = "btnInthe";
             this.btnInthe.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnInthe.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnInthe_ButtonClick);

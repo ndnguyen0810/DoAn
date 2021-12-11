@@ -19,7 +19,7 @@ namespace QuanLyThuVien.From
         }
 
         connection con = new connection();
-        string queryLoaiSach = "select MALOAI,TENLOAI from Loaisach"; //= "select * from booktype";
+        string queryLoaiSach = "select * from Loaisach"; //= "select * from booktype";
         string queryViTri= "select *  from VITRI";
 
  
@@ -42,14 +42,14 @@ namespace QuanLyThuVien.From
             }
         }
 
-        private void loadLSOnVT()
+        private void loadVTOnLS()
         {
-            DataTable dt = con.readData(queryLoaiSach);
+            DataTable dt = con.readData(queryViTri);
             if (dt != null)
             {
                 lkupLS.Properties.DataSource = dt;
-                lkupLS.Properties.DisplayMember = "TENLOAI";
-                lkupLS.Properties.ValueMember = "MALOAI";
+                lkupLS.Properties.DisplayMember = "TENVITRI";
+                lkupLS.Properties.ValueMember = "MAVT";
             }
         }
       
@@ -58,7 +58,7 @@ namespace QuanLyThuVien.From
         {
             loadLoaiSach();
             loadViTri();
-            loadLSOnVT();
+            loadVTOnLS();
             
         }
 
@@ -71,17 +71,17 @@ namespace QuanLyThuVien.From
                 txtTenLoaiSach.Focus();
                 return;
             }
-            //if ((lkupLS.EditValue == null) || (lkupLS.EditValue.ToString().Equals("")))
-            //{
-            //    XtraMessageBox.Show("Bạn chưa chọn vị trí\r\nVui lòng chọn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    txtTenLoaiSach.Focus();
-            //    return;
-            //}
+            if ((lkupLS.EditValue == null) || (lkupLS.EditValue.ToString().Equals("")))
+            {
+                XtraMessageBox.Show("Bạn chưa chọn vị trí\r\nVui lòng chọn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtTenLoaiSach.Focus();
+                return;
+            }
 
             string tensach = txtTenLoaiSach.EditValue.ToString();
-           // string vitri = lkupLS.EditValue.ToString();
+            string vitri = lkupLS.EditValue.ToString();
 
-            string queryInsert = string.Format("insert into loaisach values('{0}',N'{1}')", con.creatId("LS", queryLoaiSach), tensach);
+            string queryInsert = string.Format("insert into loaisach values('{0}',N'{1}','{2}')", con.creatId("LS", queryLoaiSach), tensach,vitri);
             if (connection.checkName(queryLoaiSach, txtTenLoaiSach, "tenloai") == true)
             {
                 XtraMessageBox.Show("Loại sách có tên \"" + txtTenLoaiSach.EditValue.ToString() + "\" đã tồn tại\r\nVui lòng nhập tên khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -116,22 +116,22 @@ namespace QuanLyThuVien.From
                 txtTenLoaiSach.Focus();
                 return;
             }
-            //if ((lkupLS.EditValue == null) || (lkupLS.EditValue.ToString().Equals("")))
-            //{
-            //    XtraMessageBox.Show("Bạn chưa chọn vị trí\r\nVui lòng chọn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    txtTenLoaiSach.Focus();
-            //    return;
-            //}
+            if ((lkupLS.EditValue == null) || (lkupLS.EditValue.ToString().Equals("")))
+            {
+                XtraMessageBox.Show("Bạn chưa chọn vị trí\r\nVui lòng chọn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtTenLoaiSach.Focus();
+                return;
+            }
             string masach = txtMaLoaiSach.EditValue.ToString();
             string tensach = txtTenLoaiSach.EditValue.ToString();
-           // string vitri = lkupLS.EditValue.ToString();
+           string vitri = lkupLS.EditValue.ToString();
             if (connection.checkName(queryLoaiSach, txtTenLoaiSach, "tenloai") == true)
             {
                 XtraMessageBox.Show("Loại sách có tên \"" + txtTenLoaiSach.EditValue.ToString() + "\" đã tồn tại\r\nVui lòng nhập tên khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 btnLamMoiLS.PerformClick();
                 return;
             }
-            string queryInsert = string.Format("update sach set tensach = N'{0}' where masach ='{1}'", tensach, masach);
+            string queryInsert = string.Format("update sach set tensach = N'{0}', mavt='{2}' where masach ='{1}'", tensach, masach, vitri);
             if (XtraMessageBox.Show("Bạn có chắc chắn muốn sửa loại sách đang chọn?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (con.exeData(queryInsert))
@@ -308,7 +308,7 @@ namespace QuanLyThuVien.From
         {
             txtMaLoaiSach.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[0].ToString()).ToString();
             txtTenLoaiSach.EditValue = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[1].ToString()).ToString();
-           // lkupViTri.Text = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[2].ToString()).ToString();
+            lkupLS.Text = gridView1.GetRowCellValue(e.RowHandle, gridView1.Columns[2].ToString()).ToString();
         }
 
         private void gridView2_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e) //vi tri

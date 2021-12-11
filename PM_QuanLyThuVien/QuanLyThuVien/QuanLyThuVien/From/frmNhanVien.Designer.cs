@@ -243,6 +243,7 @@
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT.Properties.Appearance.Options.UseFont = true;
+            this.txtSDT.Properties.MaxLength = 10;
             this.txtSDT.Size = new System.Drawing.Size(122, 22);
             this.txtSDT.StyleController = this.layoutControl1;
             this.txtSDT.TabIndex = 8;

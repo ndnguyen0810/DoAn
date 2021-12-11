@@ -28,9 +28,9 @@ namespace QuanLyThuVien
         private void loadFrom()
         {
             barHeaderItem1.Caption = "Xin chào: " + fullname;
-            barHeaderItem4.Caption = DateTime.Now.ToString();
-            
-           if(frmLogin.macv=="CV00000002")
+            barHeaderItem4.Caption = DateTime.Now.ToLongDateString();
+
+            if (frmLogin.macv=="CV00000002")
             {
                 btnThemTK.Enabled = false;
                 btnNV.Enabled = false;
@@ -387,8 +387,9 @@ namespace QuanLyThuVien
 
 
 
+
         #endregion
 
-        
+       
     }
 }
