@@ -13,7 +13,7 @@ namespace QuanLyThuVien
 {
     public class connection
     {
-        SqlConnection con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=QLTV_NguyenQuynh;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=QLTV_NguyenQuynh;Integrated Security=True");
 
         private void openConnect()
         {
