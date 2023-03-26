@@ -1,0 +1,2 @@
+vào file conection.cs trong project và thay đổi tên database, servername để kết nối:
+kiểu kết nối Authentication: Windows Authentication

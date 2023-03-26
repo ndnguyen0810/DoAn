@@ -346,20 +346,6 @@ namespace QuanLyThuVien
             }
         }
 
-        private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            Form frm = formCheck(typeof(frmThanhVien));
-            if (frm == null)
-            {
-                frmThanhVien f = new frmThanhVien();
-                f.MdiParent = this;
-                f.Show();
-            }
-            else
-            {
-                frm.Activate();
-            }
-        }
 
         #endregion
 

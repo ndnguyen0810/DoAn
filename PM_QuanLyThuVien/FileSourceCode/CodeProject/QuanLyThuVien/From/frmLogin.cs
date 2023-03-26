@@ -74,14 +74,7 @@ namespace QuanLyThuVien.From
                 txtPass.Focus();
                 return;
             }
-            //if (getInfo(STATE).ToString().Equals("True"))
-            //{
-            //    XtraMessageBox.Show("Tài khoản của bạn hiện đang bị cấm\r\nVui lòng liên hệ admin để biết thêm thông tin!", "Đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    txtUsername.EditValue = null;
-            //    txtPassword.EditValue = null;
-            //    txtUsername.Focus();
-            //    return;
-            //}
+
 
             try
             {
@@ -95,8 +88,6 @@ namespace QuanLyThuVien.From
                     macv = getInfo(MACV);
                     tencv = getInfo(TENNV);
                     manv = getInfo(MANV);
-                    string dangnhap = string.Format("insert into dangnhap (matk, thoigian) values('{0}','{1}')", mataikhoan, DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss").ToString());
-                    con.exeData(dangnhap);
                      frmMain frm = new frmMain();
                     this.Hide();
                     frm.ShowDialog();

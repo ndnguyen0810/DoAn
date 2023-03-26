@@ -12,9 +12,9 @@ using System.Threading.Tasks;
 namespace QuanLyThuVien
 {
     public class connection
-    {//.\SQLExpress;AttachDbFilename=|DataDirector y|mydbfile.mdf; Database=dbname;Trusted_Connection=Yes FileSourceCode\CodeProject\QuanLyThuVien\QLTV_NguyenQuynh.mdf
-      SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=QLTV_NguyenQuynh;Integrated Security=True");
-       // SqlConnection con = new SqlConnection(@"Data Source=.\SQLExpress;AttachDbFilename=./QuanLyThuVien/QLTV_NguyenQuynh.mdf; Database=QLTV_NguyenQuynh;Trusted_Connection=Yes");
+    {
+      SqlConnection con = new SqlConnection(@"Data Source=MYACER\SQLEXPRESS;Initial Catalog=QLTV;Integrated Security=True");
+       //chọn lại server name và name database
         private void openConnect()
         {
             if (con.State == ConnectionState.Closed)

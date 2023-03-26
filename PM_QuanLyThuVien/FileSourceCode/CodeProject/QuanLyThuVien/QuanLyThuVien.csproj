@@ -253,12 +253,6 @@
     <Compile Include="From\frmSuaTT.Designer.cs">
       <DependentUpon>frmSuaTT.cs</DependentUpon>
     </Compile>
-    <Compile Include="From\frmThanhVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="From\frmThanhVien.Designer.cs">
-      <DependentUpon>frmThanhVien.cs</DependentUpon>
-    </Compile>
     <Compile Include="From\frmThemTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -402,9 +396,6 @@
     <EmbeddedResource Include="From\frmSuaTT.resx">
       <DependentUpon>frmSuaTT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="From\frmThanhVien.resx">
-      <DependentUpon>frmThanhVien.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="From\frmThemTaiKhoan.resx">
       <DependentUpon>frmThemTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
@@ -465,9 +456,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="books_97178.ico" />
+    <Content Include="Resources\1.png" />
+    <None Include="Resources\tv%27.jpg" />
     <None Include="Resources\ttpm.png" />
     <None Include="Resources\messengerpng.png" />
-    <None Include="Resources\1.png" />
     <None Include="Resources\login.png" />
   </ItemGroup>
   <ItemGroup>
